@@ -474,15 +474,15 @@ h2 {
 .services-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
   width: 100%;
   gap: 20px;
+  padding-bottom: 50px;
 }
 
 .services-card__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,13 +490,11 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  padding-top: 70px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  min-height: 120px;
+  padding: 10px;
   border-radius: 16px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -513,18 +511,22 @@ h2 {
 }
 
 .services-card__icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
   margin-bottom: 10px;
 }
 
 .services-card__title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
   margin-bottom: 15px;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .services-card__description {
-  text-align: center;
   font-size: 17px;
 }
 
