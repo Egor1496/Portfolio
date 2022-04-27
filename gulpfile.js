@@ -33,21 +33,11 @@ gulp.task("styles", () => {
 		.pipe(browserSync.stream());
 });
 
-gulp.task("scripts", () => {
-	return gulp
-		.src(["app/libs/jquery/jquery-1.11.2.min.js"])
-		.pipe(concat("libs.js"))
-		.pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest("app/js/"))
-		.pipe(browserSync.reload({ stream: true }));
-});
-
 gulp.task("code", () => gulp.src("app/**/*.html").pipe(browserSync.reload({ stream: true })));
 
 gulp.task("watch", () => {
 	gulp.watch("app/sass/**/*.sass", gulp.parallel("styles"));
-	gulp.watch(["app/js/*.js", "app/libs/**/*.js"], gulp.parallel("scripts"));
-	gulp.watch("app/*.html", gulp.parallel("code"));
+	gulp.watch("app/**/*.html", gulp.parallel("code"));
 });
 
-gulp.task("default", gulp.parallel("styles", "scripts", "browser-sync", "watch"));
+gulp.task("default", gulp.parallel("styles", "browser-sync", "watch"));

@@ -16,7 +16,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-touch-icon-114x114.png" />
 
 		<link rel="stylesheet" href="../css/fonts.css" />
-		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/libs/normalize.css" />
 		<link rel="stylesheet" href="../css/pages/note.min.css" />
 	</head>
 
@@ -54,7 +54,7 @@
 			<!-- hello start -->
 			<section class="hello">
 				<div class="hello__wrap view-grid">
-					<div class="hello__inner hello__inner_first">
+					<div class="hello__inner hello__inner--first">
 						<p class="hello__title">Привет! я</p>
 						<h1 class="hello__main-title">Egor1496</h1>
 						<p class="hello__description">Фрилансер, Front-end разработчик & Верстальщик сайтов.</p>
@@ -73,7 +73,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="hello__inner hello__inner_second">
+					<div class="hello__inner hello__inner--second">
 						<div class="author">
 							<div class="author__ellipse"></div>
 						</div>
@@ -82,107 +82,64 @@
 			</section>
 			<!-- hell end -->
 			<!-- contact start -->
-			<!-- <section id="contact-section" class="contact">
-					<div class="contact__wrap view-grid">
-						<div class="contact__inner">
-							<div class="contact__soc soc">
-								<h3 class="soc__title">Контактная информация</h3>
-								<p class="soc__description">Социальные сети</p>
-								<div class="soc__icons icons">
-									<a href="#">
-										<img
-											src="img/facebook.svg"
-											alt="icon"
-											class="icons__image"
-										/>
-									</a>
-									<a href="#">
-										<img
-											src="img/instagram.svg"
-											alt="icon"
-											class="icons__image"
-										/>
-									</a>
-									<a href="#">
-										<img
-											src="img/dribbble.svg"
-											alt="icon"
-											class="icons__image"
-										/>
-									</a>
-									<a href="#">
-										<img
-											src="img/sms.svg"
-											alt="icon"
-											class="icons__image"
-										/>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="contact__inner">
-							<div class="contact__form">
-								<form action="" class="form">
-									<h2 class="form__title">Отправьте сообщение на почту</h2>
-									<input type="text" placeholder="Имя:" class="form__input" />
-									<input
-										type="text"
-										placeholder="Email-почта:"
-										class="form__input"
-									/>
-									<input
-										type="text"
-										placeholder="Сообщение:"
-										class="form__input"
-									/>
-									<button class="form__button button">
-										<span class="button__text">Отправить</span>
-									</button>
-								</form>
+			<section id="contact-section" class="contact">
+				<div class="contact__wrap view-grid">
+					<div class="contact__inner">
+						<div class="contact__soc soc">
+							<h3 class="soc__title">Контактная информация</h3>
+							<p class="soc__description">Социальные сети</p>
+							<div class="soc__icons icons">
+								<a href="https://github.com/Egor1496" class="icons__link">
+									<img src="../img/ui-icon/git-repo.svg" alt="icon" class="icons__image" />
+								</a>
+								<a href="https://www.youtube.com/channel/UCsys6JS17c8VRV4emxQgR1A" class="icons__link">
+									<img src="../img/ui-icon/youtube.svg" alt="icon" class="icons__image" />
+								</a>
+								<a href="mailto:egor1496work@mail.ru" class="icons__link">
+									<img src="../img/ui-icon/email.svg" alt="icon" class="icons__image" />
+								</a>
 							</div>
 						</div>
 					</div>
-				</section> -->
+					<div class="contact__inner">
+						<div class="contact__form">
+							<form action="" class="form">
+								<h2 class="form__title">Отправьте сообщение на почту</h2>
+								<input type="text" placeholder="Имя: (заблокированно)" readonly class="form__input" />
+								<input type="text" placeholder="Email-почта: (заблокированно)" readonly class="form__input" />
+								<input type="text" placeholder="Сообщение: (заблокированно)" readonly class="form__input" />
+								<button class="form__button button">
+									<span class="button__text">Отправить</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- contact end -->
 		</main>
 		<footer class="page__footer footer view-grid">
 			<div class="footer__list">
 				<span class="footer__item">@2022 Egor1496</span>
 				<span class="footer__item">Front-end developer</span>
-				<!-- <span class="footer__item">UI Designer</span> -->
-				<!-- <span class="footer__item">Data Analyst</span> -->
-				<!-- <span class="footer__item">Designed by @ernestechiet</span> -->
 			</div>
-			<!-- <div class="footer__soc soc">
-					<div class="soc__icons icons">
-						<a href="#">
-							<img
-								src="img/facebook.svg"
-								alt="icon"
-								class="icons__image"
-							/>
-						</a>
-						<a href="#">
-							<img
-								src="img/instagram.svg"
-								alt="icon"
-								class="icons__image"
-							/>
-						</a>
-						<a href="#">
-							<img
-								src="img/dribbble.svg"
-								alt="icon"
-								class="icons__image"
-							/>
-						</a>
-						<a href="#">
-							<img src="img/sms.svg" alt="icon" class="icons__image" />
-						</a>
-					</div>
-				</div> -->
+			<div class="footer__soc soc">
+				<div class="soc__icons icons">
+					<a hhref="https://github.com/Egor1496" target="_blank">
+						<img src="../img/ui-icon/git-repo.svg" alt="icon" class="icons__image" />
+					</a>
+					<a href="https://www.youtube.com/channel/UCsys6JS17c8VRV4emxQgR1A" target="_blank">
+						<img src="../img/ui-icon/youtube.svg" alt="icon" class="icons__image" />
+					</a>
+					<a href="mailto:egor1496work@mail.ru">
+						<img src="../img/ui-icon/email.svg" alt="icon" class="icons__image" />
+					</a>
+				</div>
+			</div>
 		</footer>
 		<script src="../js/libs.js"></script>
+		<script src="../js/color-theme.js" id="color-theme-json"></script>
+		<script src="../js/base.js"></script>
 		<script src="../js/pages/note.js"></script>
 	</body>
 </html>

@@ -4,12 +4,12 @@
 
 .about
 	padding-top: 50px
-	background: $section-bg
+	background: var(--section-bg)
 	// &__wrap
 	&__title
 		margin-bottom: 5px
 		font-weight: 600
-		color: $primary-color
+		color: var(--primary-color)
 	&__description
 		margin-bottom: 40px
 	@media screen and (max-width : 900px)
@@ -31,7 +31,7 @@
 		font-size: 96px
 		font-weight: 600
 		line-height: 0
-		color: $primary-color
+		color: var(--primary-color)
 	&__description
 		font-size: 24px
 	@media screen and (max-width : 900px)
@@ -52,15 +52,15 @@
 		flex-direction: column
 		padding: 10px
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
-		background-color: $low-priority-color
+		background-color: var(--low-priority-color)
 		&:hover
 			cursor: pointer
-			background-color: $primary-color
+			background-color: var(--primary-color)
 	&__title
 		font-size: 20px
 		font-weight: 600
 	&__icon
-		filter: $icon-color
+		filter: var(--icon-color)
 	@media screen and (max-width : 1080px)
 		grid-template-columns: 1fr 1fr
 		gap: 10px
@@ -83,12 +83,12 @@
 
 .services
 	padding-top: 80px
-	background: $section-bg
+	background: var(--section-bg)
 	// &__wrap
 	&__title
 		margin-bottom: 30px
 		font-weight: 600
-		color: $primary-color
+		color: var(--primary-color)
 
 .services-card
 	display: grid
@@ -105,19 +105,19 @@
 		padding: 10px
 		border-radius: 16px
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
-		border: solid 3px $light-color
+		border: solid 3px var(--light-color)
 		&:hover
 			cursor: pointer
-			border-color: $primary-color
+			border-color: var(--primary-color)
 			.services-card__title
-				color: $primary-color
+				color: var(--primary-color)
 	&__icon
 		position: absolute
 		left: 10px
 		top: 10px
 		width: 40px
 		margin-bottom: 10px
-		filter: $icon-color
+		filter: var(--icon-color)
 	&__title
 		margin-bottom: 20px
 		padding-left: 50px
