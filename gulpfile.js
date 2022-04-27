@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 	concat = require("gulp-concat"),
 	uglify = require("gulp-uglify-es").default;
 
-gulp.task("browser-sync", function () {
+gulp.task("browser-sync", () => {
 	browserSync.init({
 		server: {
 			baseDir: "app",
@@ -18,22 +18,22 @@ gulp.task("browser-sync", function () {
 	});
 });
 
-gulp.task("styles", function () {
+gulp.task("styles", () => {
 	return gulp
-		.src("sass/**/*.sass")
+		.src("app/sass/**/*.sass")
 		.pipe(sass())
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: ["last 10 versions"],
 			})
 		)
-    .pipe(cleanCSS())
-    .pipe(rename("main.min.css"))
+		.pipe(cleanCSS())
+		.pipe(rename((path) => (path.extname = ".min.css")))
 		.pipe(gulp.dest("app/css"))
 		.pipe(browserSync.stream());
 });
 
-gulp.task("scripts", function () {
+gulp.task("scripts", () => {
 	return gulp
 		.src(["app/libs/jquery/jquery-1.11.2.min.js"])
 		.pipe(concat("libs.js"))
@@ -42,13 +42,11 @@ gulp.task("scripts", function () {
 		.pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("code", function () {
-	return gulp.src("app/**/*.html").pipe(browserSync.reload({ stream: true }));
-});
+gulp.task("code", () => gulp.src("app/**/*.html").pipe(browserSync.reload({ stream: true })));
 
-gulp.task("watch", function () {
-	gulp.watch("sass/**/*.sass", gulp.parallel("styles"));
-	gulp.watch(["app/js/common.js", "app/libs/**/*.js"], gulp.parallel("scripts"));
+gulp.task("watch", () => {
+	gulp.watch("app/sass/**/*.sass", gulp.parallel("styles"));
+	gulp.watch(["app/js/*.js", "app/libs/**/*.js"], gulp.parallel("scripts"));
 	gulp.watch("app/*.html", gulp.parallel("code"));
 });
 

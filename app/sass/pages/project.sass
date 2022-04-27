@@ -1,0 +1,74 @@
+@import "../base"
+
+// project start
+
+.project
+	padding: 80px
+	background-color: $section-bg
+	// &__wrap
+	&__title
+		margin-bottom: 15px
+		font-weight: 600
+		color: $primary-color
+	&__description
+		margin-bottom: 35px
+	&__list
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		// grid-auto-rows: 1fr
+		justify-items: center
+		gap: 15px
+	@media screen and (max-width : 900px)
+		&__list
+			grid-template-columns: 1fr 1fr
+	@media screen and (max-width : 550px)
+		&__list
+			grid-template-columns: 1fr
+
+.card-project
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	max-width: 344px
+	width: 100%
+	padding: 15px
+	border-radius: 8px
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+	background-color: #31313f
+	&__image-wrap
+		margin-bottom: 15px
+		border-radius: 8px
+		background-image: linear-gradient(to bottom, rgba(24, 24, 36, 0.25) 0%, rgba(117, 98, 224, 0.5) 100%)
+		background-color: #31313f
+	&__image
+		display: block
+		max-width: 100%
+		width: 100%
+		height: auto
+	&__title
+		margin-bottom: 5px
+		font-size: 24px
+		font-weight: 600
+		color: $primary-color
+	&__description
+		margin-bottom: 25px
+	&__button-wrap
+		display: flex
+		justify-content: space-between
+		gap: 10px
+	&__button
+		max-width: 145px
+		width: 100%
+		height: 43px
+		font-size: 16px
+		font-weight: 600
+	@media screen and (max-width : 1080px)
+		&__button
+			padding: 0 15px
+	@media screen and (max-width : 900px)
+		&__title
+			font-size: 18px
+			&__description
+				font-size: 16px
+
+// project end
