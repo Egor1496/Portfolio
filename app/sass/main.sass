@@ -52,14 +52,15 @@
 		flex-direction: column
 		padding: 10px
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
-		background-color: #bdbdbd
+		background-color: $low-priority-color
 		&:hover
 			cursor: pointer
 			background-color: $primary-color
 	&__title
 		font-size: 20px
 		font-weight: 600
-	// &__icon
+	&__icon
+		filter: $icon-color
 	@media screen and (max-width : 1080px)
 		grid-template-columns: 1fr 1fr
 		gap: 10px
@@ -104,7 +105,7 @@
 		padding: 10px
 		border-radius: 16px
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
-		border: solid 3px #f5f5f5
+		border: solid 3px $light-color
 		&:hover
 			cursor: pointer
 			border-color: $primary-color
@@ -116,6 +117,7 @@
 		top: 10px
 		width: 40px
 		margin-bottom: 10px
+		filter: $icon-color
 	&__title
 		margin-bottom: 20px
 		padding-left: 50px
