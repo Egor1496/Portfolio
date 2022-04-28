@@ -133,11 +133,50 @@ h2
 			font-size: 16px
 
 .header
+	position: relative
 	&__wrap
 		width: 100%
 		height: 100%
 		display: flex
 		justify-content: space-between
+
+// hamburger start
+
+.hamburger
+	position: absolute
+	top: 50%
+	right: 10px
+	display: none
+	transform: translateY(-50%)
+	&:hover
+		cursor: pointer
+	@media screen and (max-width : 650px)
+		display: block
+	div
+		position: relative
+		width: 3em
+		height: 7px
+		border-radius: 3px
+		background-color: var(--primary-color)
+		margin-top: 8px
+		transition: all 0.3s ease-in-out
+
+#hamburger-toggle
+	display: none
+	&:checked + .hamburger .hamburger__item--top
+		transform: rotate(-45deg)
+		margin-top: 25px
+	&:checked + .hamburger .hamburger__item--bottom
+		opacity: 0
+		transform: rotate(45deg)
+	&:checked + .hamburger .hamburger__item--meat
+		transform: rotate(45deg)
+		margin-top: -7px
+
+#hamburger-toggle:checked + .hamburger + .header__wrap .nav
+	display: flex
+
+// hamburger end
 
 .logo
 	display: flex
@@ -147,10 +186,9 @@ h2
 		font-size: 28px
 		font-weight: 600
 		color: var(--primary-color)
-	@media screen and (max-width : 650px)
-		display: none
 
 .nav
+	z-index: 3
 	display: flex
 	&__list
 		display: flex
@@ -158,7 +196,15 @@ h2
 		flex-wrap: wrap
 		gap: 50px
 		list-style-type: none
-	// &__item
+		@media screen and (max-width : 900px)
+			gap: 20px
+		@media screen and (max-width : 650px)
+			display: block
+			width: 100%
+	&__item
+		@media screen and (max-width : 650px)
+			margin-bottom: 20px
+			text-align: center
 	&__link
 		font-weight: 600
 		text-decoration: none
@@ -166,14 +212,17 @@ h2
 			color: var(--primary-color)
 		&:active
 			color: var(--dark-color)
-	@media screen and (max-width : 900px)
-		&__list
-			gap: 20px
+		@media screen and (max-width : 650px)
+			font-size: 30px
 	@media screen and (max-width : 650px)
+		position: absolute
+		left: 0
+		top: 80px
+		display: none
 		width: 100%
-		&__list
-			justify-content: space-around
-			width: 100%
+		height: auto
+		padding: 30px
+		background-color: var(--darrk-bg)
 
 // Hello start
 
@@ -224,7 +273,7 @@ h2
 		margin-bottom: 20px
 		&__wrap
 			grid-template-columns: 1fr
-		&__inner_second
+		&__inner--second
 			display: none
 		&__button-wrap
 			flex-wrap: wrap

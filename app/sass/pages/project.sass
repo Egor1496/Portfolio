@@ -3,7 +3,7 @@
 // project start
 
 .project
-	padding: 80px
+	padding: 80px 0
 	background-color: var(--section-bg)
 	// &__wrap
 	&__title
@@ -15,30 +15,26 @@
 	&__list
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
-		// grid-auto-rows: 1fr
 		justify-items: center
 		gap: 15px
 	@media screen and (max-width : 900px)
 		&__list
 			grid-template-columns: 1fr 1fr
-	@media screen and (max-width : 550px)
+	@media screen and (max-width : 700px)
 		&__list
 			grid-template-columns: 1fr
 
 .card-project
-	display: flex
-	flex-direction: column
-	justify-content: space-between
 	max-width: 344px
 	width: 100%
-	padding: 15px
-	border-radius: 8px
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
-	background-color: var(--darrk-bg)
+	&__inner
+		padding: 15px
+		border-radius: 8px
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+		background-color: var(--darrk-bg)
 	&__image-wrap
 		margin-bottom: 15px
 		border-radius: 8px
-		// background-image: linear-gradient(to bottom, rgba(24, 24, 36, 0.25) 0%, rgba(117, 98, 224, 0.5) 100%)
 		background-color: var(--darrk-bg)
 	&__image
 		display: block
