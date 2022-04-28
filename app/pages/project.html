@@ -91,6 +91,17 @@
 			<!-- hell end -->
 			<!-- project start -->
 			<section id="project-section" class="project">
+				<!--
+				<a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
+					<img class="rounded" src="https://lipsum.app/id/46/200x150" />
+				</a>
+				<a data-fancybox="gallery" href="https://lipsum.app/id/47/1600x1200">
+					<img class="rounded" src="https://lipsum.app/id/47/200x150" />
+				</a>
+				<a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
+					<img class="rounded" src="https://lipsum.app/id/51/200x150" />
+				</a> -->
+				<!--  -->
 				<div class="project__wrap view-grid">
 					<h2 class="project__title">Проекты</h2>
 					<!-- <p class="project__description">
@@ -109,8 +120,18 @@
 									Сервис предназначен для упрощения рутиной работы, чтобы значительно ускорить процесс настройки рекламы в Яндекс Директ и Google Ads.
 								</p>
 								<div class="card-project__button-wrap">
-									<a href="#!" class="card-project__button button">
+									<a class="card-project__button button gallery gallery__button" data-fancybox="gallery" href="../img/project/context/min/1-min.png">
 										<span class="button__text">Смотреть</span>
+										<img src="../img/project/context/min/1-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery" href="../img/project/context/min/2-min.png">
+										<img src="../img/project/context/min/2-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery" href="../img/project/context/min/3-min.png">
+										<img src="../img/project/context/min/3-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery" href="../img/project/context/min/4-min.png">
+										<img src="../img/project/context/min/4-min.png" alt="" class="card-project__image rounded" style="display: none" />
 									</a>
 									<a href="https://context-tools.ru/negative-words" target="_blank" class="card-project__button button">
 										<span class="button__text">Сайт</span>
@@ -130,8 +151,28 @@
 									Crossout - это экшен, в котором вы сможете сами собрать бронемашину из различных деталей, а затем сражаться на ней в жарких боях.
 								</p>
 								<div class="card-project__button-wrap">
-									<a href="#!" class="card-project__button button">
+									<a
+										class="card-project__button button gallery gallery__button"
+										data-fancybox="gallery2"
+										href="../img/project/crossout-help/min/1-min.png"
+									>
 										<span class="button__text">Смотреть</span>
+										<img src="../img/project/crossout-help/min/1-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery2" href="../img/project/crossout-help/min/2-min.png">
+										<img src="../img/project/crossout-help/min/2-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery2" href="../img/project/crossout-help/min/3now-min.png">
+										<img src="../img/project/crossout-help/min/3now-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery2" href="../img/project/crossout-help/min/4-min.png">
+										<img src="../img/project/crossout-help/min/4-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery2" href="../img/project/crossout-help/min/5-min.png">
+										<img src="../img/project/crossout-help/min/5-min.png" alt="" class="card-project__image rounded" style="display: none" />
+									</a>
+									<a class="gallery__item" data-fancybox="gallery2" href="../img/project/crossout-help/min/6-min.png">
+										<img src="../img/project/crossout-help/min/6-min.png" alt="" class="card-project__image rounded" style="display: none" />
 									</a>
 								</div>
 							</div>
@@ -200,5 +241,111 @@
 		<script src="../js/color-theme.js" id="color-theme-json"></script>
 		<script src="../js/base.js"></script>
 		<script src="../js/pages/project.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+		<script>
+			Fancybox.bind('[data-fancybox="gallery"]', {
+				dragToClose: false,
+				Toolbar: false,
+				closeButton: "top",
+				Image: {
+					zoom: false,
+				},
+				on: {
+					initCarousel: (fancybox) => {
+						const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+						fancybox.$container.style.setProperty("--bg-image", `url("${slide.$thumb.src}")`);
+					},
+					"Carousel.change": (fancybox, carousel, to, from) => {
+						const slide = carousel.slides[to];
+						fancybox.$container.style.setProperty("--bg-image", `url("${slide.$thumb.src}")`);
+					},
+				},
+			});
+			Fancybox.bind('[data-fancybox="gallery2"]', {
+				dragToClose: false,
+				Toolbar: false,
+				closeButton: "top",
+				Image: {
+					zoom: false,
+				},
+				on: {
+					initCarousel: (fancybox) => {
+						const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+						fancybox.$container.style.setProperty("--bg-image", `url("${slide.$thumb.src}")`);
+					},
+					"Carousel.change": (fancybox, carousel, to, from) => {
+						const slide = carousel.slides[to];
+						fancybox.$container.style.setProperty("--bg-image", `url("${slide.$thumb.src}")`);
+					},
+				},
+			});
+		</script>
+		<style>
+			a[data-fancybox] img {
+				cursor: zoom-in;
+			}
+			.fancybox__backdrop::after {
+				content: "";
+				position: absolute;
+				width: 10%;
+				height: 10%;
+				filter: blur(2px);
+				left: 50%;
+				top: 50%;
+				transform: scale(11);
+				opacity: 0.3;
+				background-image: var(--bg-image);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			.fancybox__container {
+				--fancybox-bg: #000;
+				--fancybox-thumbs-width: 48px;
+				--fancybox-thumbs-ratio: 1;
+				--carousel-button-bg: rgb(91 78 76 / 74%);
+				--carousel-button-svg-width: 24px;
+				--carousel-button-svg-height: 24px;
+				--carousel-button-svg-stroke-width: 2.5;
+			}
+			.fancybox__nav {
+				--carousel-button-svg-width: 24px;
+				--carousel-button-svg-height: 24px;
+			}
+			.fancybox__nav .carousel__button.is-prev {
+				left: 20px;
+			}
+			.fancybox__nav .carousel__button.is-next {
+				right: 20px;
+			}
+			.carousel__button.is-close {
+				right: auto;
+				top: 20px;
+				left: 20px;
+			}
+			.fancybox__slide {
+				padding: 8px 88px;
+			}
+			/* Thumbnails */
+			.fancybox__thumbs .carousel__slide {
+				padding: 8px 8px 16px 8px;
+			}
+			.is-nav-selected::after {
+				display: none;
+			}
+			.fancybox__thumb {
+				border-radius: 6px;
+				opacity: 0.4;
+			}
+			.fancybox__thumb:hover,
+			.is-nav-selected .fancybox__thumb {
+				border-radius: 6px;
+				opacity: 1;
+			}
+			.is-nav-selected .fancybox__thumb::after {
+				display: none;
+			}
+		</style>
 	</body>
 </html>
