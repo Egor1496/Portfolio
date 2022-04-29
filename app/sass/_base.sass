@@ -53,6 +53,9 @@ h1, h2, h3, h4, h5, a, p, span
 	padding: 0
 	color: var(--base-color)
 
+a
+	text-decoration: none
+
 h2
 	font-size: 32px
 	@media screen and (max-width : 900px)
@@ -236,6 +239,18 @@ h2
 	margin-bottom: 40px
 	padding-top: 100px
 	background-color: var(--section-bg)
+	&--mini
+		padding: 20px
+		.hello__wrap
+			display: flex
+		.hello__inner
+			margin: 0
+		.hello__description
+			margin: 0
+		.hello__inner--second
+			display: flex
+			justify-content: center
+			align-items: center
 	&__wrap
 		display: grid
 		grid-template-columns: 1fr 1fr
@@ -262,7 +277,8 @@ h2
 	&__button-wrap
 		display: flex
 		gap: 30px
-	// &__button
+	&__button
+		min-width: 150px
 	@media screen and (max-width : 900px)
 		padding-top: 80px
 		&__title

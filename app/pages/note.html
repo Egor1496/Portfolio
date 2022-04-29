@@ -10,20 +10,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 		<!-- favicon start -->
-		<link type="image/png" sizes="16x16" rel="icon" href="img/favicon/ favicon-16x16.png" />
-		<link type="image/png" sizes="32x32" rel="icon" href="img/favicon/code-icon-32.png" />
-		<link type="image/png" sizes="96x96" rel="icon" href="img/favicon/code-icon-96.png" />
-		<link type="image/png" sizes="120x120" rel="icon" href="img/favicon/code-icon-120.png" />
-		<link type="image/png" sizes="192x192" rel="icon" href="img/favicon/code-icon-192.png" />
-		<link sizes="57x57" rel="apple-touch-icon" href="img/favicon/code-icon-57.png" />
-		<link sizes="60x60" rel="apple-touch-icon" href="img/favicon/code-icon-60.png" />
-		<link sizes="72x72" rel="apple-touch-icon" href="img/favicon/code-icon-72.png" />
-		<link sizes="76x76" rel="apple-touch-icon" href="img/favicon/code-icon-76.png" />
-		<link sizes="114x114" rel="apple-touch-icon" href="img/favicon/img/favicon/code-icon-114.png" />
-		<link sizes="120x120" rel="apple-touch-icon" href="img/favicon/code-icon-120.png" />
-		<link sizes="144x144" rel="apple-touch-icon" href="img/favicon/code-icon-144.png" />
-		<link sizes="152x152" rel="apple-touch-icon" href="img/favicon/code-icon-152.png" />
-		<link sizes="180x180" rel="apple-touch-icon" href="img/favicon/code-icon-180.png" />
+		<link type="image/png" sizes="16x16" rel="icon" href="../img/favicon/ favicon-16x16.png" />
+		<link type="image/png" sizes="32x32" rel="icon" href="../img/favicon/code-icon-32.png" />
+		<link type="image/png" sizes="96x96" rel="icon" href="../img/favicon/code-icon-96.png" />
+		<link type="image/png" sizes="120x120" rel="icon" href="../img/favicon/code-icon-120.png" />
+		<link type="image/png" sizes="192x192" rel="icon" href="../img/favicon/code-icon-192.png" />
+		<link sizes="57x57" rel="apple-touch-icon" href="../img/favicon/code-icon-57.png" />
+		<link sizes="60x60" rel="apple-touch-icon" href="../img/favicon/code-icon-60.png" />
+		<link sizes="72x72" rel="apple-touch-icon" href="../img/favicon/code-icon-72.png" />
+		<link sizes="76x76" rel="apple-touch-icon" href="../img/favicon/code-icon-76.png" />
+		<link sizes="114x114" rel="apple-touch-icon" href="../img/favicon/code-icon-114.png" />
+		<link sizes="120x120" rel="apple-touch-icon" href="../img/favicon/code-icon-120.png" />
+		<link sizes="144x144" rel="apple-touch-icon" href="../img/favicon/code-icon-144.png" />
+		<link sizes="152x152" rel="apple-touch-icon" href="../img/favicon/code-icon-152.png" />
+		<link sizes="180x180" rel="apple-touch-icon" href="../img/favicon/code-icon-180.png" />
 		<!-- favicon end -->
 
 		<link rel="stylesheet" href="../css/fonts.css" />
@@ -57,24 +57,27 @@
 						<li class="nav__item">
 							<a href="project.html" class="nav__link">Проекты</a>
 						</li>
-						<!-- <li class="nav__item">
-							<a href="note.html" class="nav__link">Заметки</a>
+						<li class="nav__item nav__item--active">
+							<a href="note.html" class="nav__link">Полезности</a>
 						</li>
+						<!--
 						<li class="nav__item">
 							<a href="pet.html" class="nav__link">UI шаблоны</a>
-						</li> -->
+						</li>
+						-->
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main class="page__main">
 			<!-- hello start -->
-			<section class="hello">
+			<section class="hello hello--mini">
 				<div class="hello__wrap view-grid">
-					<div class="hello__inner hello__inner--first">
-						<p class="hello__title">Привет! я</p>
+					<div class="hello__inner">
 						<h1 class="hello__main-title">Egor1496</h1>
 						<p class="hello__description">Фрилансер, Front-end разработчик & Верстальщик сайтов.</p>
+					</div>
+					<div class="hello__inner hello__inner--second">
 						<div class="hello__button-wrap">
 							<a href="project.html#project-section" class="hello__button button">
 								<span class="button__text">Проекты</span>
@@ -90,16 +93,185 @@
 							</a>
 						</div>
 					</div>
-					<div class="hello__inner hello__inner--second">
-						<div class="author">
-							<div class="author__ellipse">
-								<img src="../img/project/crossout-help/prev.png" alt="" class="author__img" />
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
-			<!-- hell end -->
+			<!-- hello end -->
+			<!-- note start -->
+			<section class="note">
+				<div class="note__wrap view-grid">
+					<h2 class="note__title">Полезности</h2>
+					<p class="note__description">Список полезных ресурсов для разработки.</p>
+					<div class="note__item-list list">
+						<p class="list__title">Cтатьи:</p>
+						<a href="https://habr.com/ru/all/" target="_blank" class="note__item item">
+							<p class="item__title">Хабр</p>
+							<p class="item__description">
+								Крупнейший в Европе ресурс для IT-специалистов. Сюда приходят обсудить новости индустрии и поделиться опытом.
+							</p>
+						</a>
+						<a href="https://html5book.ru/html-html5/" target="_blank" class="note__item item">
+							<p class="item__title">HTML5 book</p>
+							<p class="item__description">
+								Основы языка HTML. Таблица тегов и атрибутов. Всё про HTML-таблицы, списки, карты-изображения, спецсимволы, HTML5-видео и аудио,
+								HTML5-формы.
+							</p>
+						</a>
+						<a href="https://learn.javascript.ru/" target="_blank" class="note__item item">
+							<p class="item__title">Современный учебник JavaScript</p>
+							<p class="item__description">
+								Перед вами учебник по JavaScript, начиная с основ, включающий в себя много тонкостей и фишек JavaScript/DOM.
+							</p>
+						</a>
+						<a href="https://reactdev.ru/libs/react-router/" target="_blank" class="note__item item">
+							<p class="item__title">Справочник React</p>
+							<p class="item__description">Справочник web-разработчика с примерами кода - React</p>
+						</a>
+						<a href="https://liquidhub.ru/blogs/blog/html-verstka" target="_blank" class="note__item item">
+							<p class="item__title">HTML-верстка</p>
+							<p class="item__description">Xто это такое и какие основные правила процесса</p>
+						</a>
+					</div>
+					<div class="note__item-list list">
+						<p class="list__title">Шпаргалки:</p>
+						<a href="https://tpverstak.ru/" target="_blank" class="note__item item">
+							<p class="item__title">Типичный Верстальщик</p>
+							<p class="item__description">Полезный проект для верстальщиков и фронтенд-разработчиков</p>
+						</a>
+						<a href="https://tretyakov.net/post/shpargalka-po-komandam-git" target="_blank" class="note__item item">
+							<p class="item__title">tretyakov.net</p>
+							<p class="item__description">Шпаргалка по командам Git</p>
+						</a>
+						<a href="https://recommend.maxgraph.ru/" target="_blank" class="note__item item">
+							<p class="item__title">HTML-код</p>
+							<p class="item__description">Рекомендации по верстке сайта. Проверка валидности, семантики, кодировки и т.д.</p>
+						</a>
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title">Код-стайл</p>
+							<!-- <p class="item__description"></p> -->
+						</a>
+						<a href="https://webref.ru/" target="_blank" class="note__item item">
+							<p class="item__title">WebReference</p>
+							<p class="item__description">Руководства по веб-технологиям, учебные курсы, справочник HTML/CSS.</p>
+						</a>
+						<a href="https://habr.com/ru/company/ruvds/blog/599929/" target="_blank" class="note__item item">
+							<p class="item__title">RUVDS.com</p>
+							<p class="item__description">30 команд Git, необходимых для освоения интерфейса командной строки Git</p>
+						</a>
+						<a href="https://jquery-docs.ru/" target="_blank" class="note__item item">
+							<p class="item__title">Русская документация по API jQuery</p>
+							<p class="item__description">jQuery это быстрая, небольшая и богатая возможностями JavaScript библиотека.</p>
+						</a>
+						<a href="https://webdesign-master.ru/blog/docs/gulp-documentation.html" target="_blank" class="note__item item">
+							<p class="item__title">WebDesign Master</p>
+							<p class="item__description">Документация Gulp на русском</p>
+						</a>
+						<a href="https://doka.guide/about/" target="_blank" class="note__item item">
+							<p class="item__title">Дока</p>
+							<p class="item__description">Дока — это добрый справочник для веб-разработчиков. Это место, где аккумулируются знания сообщества</p>
+						</a>
+						<a href="https://tpverstak.ru/grid/" target="_blank" class="note__item item">
+							<p class="item__title">Шпаргалка по Grid CSS</p>
+							<!-- <p class="item__description"></p> -->
+						</a>
+					</div>
+					<div class="note__item-list list">
+						<p class="list__title">Валидаторы:</p>
+						<a href="https://validator.w3.org/" target="_blank" class="note__item item">
+							<p class="item__title">W3C-HTML</p>
+							<p class="item__description">Validation Service</p>
+						</a>
+						<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="note__item item">
+							<p class="item__title">W3C-CSS</p>
+							<p class="item__description">Validation Service</p>
+						</a>
+						<a href="https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect&hl=ru" target="_blank" class="note__item item">
+							<p class="item__title">PageSpeed Insights</p>
+							<p class="item__description">Узнайте, как ускорить загрузку своих страниц на любых устройствах.</p>
+						</a>
+						<a href="https://gtmetrix.com/" target="_blank" class="note__item item">
+							<p class="item__title">GTmetrix</p>
+							<p class="item__description">
+								Посмотрите, как работает ваш сайт, узнайте, почему он работает медленно, и откройте для себя возможности оптимизации.
+							</p>
+						</a>
+						<a href="https://tools.pingdom.com/" target="_blank" class="note__item item">
+							<p class="item__title">Pingdom Website Speed Test</p>
+							<p class="item__description">Тест предназначен для того, чтобы помочь сделать ваш сайт быстрее</p>
+						</a>
+						<a href="https://sitechecker.pro/ru/" target="_blank" class="note__item item">
+							<p class="item__title">SEO-анализ</p>
+							<p class="item__description">
+								Sitechecker проведет SEO-аудит сайта, найдет ошибки, точки роста и подготовит список задач для увеличения органического трафика из
+								поисковых систем.
+							</p>
+						</a>
+						<a href="https://search.google.com/test/mobile-friendly" target="_blank" class="note__item item">
+							<p class="item__title">Проверка оптимизации для мобильных</p>
+							<p class="item__description">
+								Оптимизирована ли ваша страница для мобильных устройств? Проверьте, удобно ли просматривать страницу на мобильном устройстве.
+							</p>
+						</a>
+						<a href="https://www.whatsmyip.org/http-compression-test/" target="_blank" class="note__item item">
+							<p class="item__title">HTTP Compression Test</p>
+							<p class="item__description">Этот инструмент проверяет ваш сервер, чтобы увидеть, отправляет ли он сжатые данные.</p>
+						</a>
+						<a href="http://iloveadaptive.com/ru/" target="_blank" class="note__item item">
+							<p class="item__title">iloveadaptive</p>
+							<p class="item__description">Посмотрите как выглядит сайт на разных устройствах</p>
+						</a>
+						<a href="https://jsonlint.com/" target="_blank" class="note__item item">
+							<p class="item__title">JSONLint</p>
+							<p class="item__description">JSONLint-это валидатор и переформатер для JSON, облегченного формата обмена данными.</p>
+						</a>
+						<a href="https://www.artlebedev.ru/orfograf/" target="_blank" class="note__item item">
+							<p class="item__title">Орфограф</p>
+							<p class="item__description">Программа подготовки текстов для публикации на вебе</p>
+						</a>
+						<a href="https://rustxt.ru/check-spelling" target="_blank" class="note__item item">
+							<p class="item__title">RusTXT</p>
+							<p class="item__description">Проверка орфографии и пунктуации</p>
+						</a>
+						<a href="https://www.artlebedev.ru/typograf/" target="_blank" class="note__item item">
+							<p class="item__title">- Это "Типограф"?</p>
+							<p class="item__description">Проверяет правописание на русском и английском, отдельные тексты или целые веб-страницы</p>
+						</a>
+					</div>
+					<!-- <div class="note__item-list list">
+						<p class="list__title">Генераторы:</p>
+						<div class="note__item item">
+							<p class="item__title">Lorem ipsum dolor sit amet.</p>
+							<p class="item__description">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facere illum amet possimus dolor hic quas laborum quia fugit esse?
+							</p>
+						</div>
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title">Lorem ipsum dolor sit amet.</p>
+							<p class="item__description">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facere illum amet possimus dolor hic quas laborum quia fugit esse?
+							</p>
+						</a>
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title">Lorem ipsum dolor sit amet.</p>
+							<p class="item__description">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facere illum amet possimus dolor hic quas laborum quia fugit esse?
+							</p>
+						</a>
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title">Lorem ipsum dolor sit amet.</p>
+							<p class="item__description">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facere illum amet possimus dolor hic quas laborum quia fugit esse?
+							</p>
+						</a>
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title">Lorem ipsum dolor sit amet.</p>
+							<p class="item__description">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos facere illum amet possimus dolor hic quas laborum quia fugit esse?
+							</p>
+						</a>
+					</div> -->
+				</div>
+			</section>
+			<!-- note end -->
 			<!-- contact start -->
 			<section id="contact-section" class="contact">
 				<div class="contact__wrap view-grid">

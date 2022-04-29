@@ -2,7 +2,7 @@ var colorThemeList = [
 	[
 		"--base-color: #fff",
 		"--light-color: #F5F5F5",
-		"--low-priority-color: #848191",
+		"--low-priority-color: #4c4a58",
 		"--primary-color: #7562E0",
 		"--secondary-color: #282162",
 		"--dark-color: #000036",
@@ -24,7 +24,7 @@ var colorThemeList = [
 	[
 		"--base-color: #ffffff",
 		"--light-color: #f5f5f5",
-		"--low-priority-color: #819191",
+		"--low-priority-color: #305a5a",
 		"--primary-color: #e09f62",
 		"--secondary-color: #623321",
 		"--dark-color: #2a0036",
@@ -35,7 +35,7 @@ var colorThemeList = [
 	[
 		"--base-color: #ffffff",
 		"--light-color: #f5f5f5",
-		"--low-priority-color: #819191",
+		"--low-priority-color: #2f4646",
 		"--primary-color: #959f3c",
 		"--secondary-color: #21623a",
 		"--dark-color: #033600",
