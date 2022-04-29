@@ -52,6 +52,8 @@ h1, h2, h3, h4, h5, a, p, span
 	margin: 0
 	padding: 0
 	color: var(--base-color)
+	&::selection
+		background: var(--low-priority-color)
 
 a
 	text-decoration: none
@@ -84,6 +86,7 @@ h2
 	border: solid 2px var(--primary-color)
 	text-decoration: none
 	background-color: transparent
+	transition: all .3s ease-out
 	&--max-wigth
 		max-width: none
 		width: 100%
@@ -101,6 +104,15 @@ h2
 		width: 20px
 		height: 20px
 		filter: var(--icon-color)
+	&--disabled
+		opacity: .5
+		background-color: transparent
+		&:hover
+			cursor: no-drop
+			background-color: transparent
+		&:active
+			cursor: no-drop
+			background-color: transparent
 	@media screen and (max-width : 900px)
 		font-size: 16px
 		// &:hover
@@ -189,7 +201,7 @@ h2
 	align-self: center
 	&__link
 		text-decoration: none
-		font-size: 28px
+		font-size: 40px
 		font-weight: 600
 		color: var(--primary-color)
 
@@ -208,16 +220,20 @@ h2
 			display: block
 			width: 100%
 	&__item
+		&--active
+			.nav__link
+				color: var(--primary-color)
 		@media screen and (max-width : 650px)
 			margin-bottom: 20px
 			text-align: center
 	&__link
 		font-weight: 600
 		text-decoration: none
+		transition: all .1s ease-out
 		&:hover
 			color: var(--primary-color)
 		&:active
-			color: var(--dark-color)
+			color: var(--primary-color)
 		@media screen and (max-width : 650px)
 			font-size: 30px
 	@media screen and (max-width : 650px)

@@ -22,6 +22,8 @@
 	flex-wrap: wrap
 	&__experiens
 		margin-bottom: 50px
+		@media screen and (max-width : 900px)
+			margin-bottom: 0
 
 .experiens
 	display: flex
@@ -29,6 +31,8 @@
 	width: 100%
 	padding: 50px 0
 	gap: 20px
+	@media screen and (max-width : 900px)
+		padding: 20px 0
 	&__time
 		font-size: 96px
 		font-weight: 600
@@ -38,9 +42,6 @@
 			font-size: 55px
 	&__description
 		font-size: 24px
-	@media screen and (max-width : 900px)
-		&__description
-			font-size: 16px
 
 .card-list
 	display: grid
@@ -83,8 +84,7 @@
 // services start
 
 .services
-	padding-top: 80px
-	padding-bottom: 50px
+	padding: 50px
 	margin-bottom: 50px
 	background: var(--section-bg)
 	// &__wrap
@@ -131,6 +131,8 @@
 	&__description
 		margin-left: 2px
 		font-size: 17px
+	@media screen and (max-width : 1040px)
+		grid-template-columns: 1fr 1fr 1fr
 	@media screen and (max-width : 900px)
 		grid-template-columns: 1fr 1fr
 		&__title

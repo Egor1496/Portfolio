@@ -25,24 +25,45 @@
 		padding-top: 40px
 		margin-top: 20px
 		gap: 10px
+		@media screen and (max-width : 900px)
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		@media screen and (max-width : 700px)
+			grid-template-columns: 1fr 1fr 1fr
+		@media screen and (max-width : 700px)
+			grid-template-columns: 1fr 1fr
+		@media screen and (max-width : 400px)
+			grid-template-columns: 1fr
 		&__title
 			position: absolute
 			top: 5px
 			font-size: 25px
 			color: var(--primary-color)
 	.item
+		position: relative
 		padding: 10px
 		background-color: var(--low-priority-color)
+		transition: all .3s ease-out
 		&:hover
 			cursor: pointer
 			background-color: var(--primary-color)
 			.item__title
-				color: var(--base-color)
+				color: var(--low-priority-color)
+			.item__description
+				color: var(--low-priority-color)
 		&__title
 			margin-bottom: 10px
 			font-size: 20px
-			font-weight: 900
+			font-weight: 700
 			line-height: 1.2rem
 			color: var(--primary-color)
 		&__description
+			position: relative
+			z-index: 2
 			font-size: 16px
+		&__favicon
+			position: absolute
+			z-index: 1
+			bottom: 5px
+			right: 5px
+			max-width: 50px
+			opacity: .4
