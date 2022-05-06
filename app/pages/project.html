@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
 	@@include("../blocks/head.html", { "favicon": "../", "libs": "../css/libs/normalize.min.css", "css": "../css/pages/project.min.css" })
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 	<body class="page__body">
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -116,8 +117,10 @@
 			<!-- project end -->
 			@@include("../blocks/contact.html", {"social": "../"})
 		</main>
+		@@include("../blocks/footer.html", { "social": "../" })
+		<script src="../js/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-		@@include("../blocks/footer.html", { "social": "../", "libs": "../js/libs.min.js", "theme": "../js/color-theme.min.js", "base":
-		"../js/base.min.js", "page": "../js/pages/project.min.js" })
+		<script src="../js/main.min.js"></script>
+		<script src="../js/pages/project.min.js"></script>
 	</body>
 </html>

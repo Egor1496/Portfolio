@@ -39,7 +39,10 @@
 			<!-- hello end -->
 			@@include("../blocks/contact.html", {"social": "../"})
 		</main>
-		@@include("../blocks/footer.html", { "social": "../", "libs": "../js/libs.min.js", "theme": "../js/color-theme.min.js", "base":
-		"../js/base.min.js", "page": "../js/pages/pet.min.js" })
+		@@include("../blocks/footer.html", { "social": "../"})
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+		<script src="../js/main.min.js"></script>
+		<script src="../js/pages/pet.min.js"></script>
 	</body>
 </html>
