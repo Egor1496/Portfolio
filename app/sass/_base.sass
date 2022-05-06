@@ -1,5 +1,5 @@
 :root
-	--base-color: #282162
+	--base-color: #010104
 	--light-color: #282162
 	--low-priority-color: #282162
 	--primary-color: #282162
@@ -48,6 +48,9 @@
 *, *:after, *:before
 	box-sizing: border-box
 
+body
+	overflow-x: hidden
+
 h1, h2, h3, h4, h5, a, p, span
 	margin: 0
 	padding: 0
@@ -82,11 +85,11 @@ h2
 	width: 100%
 	min-height: 48px
 	gap: 6px
-	border-radius: 8px
+	border-radius: var(--button-radius)
 	border: solid 2px var(--primary-color)
 	text-decoration: none
 	background-color: transparent
-	transition: all .3s ease-out
+	transition: background .3s ease-out
 	&--max-wigth
 		max-width: none
 		width: 100%
@@ -220,6 +223,9 @@ h2
 			display: block
 			width: 100%
 	&__item
+		&:hover
+			transform: scale(1.1)
+			transition: transform .1s ease-out
 		&--active
 			.nav__link
 				color: var(--primary-color)
@@ -229,7 +235,7 @@ h2
 	&__link
 		font-weight: 600
 		text-decoration: none
-		transition: all .1s ease-out
+		transition: color .1s ease-out
 		&:hover
 			color: var(--primary-color)
 		&:active

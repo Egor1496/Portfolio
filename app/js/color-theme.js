@@ -9,6 +9,7 @@ var colorThemeList = [
 		"--section-bg: #1a1a29",
 		"--darrk-bg: #181824",
 		"--icon-color: none;",
+		"--button-radius: 0px",
 	],
 	[
 		"--base-color: #ffffff",
@@ -20,6 +21,7 @@ var colorThemeList = [
 		"--section-bg: #1e291a",
 		"--darrk-bg: #1a2418",
 		"--icon-color: none;",
+		"--button-radius: 5px",
 	],
 	[
 		"--base-color: #ffffff",
@@ -31,6 +33,7 @@ var colorThemeList = [
 		"--section-bg: #1b1a29",
 		"--darrk-bg: #241818",
 		"--icon-color: none;",
+		"--button-radius: 10px",
 	],
 	[
 		"--base-color: #ffffff",
@@ -42,6 +45,7 @@ var colorThemeList = [
 		"--section-bg: #1b291a",
 		"--darrk-bg: #222418",
 		"--icon-color: none;",
+		"--button-radius: 20px",
 	],
 	[
 		"--base-color: #000000",
@@ -53,6 +57,7 @@ var colorThemeList = [
 		"--section-bg: #a3a1c8",
 		"--darrk-bg: #d0b5b5",
 		"--icon-color: invert(100%)",
+		"--button-radius: 20px",
 	],
 	[
 		"--base-color: #000000",
@@ -64,5 +69,6 @@ var colorThemeList = [
 		"--section-bg: #c2f08b",
 		"--darrk-bg: #fff3f3",
 		"--icon-color: invert(60%)",
+		"--button-radius: 20px",
 	],
 ];

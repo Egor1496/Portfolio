@@ -1,37 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
-	<head>
-		<meta charset="utf-8" />
-
-		<title>Egor1496 портфолио</title>
-
-		<meta name="description" content="" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-		<!-- favicon start -->
-		<link type="image/png" sizes="16x16" rel="icon" href="../img/favicon/ favicon-16x16.png" />
-		<link type="image/png" sizes="32x32" rel="icon" href="../img/favicon/code-icon-32.png" />
-		<link type="image/png" sizes="96x96" rel="icon" href="../img/favicon/code-icon-96.png" />
-		<link type="image/png" sizes="120x120" rel="icon" href="../img/favicon/code-icon-120.png" />
-		<link type="image/png" sizes="192x192" rel="icon" href="../img/favicon/code-icon-192.png" />
-		<link sizes="57x57" rel="apple-touch-icon" href="../img/favicon/code-icon-57.png" />
-		<link sizes="60x60" rel="apple-touch-icon" href="../img/favicon/code-icon-60.png" />
-		<link sizes="72x72" rel="apple-touch-icon" href="../img/favicon/code-icon-72.png" />
-		<link sizes="76x76" rel="apple-touch-icon" href="../img/favicon/code-icon-76.png" />
-		<link sizes="114x114" rel="apple-touch-icon" href="../img/favicon/code-icon-114.png" />
-		<link sizes="120x120" rel="apple-touch-icon" href="../img/favicon/code-icon-120.png" />
-		<link sizes="144x144" rel="apple-touch-icon" href="../img/favicon/code-icon-144.png" />
-		<link sizes="152x152" rel="apple-touch-icon" href="../img/favicon/code-icon-152.png" />
-		<link sizes="180x180" rel="apple-touch-icon" href="../img/favicon/code-icon-180.png" />
-		<!-- favicon end -->
-
-		<link rel="stylesheet" href="../css/fonts.css" />
-		<link rel="stylesheet" href="../css/libs/normalize.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-		<link rel="stylesheet" href="../css/pages/project.min.css" />
-	</head>
-
+	@@include("../blocks/head.html", { "favicon": "../", "libs": "../css/libs/normalize.min.css", "css": "../css/pages/project.min.css" })
 	<body class="page__body">
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -39,37 +8,8 @@
 			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 			<script src="libs/respond/respond.min.js"></script>
 		<![endif]-->
-		<header class="page__header header">
-			<input type="checkbox" id="hamburger-toggle" />
-			<label for="hamburger-toggle" class="hamburger">
-				<div class="hamburger__item hamburger__item--top"></div>
-				<div class="hamburger__item hamburger__item--meat"></div>
-				<div class="hamburger__item hamburger__item--bottom"></div>
-			</label>
-			<div class="header__wrap view-grid">
-				<div class="logo">
-					<a href="#!" class="logo__link">Egor1496</a>
-				</div>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a href="../index.html" class="nav__link">Обо мне</a>
-						</li>
-						<li class="nav__item nav__item--active">
-							<a href="project.html" class="nav__link">Проекты</a>
-						</li>
-						<li class="nav__item">
-							<a href="note.html" class="nav__link">Полезности</a>
-						</li>
-						<!--
-						<li class="nav__item">
-							<a href="pet.html" class="nav__link">UI шаблоны</a>
-						</li>
-						-->
-					</ul>
-				</nav>
-			</div>
-		</header>
+		@@include("../blocks/header.html", { "about": "../index.html", "project": "../pages/project.html", "note": "../pages/note.html", "pet":
+		"../pages/pet.html" })
 		<main class="page__main">
 			<!-- hello start -->
 			<section class="hello hello--mini">
@@ -174,66 +114,10 @@
 				</div>
 			</section>
 			<!-- project end -->
-			<!-- contact start -->
-			<section id="contact-section" class="contact">
-				<div class="contact__wrap view-grid">
-					<div class="contact__inner">
-						<div class="contact__soc soc">
-							<h3 class="soc__title">Контактная информация</h3>
-							<p class="soc__description">Социальные сети</p>
-							<div class="soc__icons icons">
-								<a href="https://github.com/Egor1496" class="icons__link">
-									<img src="../img/ui-icon/git-repo.svg" alt="icon" class="icons__image" />
-								</a>
-								<a href="https://www.youtube.com/channel/UCsys6JS17c8VRV4emxQgR1A" class="icons__link">
-									<img src="../img/ui-icon/youtube.svg" alt="icon" class="icons__image" />
-								</a>
-								<a href="mailto:egor1496work@mail.ru" class="icons__link">
-									<img src="../img/ui-icon/email.svg" alt="icon" class="icons__image" />
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="contact__inner">
-						<div class="contact__form">
-							<form action="" class="form">
-								<h2 class="form__title">Отправьте сообщение на почту</h2>
-								<input type="text" placeholder="Имя:" readonly class="form__input" />
-								<input type="text" placeholder="Email-почта:" readonly class="form__input" />
-								<input type="text" placeholder="Сообщение:" readonly class="form__input" />
-								<button class="form__button button button--disabled" disabled>
-									<span class="button__text">Отправить</span>
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- contact end -->
+			@@include("../blocks/contact.html", {"social": "../"})
 		</main>
-		<footer class="page__footer footer view-grid">
-			<div class="footer__list">
-				<span class="footer__item">@2022 Egor1496</span>
-				<span class="footer__item">Front-end developer</span>
-			</div>
-			<div class="footer__soc soc">
-				<div class="soc__icons icons">
-					<a href="https://github.com/Egor1496" target="_blank">
-						<img src="../img/ui-icon/git-repo.svg" alt="icon" class="icons__image" />
-					</a>
-					<a href="https://www.youtube.com/channel/UCsys6JS17c8VRV4emxQgR1A" target="_blank">
-						<img src="../img/ui-icon/youtube.svg" alt="icon" class="icons__image" />
-					</a>
-					<a href="mailto:egor1496work@mail.ru">
-						<img src="../img/ui-icon/email.svg" alt="icon" class="icons__image" />
-					</a>
-				</div>
-			</div>
-		</footer>
-		<script src="../js/libs.js"></script>
-		<script src="../js/color-theme.js" id="color-theme-json"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-		<script src="../js/base.js"></script>
-		<script src="../js/pages/project.js"></script>
+		@@include("../blocks/footer.html", { "social": "../", "libs": "../js/libs.min.js", "theme": "../js/color-theme.min.js", "base":
+		"../js/base.min.js", "page": "../js/pages/project.min.js" })
 	</body>
 </html>
