@@ -42,9 +42,16 @@
 				<div class="note__wrap view-grid">
 					<h2 class="note__title">Полезности</h2>
 					<p class="note__description">Список полезных ресурсов для разработки.</p>
-					<div class="note__item-list list">
-						<p class="list__title">Cтатьи:</p>
-						<a href="https://habr.com/ru/all/" target="_blank" class="note__item item">
+					<template id="template-note-item">
+						<a href="" target="_blank" class="note__item item">
+							<p class="item__title"></p>
+							<p class="item__description"></p>
+							<img src="" class="item__favicon" />
+						</a>
+					</template>
+			<!-- <div class="note__item-list list">
+						 <p class="list__title">Cтатьи:</p>
+						 <a href="https://habr.com/ru/all/" target="_blank" class="note__item item">
 							<p class="item__title">Хабр</p>
 							<p class="item__description">
 								Крупнейший в Европе ресурс для IT-специалистов. Сюда приходят обсудить новости индустрии и поделиться опытом.
@@ -96,7 +103,7 @@
 						</a>
 						<a href="https://codeguide.maxgraph.ru/" target="_blank" class="note__item item">
 							<p class="item__title">Код-стайл</p>
-							<!-- <p class="item__description"></p> -->
+							<p class="item__description"></p>
 							<img src="https://codeguide.maxgraph.ru/img/logo.png" class="item__favicon" />
 						</a>
 						<a href="https://webref.ru/" target="_blank" class="note__item item">
@@ -126,7 +133,7 @@
 						</a>
 						<a href="https://tpverstak.ru/grid/" target="_blank" class="note__item item">
 							<p class="item__title">Шпаргалка по Grid CSS</p>
-							<!-- <p class="item__description"></p> -->
+						 <p class="item__description"></p>
 							<img src="https://tpverstak.ru/wp-content/uploads/2018/03/cropped-favicon-180x180.png" class="item__favicon" />
 						</a>
 					</div>
@@ -209,7 +216,7 @@
 							<p class="item__title">- Это "Типограф"?</p>
 							<p class="item__description">Проверяет правописание на русском и английском, отдельные тексты или целые веб-страницы</p>
 							<img src="https://img.artlebedev.ru/icons/favicon-set.ico" class="item__favicon" />
-						</a>
+						</a> -->
 					</div>
 				</div>
 			</section>
