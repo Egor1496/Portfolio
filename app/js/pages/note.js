@@ -201,7 +201,7 @@ $(document).ready(() => {
 		);
 		for (let i = 0; i < noteList[key].length; i++) {
 			const $clone = $($.parseHTML(template.innerHTML));
-			$clone.find("a").attr("href", noteList[key][i].href);
+			$clone.attr("href", noteList[key][i].href);
 			$clone.find(".item__title").text(noteList[key][i].title);
 			$clone.find(".item__description").text(noteList[key][i].description);
 			$clone.find("img").attr("src", noteList[key][i].src);
