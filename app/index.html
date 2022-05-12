@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
-	@@include("blocks/head.html", { "prefix": "", "libs": "css/libs/normalize.min.css", "css": "css/pages/about.min.css" })
+	@@include("blocks/head.html", { "prefix": ".", "libs": "css/libs/normalize.min.css", "css": "css/pages/about.min.css" })
 	<body class="page__body">
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -134,9 +134,9 @@
 				</div>
 			</section>
 			<!-- services end -->
-			@@include("blocks/contact.html", {"prefix": ""})
+			@@include("blocks/contact.html", {"prefix": "."})
 		</main>
-		@@include("blocks/footer.html", { "prefix": "" })
+		@@include("blocks/footer.html", { "prefix": "." })
 		<script src="js/jquery.min.js"></script>
 		<script src="js/main.min.js"></script>
 		<script src="js/pages/about.min.js"></script>
