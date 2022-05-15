@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
 	@@include("../blocks/head.html", { "prefix": "..", "libs": "../css/libs/normalize.min.css", "css": "../css/pages/note.min.css" })
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	<body class="page__body">
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -12,7 +13,7 @@
 		"../pages/pet.html" })
 		<main class="page__main">
 			<!-- hello start -->
-			<section class="hello hello--mini">
+			<section class="hello hello--mini section">
 				<div class="hello__wrap view-grid">
 					<div class="hello__inner">
 						<h1 class="hello__main-title">Egor1496</h1>
@@ -56,6 +57,7 @@
 		</main>
 		@@include("../blocks/footer.html", { "prefix": ".." })
 		<script src="../js/jquery.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="../js/main.min.js"></script>
 		<script src="../js/pages/note.min.js"></script>
 	</body>

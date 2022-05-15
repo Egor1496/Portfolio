@@ -8,6 +8,14 @@
 	--section-bg: #282162
 	--darrk-bg: #282162
 	--icon-color: none
+	--button-radius: 5px
+	--text-shadow-button: 2px 2px 4px var(--primary-color)
+	--box-shadow-button: 0px 0px 3px var(--primary-color)
+	--text-shadow-title: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color)
+	--text-shadow-big: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color), 3px 3px var(--low-priority-color), 4px 4px var(--low-priority-color), 5px 5px var(--low-priority-color), 6px 6px var(--low-priority-color), 7px 7px 2px var(--low-priority-color)
+	--text-shadow-nav: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color), 3px 3px var(--low-priority-color), 4px 4px var(--low-priority-color)
+	--section-pattern: linear-gradient(63deg, rgba(100, 100, 100, .05) 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, rgba(100, 100, 100, .05) 78%), linear-gradient(63deg, transparent 34%, rgba(100, 100, 100, .05) 38%, rgba(100, 100, 100, .05) 58%, transparent 62%), rgba(100, 100, 100, .05)
+	--section-pattern-size: 16px 48px
 
 @media only screen and (max-width : 768px)
 .animated
@@ -63,6 +71,7 @@ a
 
 h2
 	font-size: 32px
+	text-shadow: var(--text-shadow-title)
 	@media screen and (max-width : 900px)
 		font-size: 24px
 
@@ -72,7 +81,39 @@ h2
 	margin: 0 auto
 	padding: 0 20px
 
+section
+	position: relative
+	padding: 100px 0
+	background: var(--section-pattern)
+	background-size: var(--section-pattern-size)
+
+.section_wave
+	position: absolute
+	left: -150%
+	z-index: 2
+	width: 300%
+	height: 50px
+	&--top
+		bottom: 0px
+	&--bottom
+		top: -4px
+		transform: rotate(180deg)
+	svg
+		animation: move-section 10s linear infinite
+		width: 100%
+		height: 100%
+
 // base end
+
+// animation start
+
+@keyframes move-section
+	from
+		transform: translate(300px, 0%)
+	to
+		transform: translate(-300px, 0%)
+
+// animation end
 
 // elemets start
 
@@ -85,11 +126,13 @@ h2
 	width: 100%
 	min-height: 48px
 	gap: 6px
+	background-color: var(--section-bg)
 	border-radius: var(--button-radius)
 	border: solid 2px var(--primary-color)
 	text-decoration: none
-	background-color: transparent
 	transition: background .3s ease-out
+	text-shadow: var(--text-shadow-button)
+	box-shadow: var(--box-shadow-button)
 	&--max-wigth
 		max-width: none
 		width: 100%
@@ -207,6 +250,7 @@ h2
 		font-size: 40px
 		font-weight: 600
 		color: var(--primary-color)
+		text-shadow: var(--text-shadow-big)
 
 .nav
 	z-index: 3
@@ -235,6 +279,7 @@ h2
 	&__link
 		font-weight: 600
 		text-decoration: none
+		text-shadow: var(--text-shadow-nav)
 		transition: color .1s ease-out
 		&:hover
 			color: var(--primary-color)
@@ -258,7 +303,6 @@ h2
 	display: flex
 	align-items: end
 	overflow: hidden
-	margin-bottom: 40px
 	padding-top: 100px
 	background-color: var(--section-bg)
 	&--mini
@@ -320,30 +364,31 @@ h2
 			flex-wrap: wrap
 		&__button
 			width: 120px
+	.section_wave
+		height: 20px
 
 .author
 	position: relative
+	z-index: 1
 	&__ellipse
 		position: absolute
 		right: 0
-		top: 0
+		top: -20px
 		width: 486px
 		height: 486px
-		// opacity: 0.5
 		border-radius: 50%
 		background: var(--primary-color)
 	&__img
-		max-width: 520px
+		max-width: 450px
 		position: absolute
-		left: 20px
-		top: -90px
+		left: 40px
+		top: -70px
 
 // Hello end
 
 // contact start
 
 .contact
-	padding: 50px 0
 	background-color: var(--section-bg)
 	&__wrap
 		display: grid

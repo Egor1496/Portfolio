@@ -55,7 +55,7 @@ $(document).ready(() => {
 			{
 				href: "https://codeguide.maxgraph.ru/",
 				title: "Код-стайл",
-				description: "",
+				description: "Базовый синтаксис и правила написания HTML/CSS/js",
 				src: "https://codeguide.maxgraph.ru/img/logo.png",
 			},
 			{
@@ -177,17 +177,35 @@ $(document).ready(() => {
 		],
 	};
 
-	// let item = $(".note__item");
-	// let res = [];
-	// for (let i = 0; i < item.length; i++) {
-	// 	res.push({
-	// 		href: $(item[i]).attr("href"),
-	// 		title: $(item[i]).find(".item__title").text().trim(),
-	// 		description: $(item[i]).find(".item__description").text().trim(),
-	// 		src: $(item[i]).find("img").attr("src"),
-	// 	});
-	// }
-	// console.log(res);
+	const AOSS = [
+		"fade",
+		"fade-up",
+		"fade-down",
+		"fade-left",
+		"fade-right",
+		"fade-up-right",
+		"fade-up-left",
+		"fade-down-right",
+		"fade-down-left",
+		"flip-up",
+		"flip-down",
+		"flip-left",
+		"flip-right",
+		"slide-up",
+		"slide-down",
+		"slide-left",
+		"slide-right",
+		"zoom-in",
+		"zoom-in-up",
+		"zoom-in-down",
+		"zoom-in-left",
+		"zoom-in-right",
+		"zoom-out",
+		"zoom-out-up",
+		"zoom-out-down",
+		"zoom-out-left",
+		"zoom-out-right",
+	];
 
 	const template = document.getElementById("template-note-item");
 	for (const key in noteList) {
@@ -201,6 +219,7 @@ $(document).ready(() => {
 		);
 		for (let i = 0; i < noteList[key].length; i++) {
 			const $clone = $($.parseHTML(template.innerHTML));
+			$clone.attr("data-aos", AOSS[getRandomInt(0, AOSS.length - 1)]);
 			$clone.attr("href", noteList[key][i].href);
 			$clone.find(".item__title").text(noteList[key][i].title);
 			$clone.find(".item__description").text(noteList[key][i].description);
@@ -209,4 +228,6 @@ $(document).ready(() => {
 		}
 		$(".note__wrap").append(div);
 	}
+
+	AOS.init();
 });
