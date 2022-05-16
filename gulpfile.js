@@ -65,6 +65,7 @@ task("watch", () => {
 		server: {
 			baseDir: "dist",
 		},
+		startPath: "pages/about.html",
 		notify: false,
 	});
 	watch("app/**/*.html", parallel("html"));
