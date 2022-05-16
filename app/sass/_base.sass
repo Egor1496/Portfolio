@@ -1,19 +1,19 @@
 :root
-	--base-color: #010104
-	--light-color: #282162
-	--low-priority-color: #282162
-	--primary-color: #282162
-	--secondary-color: #282162
-	--dark-color: #282162
-	--section-bg: #282162
-	--darrk-bg: #282162
+	--text-color-1: #010104
+	--text-color-2: #282162
+	--front-color-1: #282162
+	--front-color-2: #282162
+	--front-color-3: #282162
+	--back-color-1: #282162
+	--back-color-2: #282162
+	--back-color-3: #282162
 	--icon-color: none
 	--button-radius: 5px
-	--text-shadow-button: 2px 2px 4px var(--primary-color)
-	--box-shadow-button: 0px 0px 3px var(--primary-color)
-	--text-shadow-title: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color)
-	--text-shadow-big: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color), 3px 3px var(--low-priority-color), 4px 4px var(--low-priority-color), 5px 5px var(--low-priority-color), 6px 6px var(--low-priority-color), 7px 7px 2px var(--low-priority-color)
-	--text-shadow-nav: 1px 1px var(--low-priority-color), 2px 2px var(--low-priority-color), 3px 3px var(--low-priority-color), 4px 4px var(--low-priority-color)
+	--text-shadow-button: 2px 2px 4px var(--front-color-2)
+	--box-shadow-button: 0px 0px 3px var(--front-color-2)
+	--text-shadow-title: 1px 1px var(--front-color-1), 2px 2px var(--front-color-1)
+	--text-shadow-big: 1px 1px var(--front-color-1), 2px 2px var(--front-color-1), 3px 3px var(--front-color-1), 4px 4px var(--front-color-1), 5px 5px var(--front-color-1), 6px 6px var(--front-color-1), 7px 7px 2px var(--front-color-1)
+	--text-shadow-nav: 1px 1px var(--front-color-1), 2px 2px var(--front-color-1), 3px 3px var(--front-color-1), 4px 4px var(--front-color-1)
 	--section-pattern: linear-gradient(63deg, rgba(100, 100, 100, .05) 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, rgba(100, 100, 100, .05) 78%), linear-gradient(63deg, transparent 34%, rgba(100, 100, 100, .05) 38%, rgba(100, 100, 100, .05) 58%, transparent 62%), rgba(100, 100, 100, .05)
 	--section-pattern-size: 16px 48px
 
@@ -62,9 +62,9 @@ body
 h1, h2, h3, h4, h5, a, p, span
 	margin: 0
 	padding: 0
-	color: var(--base-color)
+	color: var(--text-color-1)
 	&::selection
-		background: var(--low-priority-color)
+		background: var(--front-color-1)
 
 a
 	text-decoration: none
@@ -89,29 +89,32 @@ section
 
 .section_wave
 	position: absolute
-	left: -150%
 	z-index: 2
-	width: 300%
+	width: 200%
 	height: 50px
 	&--top
-		bottom: 0px
+		bottom: -1px
+		left: -100%
 	&--bottom
-		top: -4px
+		top: -1px
+		right: -100%
 		transform: rotate(180deg)
 	svg
-		animation: move-section 10s linear infinite
 		width: 100%
 		height: 100%
+		animation: move-section 120s linear infinite
 
 // base end
 
 // animation start
 
 @keyframes move-section
-	from
-		transform: translate(300px, 0%)
-	to
-		transform: translate(-300px, 0%)
+	0%
+		transform: translate(0%, 0)
+	50%
+		transform: translate(50%, 0)
+	100%
+		transform: translate(0%, 0)
 
 // animation end
 
@@ -126,9 +129,9 @@ section
 	width: 100%
 	min-height: 48px
 	gap: 6px
-	background-color: var(--section-bg)
+	background-color: var(--back-color-2)
 	border-radius: var(--button-radius)
-	border: solid 2px var(--primary-color)
+	border: solid 2px var(--front-color-2)
 	text-decoration: none
 	transition: background .3s ease-out
 	text-shadow: var(--text-shadow-button)
@@ -138,14 +141,14 @@ section
 		width: 100%
 	&:hover
 		cursor: pointer
-		background-color: var(--primary-color)
+		background-color: var(--front-color-2)
 	&:active
 		opacity: 0.8
 	&__text
-		color: var(--base-color)
+		color: var(--text-color-1)
 	&__link
 		text-decoration: none
-		color: var(--base-color)
+		color: var(--text-color-1)
 	&__icon
 		width: 20px
 		height: 20px
@@ -184,12 +187,12 @@ section
 		line-height: normal
 		letter-spacing: normal
 		text-align: left
-		color: var(--base-color)
-		background-color: var(--darrk-bg)
+		color: var(--text-color-1)
+		background-color: var(--back-color-3)
 	&__header
 		width: 100%
 		height: 80px
-		background-color: var(--darrk-bg)
+		background-color: var(--back-color-3)
 	// &__main
 	// &__footer
 	@media screen and (max-width : 900px)
@@ -221,7 +224,7 @@ section
 		width: 3em
 		height: 7px
 		border-radius: 3px
-		background-color: var(--primary-color)
+		background-color: var(--front-color-2)
 		margin-top: 8px
 		transition: all 0.3s ease-in-out
 
@@ -249,7 +252,7 @@ section
 		text-decoration: none
 		font-size: 40px
 		font-weight: 600
-		color: var(--primary-color)
+		color: var(--front-color-2)
 		text-shadow: var(--text-shadow-big)
 
 .nav
@@ -272,7 +275,7 @@ section
 			transition: transform .1s ease-out
 		&--active
 			.nav__link
-				color: var(--primary-color)
+				color: var(--front-color-2)
 		@media screen and (max-width : 650px)
 			margin-bottom: 20px
 			text-align: center
@@ -282,9 +285,9 @@ section
 		text-shadow: var(--text-shadow-nav)
 		transition: color .1s ease-out
 		&:hover
-			color: var(--primary-color)
+			color: var(--front-color-2)
 		&:active
-			color: var(--primary-color)
+			color: var(--front-color-2)
 		@media screen and (max-width : 650px)
 			font-size: 30px
 	@media screen and (max-width : 650px)
@@ -295,7 +298,7 @@ section
 		width: 100%
 		height: auto
 		padding: 30px
-		background-color: var(--darrk-bg)
+		background-color: var(--back-color-3)
 
 // Hello start
 
@@ -305,7 +308,7 @@ section
 	overflow: hidden
 	padding-top: 100px
 	padding-bottom: 10px
-	background-color: var(--section-bg)
+	background-color: var(--back-color-2)
 	&--mini
 		padding: 20px
 		.hello__wrap
@@ -337,7 +340,7 @@ section
 		margin-bottom: 10px
 		font-size: 52px
 		font-weight: 600
-		color: var(--light-color)
+		color: var(--text-color-2)
 	&__description
 		max-width: 430px
 		margin-bottom: 30px
@@ -378,7 +381,7 @@ section
 		width: 486px
 		height: 486px
 		border-radius: 50%
-		background: var(--primary-color)
+		background: var(--front-color-2)
 	&__img
 		max-width: 450px
 		position: absolute
@@ -390,7 +393,7 @@ section
 // contact start
 
 .contact
-	background-color: var(--section-bg)
+	background-color: var(--back-color-2)
 	&__wrap
 		display: grid
 		grid-template-columns: 1fr 1fr
@@ -406,7 +409,7 @@ section
 	&__title
 		margin-bottom: 15px
 		font-weight: 600
-		color: var(--primary-color)
+		color: var(--front-color-2)
 	&__description
 		margin-bottom: 5px
 	&__icons
@@ -439,11 +442,11 @@ section
 		padding: 15px 20px
 		border: none
 		border-radius: 8px
-		background-color: var(--low-priority-color)
-		color: var(--base-color)
+		background-color: var(--front-color-1)
+		color: var(--text-color-1)
 		&::placeholder
 			font-size: 17px
-			color: var(--base-color)
+			color: var(--text-color-1)
 	&__button
 		font-size: 17px
 	@media screen and (max-width : 800px)
