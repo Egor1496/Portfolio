@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
-	@@include("blocks/head.html", { "prefix": ".", "libs": "css/libs/normalize.min.css", "css": "css/pages/about.min.css" })
+	@@include("../blocks/head.html", { "libs": "../css/libs/normalize.min.css", "css": "../css/pages/about.min.css" })
 	<body class="page__body">
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -8,7 +8,7 @@
 			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 			<script src="libs/respond/respond.min.js"></script>
 		<![endif]-->
-		@@include("blocks/header.html", { "about": "index.html", "project": "pages/project.html", "note": "pages/note.html", "pet": "pages/pet.html" })
+		@@include("../blocks/header.html", { "about": "about.html", "project": "project.html", "note": "note.html", "pet": "pet.html" })
 		<main class="page__main">
 			<!-- hello start -->
 			<section class="hello">
@@ -18,16 +18,16 @@
 						<h1 class="hello__main-title">Egor1496</h1>
 						<p class="hello__description">Фрилансер, Front-end разработчик & Верстальщик сайтов.</p>
 						<div class="hello__button-wrap">
-							<a href="pages/project.html#project-section" class="hello__button button">
+							<a href="project.html#project-section" class="hello__button button">
 								<span class="button__text">Проекты</span>
 								<div class="button__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/user.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/user.svg"></object>
 								</div>
 							</a>
 							<a href="https://github.com/Egor1496" target="_blank" class="hello__button button">
 								<span class="button__text">Github</span>
 								<div class="button__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/eye.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/eye.svg"></object>
 								</div>
 							</a>
 						</div>
@@ -35,7 +35,7 @@
 					<div class="hello__inner hello__inner--second">
 						<div class="author">
 							<div class="author__ellipse">
-								<img src="img/project/crossout-help/prev.png" alt="" class="author__img" />
+								<img src="../img/project/crossout-help/prev.png" alt="" class="author__img" />
 							</div>
 						</div>
 					</div>
@@ -58,7 +58,7 @@
 						<div class="skills__card card-list">
 							<div class="card-list__item">
 								<div class="card-list__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/ruler&pen.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/ruler&pen.svg"></object>
 								</div>
 								<p class="card-list__title">
 									Верстка.<br />
@@ -67,7 +67,7 @@
 							</div>
 							<div class="card-list__item">
 								<div class="card-list__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/full-screen.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/full-screen.svg"></object>
 								</div>
 								<p class="card-list__title">
 									Адаптация.<br />
@@ -76,7 +76,7 @@
 							</div>
 							<div class="card-list__item">
 								<div class="card-list__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/internet-world.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/internet-world.svg"></object>
 								</div>
 								<p class="card-list__title">
 									Кросс-браузерная.<br />
@@ -85,13 +85,13 @@
 							</div>
 							<div class="card-list__item">
 								<div class="card-list__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/browser-speedometer.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/browser-speedometer.svg"></object>
 								</div>
 								<p class="card-list__title">Оптимизация скорости загрузки.<br /></p>
 							</div>
 							<div class="card-list__item">
 								<div class="card-list__icon svg-hover-fix">
-									<object type="image/svg+xml" data="img/ui-icon/browser-2.svg"></object>
+									<object type="image/svg+xml" data="../img/ui-icon/browser-2.svg"></object>
 								</div>
 								<p class="card-list__title">Валидный код по стандарту W3С.<br /></p>
 							</div>
@@ -106,27 +106,27 @@
 					<h2 class="services__title">Владение технологиями:</h2>
 					<div class="services-card">
 						<div class="services-card__item">
-							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="img/ui-icon/ruler&pen.svg"></object>
+							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="../img/ui-icon/ruler&pen.svg"></object>
 							<div class="services-card__title">Макеты:</div>
 							<div class="services-card__description">PSD, Figma, Adobe xd.</div>
 						</div>
 						<div class="services-card__item">
-							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="img/ui-icon/html.svg"></object>
+							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="../img/ui-icon/html.svg"></object>
 							<div class="services-card__title">HTML5:</div>
-							<div class="services-card__description">Bootstrap, БЭМ, WC3.</div>
+							<div class="services-card__description">БЭМ, WC3, Bootstrap.</div>
 						</div>
 						<div class="services-card__item">
-							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="img/ui-icon/css3.svg"></object>
+							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="../img/ui-icon/css3.svg"></object>
 							<div class="services-card__title">CSS3:</div>
-							<div class="services-card__description">SASS, SCSS, LESS, Flexbox, Grid Layout.</div>
+							<div class="services-card__description">Flexbox, Grid, SASS, SCSS, LESS.</div>
 						</div>
 						<div class="services-card__item">
-							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="img/ui-icon/javascript.svg"></object>
+							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="../img/ui-icon/javascript.svg"></object>
 							<div class="services-card__title">JavaScript:</div>
 							<div class="services-card__description">ES9, JQuery.</div>
 						</div>
 						<div class="services-card__item">
-							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="img/ui-icon/git-repo.svg"></object>
+							<object class="services-card__icon svg-hover-fix" type="image/svg+xml" data="../img/ui-icon/git-repo.svg"></object>
 							<div class="services-card__title">Инструменты:</div>
 							<div class="services-card__description">git, gulp, npm, yarn.</div>
 						</div>
@@ -134,11 +134,11 @@
 				</div>
 			</section>
 			<!-- services end -->
-			@@include("blocks/contact.html", {"prefix": "."})
+			@@include("../blocks/contact.html")
 		</main>
-		@@include("blocks/footer.html", { "prefix": "." })
-		<script src="js/jquery.min.js"></script>
-		<script src="js/main.min.js"></script>
-		<script src="js/pages/about.min.js"></script>
+		@@include("../blocks/footer.html")
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/main.min.js"></script>
+		<script src="../js/pages/about.min.js"></script>
 	</body>
 </html>

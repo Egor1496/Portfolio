@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
-	@@include("../blocks/head.html", { "prefix": "..", "libs": "../css/libs/normalize.min.css", "css": "../css/pages/project.min.css" })
+	@@include("../blocks/head.html", {"libs": "../css/libs/normalize.min.css", "css": "../css/pages/project.min.css" })
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 	<body class="page__body">
 		<!--[if lt IE 9]>
@@ -9,8 +9,7 @@
 			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 			<script src="libs/respond/respond.min.js"></script>
 		<![endif]-->
-		@@include("../blocks/header.html", { "about": "../index.html", "project": "../pages/project.html", "note": "../pages/note.html", "pet":
-		"../pages/pet.html" })
+		@@include("../blocks/header.html", { "about": "about.html", "project": "project.html", "note": "note.html", "pet": "pet.html" })
 		<main class="page__main">
 			<!-- hello start -->
 			<section class="hello hello--mini">
@@ -115,9 +114,9 @@
 				</div>
 			</section>
 			<!-- project end -->
-			@@include("../blocks/contact.html", {"prefix": ".."})
+			@@include("../blocks/contact.html")
 		</main>
-		@@include("../blocks/footer.html", { "prefix": ".." })
+		@@include("../blocks/footer.html")
 		<script src="../js/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 		<script src="../js/main.min.js"></script>
