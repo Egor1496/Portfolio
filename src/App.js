@@ -1,13 +1,22 @@
 import React from "react";
-import "./styles/App.css";
-import ColorsDemo from "./components/ui/colors-demo/Colors-demo.jsx";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import "./styles/App.css";
+
+import Home from "./pages/Home.jsx";
+import Demo from "./pages/Demo.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+
+const App = () => {
 	return (
 		<div>
-			<ColorsDemo />
+			<Routes>
+				<Route index element={<Home />} />
+				<Route path="demo" element={<Demo />} />
+				<Route path="*" element={<ErrorPage />} />
+			</Routes>
 		</div>
 	);
-}
+};
 
 export default App;
