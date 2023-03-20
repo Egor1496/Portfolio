@@ -80,13 +80,13 @@
   --color5: #41B3A3;
 } */
 
-/* :root {
+:root {
   --color1: #2C3531;
   --color2: #116466;
   --color3: #D9B08C;
   --color4: #FFCB9A;
   --color5: #D1E8E2;
-} */
+}
 
 /* :root {
   --color1: #272727;
@@ -128,13 +128,13 @@
   --color5: #8860D0;
 } */
 
-:root {
+/* :root {
   --color1: #61892F;
   --color2: #86C232;
   --color3: #222629;
   --color4: #474B4F;
   --color5: #6B6E70;
-}
+} */
 
 /* :root {
   --color1: #FAED26;

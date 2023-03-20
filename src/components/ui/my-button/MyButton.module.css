@@ -1,5 +1,45 @@
 @import url("../../../styles/theme-colors.css");
+@import url("../../../styles/base-params.css");
 
 .main{
-  padding: 20px;
+  padding: 10px;
+}
+
+.button{
+  min-height: var(--def-cont-min-height);
+  padding: var(--def-cont-padding);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border-bottom: 3px solid var(--color2);
+  background-color: var(--color5);
+  color: var(--color1);
+  font-size: var(--def-font-size);
+  transition: transform 0.1s, background-color 0.08s;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: var(--color2);
+  color: var(--color3);
+  transform: scale(1.05);
+}
+
+.button:active{
+  border-radius: 5px;
+  border-bottom: 3px solid var(--color2);
+  background-color: var(--color5);
+  color: var(--color1);
+}
+
+.button--disable{
+
+}
+
+.button--disable:hover{
+
+}
+
+.button--disable:active{
+
 }
