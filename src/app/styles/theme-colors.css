@@ -1,9 +1,57 @@
+:root {
+  --color1: #2C3531;
+  --color2: #116466;
+  --color3: #D9B08C;
+  --color4: #FFCB9A;
+  --color5: #D1E8E2;
+}
+
 /* :root {
   --color1: #00887A;
   --color2: #FFCCBC;
   --color3: #FFFFFF;
   --color4: #D3E3FC;
   --color5: #77A6F7;
+} */
+
+/* :root {
+  --color1: #5D5C61;
+  --color2: #379683;
+  --color3: #7395AE;
+  --color4: #557A95;
+  --color5: #B1A296;
+} */
+
+/* :root {
+  --color1: #8D8741;
+  --color2: #659DBD;
+  --color3: #DAAD86;
+  --color4: #BC986A;
+  --color5: #FBEEC1;
+} */
+
+/* :root {
+  --color1: #61892F;
+  --color2: #86C232;
+  --color3: #222629;
+  --color4: #474B4F;
+  --color5: #6B6E70;
+} */
+
+/* :root {
+  --color1: #FBE8A6;
+  --color2: #F4976C;
+  --color3: #303C6C;
+  --color4: #B4DFE5;
+  --color5: #D2FDFF;
+} */
+
+/* :root {
+  --color1: #B23850;
+  --color2: #3B8BEB;
+  --color3: #E7E3D4;
+  --color4: #C4DBF6;
+  --color5: #8590AA;
 } */
 
 /* :root {
@@ -40,14 +88,6 @@
 } */
 
 /* :root {
-  --color1: #5D5C61;
-  --color2: #379683;
-  --color3: #7395AE;
-  --color4: #557A95;
-  --color5: #B1A296;
-} */
-
-/* :root {
   --color1: #8EE4AF;
   --color2: #EDF5E1;
   --color3: #5CDB95;
@@ -65,28 +105,12 @@
 } */
 
 /* :root {
-  --color1: #8D8741;
-  --color2: #659DBD;
-  --color3: #DAAD86;
-  --color4: #BC986A;
-  --color5: #FBEEC1;
-} */
-
-/* :root {
   --color1: #E27D60;
   --color2: #85DCBD;
   --color3: #E8A87C;
   --color4: #C38D9E;
   --color5: #41B3A3;
 } */
-
-:root {
-  --color1: #2C3531;
-  --color2: #116466;
-  --color3: #D9B08C;
-  --color4: #FFCB9A;
-  --color5: #D1E8E2;
-}
 
 /* :root {
   --color1: #272727;
@@ -128,13 +152,6 @@
   --color5: #8860D0;
 } */
 
-/* :root {
-  --color1: #61892F;
-  --color2: #86C232;
-  --color3: #222629;
-  --color4: #474B4F;
-  --color5: #6B6E70;
-} */
 
 /* :root {
   --color1: #FAED26;
@@ -182,22 +199,6 @@
   --color3: #BC4639;
   --color4: #D4A59A;
   --color5: #F3E0DC;
-} */
-
-/* :root {
-  --color1: #FBE8A6;
-  --color2: #F4976C;
-  --color3: #303C6C;
-  --color4: #B4DFE5;
-  --color5: #D2FDFF;
-} */
-
-/* :root {
-  --color1: #B23850;
-  --color2: #3B8BEB;
-  --color3: #E7E3D4;
-  --color4: #C4DBF6;
-  --color5: #8590AA;
 } */
 
 /* #59253A - #78244C - #895061 - #0677A1 - #2D4159 */

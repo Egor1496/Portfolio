@@ -1,0 +1,68 @@
+@import url("../../../app/styles/theme-colors.css");
+
+.main{
+  margin: 20px 0;
+}
+
+.input{
+  width: 250px;
+  height: 30px;
+  max-height: 110px;
+  max-width: 250px;
+  padding: 5px 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  border: 3px solid var(--color2);
+  background-color: var(--color5);
+  color: var(--color1);
+  font-size: var(--def-font-size);
+  transition: box-shadow 0.2s;
+}
+
+.input:hover{
+
+}
+
+.input:focus{
+  box-shadow: 0px 0px 4px 1px var(--color2);
+}
+
+input::selection {
+  background-color: var(--color3);
+}
+
+.disable{
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  transition: none;
+  box-shadow: none;
+}
+
+.disable:hover{
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  color: var(--color1);
+  transform: none;
+  box-shadow: none;
+}
+
+.disable:active{
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  color: var(--color1);
+  transform: none;
+  box-shadow: none;
+}
+
+.disable:focus{
+  box-shadow: none;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

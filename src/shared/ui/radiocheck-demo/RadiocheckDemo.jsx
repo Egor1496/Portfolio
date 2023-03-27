@@ -2,26 +2,26 @@ import React from "react";
 import styles from "./RadiocheckDemo.module.css"
 
 const RadiocheckDemo = () => {
-	return (
+  return (
     <div className={styles.main}>
       <label htmlFor="checkbox1">
-        <input type="checkbox" id="checkbox1" required/>
+        <input type="checkbox" id="checkbox1" required />
         Unchecked
       </label>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" required/>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" required />
         Radio is off
       </label>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <table >
         <thead>
           <tr>
             <th width="20px">
               <label htmlFor="checkbox-table-1">
-                <input type="checkbox" id="checkbox-table-1"/>
+                <input type="checkbox" id="checkbox-table-1" />
               </label>
             </th>
             <th>Rank</th>
@@ -32,7 +32,7 @@ const RadiocheckDemo = () => {
           <tr>
             <td>
               <label htmlFor="checkbox-table-2">
-              <input type="checkbox" id="checkbox-table-2"/>
+                <input type="checkbox" id="checkbox-table-2" />
               </label>
             </td>
             <td>1</td>
@@ -41,7 +41,7 @@ const RadiocheckDemo = () => {
           <tr>
             <td>
               <label htmlFor="checkbox-table-3">
-                <input type="checkbox" id="checkbox-table-3"/>
+                <input type="checkbox" id="checkbox-table-3" />
               </label>
             </td>
             <td>2</td>
@@ -50,7 +50,7 @@ const RadiocheckDemo = () => {
           <tr>
             <td>
               <label htmlFor="checkbox-table-4">
-                <input type="checkbox" id="checkbox-table-4"/>
+                <input type="checkbox" id="checkbox-table-4" />
               </label>
             </td>
             <td>3</td>
@@ -59,7 +59,7 @@ const RadiocheckDemo = () => {
           <tr>
             <td>
               <label htmlFor="checkbox-table-5">
-                <input type="checkbox" id="checkbox-table-5"/>
+                <input type="checkbox" id="checkbox-table-5" />
               </label>
             </td>
             <td>4</td>
@@ -68,7 +68,7 @@ const RadiocheckDemo = () => {
           <tr>
             <td>
               <label htmlFor="checkbox-table-6">
-                <input type="checkbox" id="checkbox-table-6"/>
+                <input type="checkbox" id="checkbox-table-6" />
               </label>
             </td>
             <td>5</td>
@@ -80,4 +80,4 @@ const RadiocheckDemo = () => {
   );
 }
 
-export default RadiocheckDemo;
+export { RadiocheckDemo };

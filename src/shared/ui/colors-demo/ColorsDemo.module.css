@@ -1,4 +1,4 @@
-@import url("../../styles/theme-colors.css");
+@import url("../../../app/styles/theme-colors.css");
 
 .div{
   width: 1000px;
@@ -6,15 +6,22 @@
   justify-content: center;
 }
 
-.color1, .color2,
-.color3, .color4,
-.color5 {
+.colorDemo{
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 200px;
   min-height: 200px;
 }
+
+.textColor1{
+  color: var(--text-сolor1);
+}
+
+.textColor2{
+  color: var(--text-сolor2);
+}
+
 
 .color1{
   background-color: var(--color1);

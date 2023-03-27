@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TypographyDemo.module.css";
 
 const TypographyDemo = () => {
-	return (
+  return (
     <div className={styles.main}>
       <h1>h1. Bootstrap heading</h1>
       <h2>h2. Bootstrap heading</h2>
@@ -24,7 +24,7 @@ const TypographyDemo = () => {
       <p><abbr title="HyperText">HTML</abbr> is the best thing since sliced bread.</p>
       <address>
         <strong>Full Name</strong>
-        <br/>
+        <br />
         <a href="mailto:#">first.last@example.com</a>
       </address>
       <blockquote>
@@ -50,4 +50,4 @@ const TypographyDemo = () => {
   );
 }
 
-export default TypographyDemo;
+export { TypographyDemo };

@@ -1,13 +1,13 @@
-@import url("../../../styles/theme-colors.css");
-@import url("../../../styles/base-params.css");
+@import url("../../../app/styles/theme-colors.css");
+@import url("../../../app/styles/base-params.css");
 
 .main{
-  padding: 10px;
+  margin: 20px 0;
 }
 
 .button{
-  min-height: var(--def-cont-min-height);
-  padding: var(--def-cont-padding);
+  min-width: 80px;
+  min-height: 40px;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -32,14 +32,24 @@
   color: var(--color1);
 }
 
-.button--disable{
-
+.disable{
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  transition: none;
 }
 
-.button--disable:hover{
-
+.disable:hover{
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  color: var(--color1);
+  transform: none;
 }
 
-.button--disable:active{
-
+.disable:active{
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--disable-control-bg);
+  color: var(--color1);
+  transform: none;
 }
