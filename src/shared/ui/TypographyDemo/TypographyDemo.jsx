@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./TypographyDemo.module.css";
+import css from "./TypographyDemo.module.css";
 
 const TypographyDemo = () => {
   return (
-    <div className={styles.main}>
+    <div className={css.main}>
       <h1>h1. Bootstrap heading</h1>
       <h2>h2. Bootstrap heading</h2>
       <h3>h3. Bootstrap heading</h3>

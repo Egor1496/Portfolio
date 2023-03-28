@@ -1,0 +1,11 @@
+@import url("../../../app/styles/base-params.css");
+
+.main{
+
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

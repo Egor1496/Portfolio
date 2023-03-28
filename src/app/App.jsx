@@ -10,12 +10,8 @@ import { Error as ErrorPage } from "../pages";
 const App = () => {
 	return (
 		<div>
-			<Link to="/ui">
-				<h1>Интерфейс</h1>
-			</Link>
-			<Link to="/demo">
-				<h1>Шаблон</h1>
-			</Link>
+			<Link to="/ui"><h1>Интерфейс</h1></Link>
+			<Link to="/demo"><h1>Шаблон</h1></Link>
 			<Routes>
 				<Route index element={<UIKit />} />
 				<Route path="/demo" element={<Demo />} />

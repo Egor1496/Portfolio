@@ -1,0 +1,37 @@
+@import url("../../../app/styles/base-params.css");
+
+.main{
+
+}
+
+.input{
+
+}
+
+.input:hover{
+
+}
+
+.input:focus{
+
+}
+
+input::selection {
+
+}
+
+.disabled{
+
+}
+
+.disabled:hover{
+
+}
+
+.disabled:active{
+
+}
+
+.disabled:focus{
+
+}

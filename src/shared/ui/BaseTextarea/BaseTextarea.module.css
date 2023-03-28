@@ -1,7 +1,7 @@
-@import url("../../../app/styles/theme-colors.css");
+@import url("../../../app/styles/base-params.css");
 
 .main{
-  margin: 20px 0;
+
 }
 
 .textarea{
@@ -61,10 +61,4 @@ textarea::selection {
 
 .disable:focus{
   box-shadow: none;
-}
-
-.label{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }

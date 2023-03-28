@@ -1,0 +1,10 @@
+@import url("../../../app/styles/base-params.css");
+
+.main{
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

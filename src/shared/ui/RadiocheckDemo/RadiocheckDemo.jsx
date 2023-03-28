@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./RadiocheckDemo.module.css"
+import css from "./RadiocheckDemo.module.css"
 
 const RadiocheckDemo = () => {
   return (
-    <div className={styles.main}>
+    <div className={css.main}>
       <label htmlFor="checkbox1">
         <input type="checkbox" id="checkbox1" required />
         Unchecked

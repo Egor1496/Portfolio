@@ -1,8 +1,10 @@
 import React from "react";
 
-import { ColorsDemo } from "../../../shared/ui";
-import { TypographyDemo } from "../../../shared/ui";
-import { RadiocheckDemo } from "../../../shared/ui";
+import {
+  ColorsDemo,
+  TypographyDemo,
+  RadiocheckDemo
+} from "../../../shared/ui";
 
 const Demo = () => {
   return (

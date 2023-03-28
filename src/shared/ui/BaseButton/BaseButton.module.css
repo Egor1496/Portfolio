@@ -1,8 +1,6 @@
-@import url("../../../app/styles/theme-colors.css");
 @import url("../../../app/styles/base-params.css");
 
 .main{
-  margin: 20px 0;
 }
 
 .button{
@@ -13,7 +11,7 @@
   border-radius: 5px;
   border-bottom: 3px solid var(--color2);
   background-color: var(--color5);
-  color: var(--color1);
+  color: var(--text-сolor2);
   font-size: var(--def-font-size);
   transition: transform 0.1s, background-color 0.08s;
 }
@@ -29,27 +27,28 @@
   border-radius: 5px;
   border-bottom: 3px solid var(--color2);
   background-color: var(--color5);
-  color: var(--color1);
+  color: var(--text-сolor2);
 }
 
-.disable{
+.buttonDisabled{
   opacity: 0.5;
   background-color: var(--disable-control-bg);
+  color: var(--text-сolor1);
   transition: none;
 }
 
-.disable:hover{
+.buttonDisabled:hover{
   cursor: default;
   opacity: 0.5;
   background-color: var(--disable-control-bg);
-  color: var(--color1);
+  color: var(--text-сolor1);
   transform: none;
 }
 
-.disable:active{
+.buttonDisabled:active{
   cursor: default;
   opacity: 0.5;
   background-color: var(--disable-control-bg);
-  color: var(--color1);
+  color: var(--text-сolor1);
   transform: none;
 }

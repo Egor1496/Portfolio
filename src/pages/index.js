@@ -1,3 +1,3 @@
-export * from "./ui/ui/UIKit.jsx";
-export * from "./demo/ui/Demo.jsx";
-export * from "./error/ui/Error.jsx";
+export * from "./UIKit/ui/UIKit.jsx";
+export * from "./Demo/ui/Demo.jsx";
+export * from "./Error/ui/Error.jsx";
