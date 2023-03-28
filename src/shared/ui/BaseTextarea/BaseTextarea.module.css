@@ -15,10 +15,10 @@
   border: none;
   outline: none;
   border-radius: 10px;
-  border: 3px solid var(--color2);
-  background-color: var(--color5);
-  color: var(--color1);
-  font-size: var(--def-font-size);
+  border: 3px solid var(--color-2);
+  background-color: var(--color-5);
+  color: var(--сolor-control-1);
+  font-size: var(--font-size-def-2);
   transition: box-shadow 0.2s;
 }
 
@@ -27,16 +27,16 @@
 }
 
 .textarea:focus{
-  box-shadow: 0px 0px 4px 1px var(--color2);
+  box-shadow: 0px 0px 4px 1px var(--color-2);
 }
 
 textarea::selection {
-  background-color: var(--color3);
+  background-color: var(--color-3);
 }
 
 .disable{
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
+  background-color: var(--bg-disable-control-1);
   transition: none;
   box-shadow: none;
 }
@@ -44,7 +44,7 @@ textarea::selection {
 .disable:hover{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
+  background-color: var(--bg-disable-control-1);
   color: var(--color1);
   transform: none;
   box-shadow: none;
@@ -53,7 +53,7 @@ textarea::selection {
 .disable:active{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
+  background-color: var(--bg-disable-control-1);
   color: var(--color1);
   transform: none;
   box-shadow: none;

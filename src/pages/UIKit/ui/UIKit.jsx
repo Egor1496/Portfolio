@@ -25,19 +25,19 @@ function UIKit() {
 					<BaseRadiocheck disabled />
 				</GridСell>
 				<GridСell>
-					<MyLabel labelText="Описание:" >
+					<MyLabel labelText="[abcdef]" >
 						<BaseButton text="Кнопка" />
 					</MyLabel>
-					<MyLabel labelText="Описание:" >
+					<MyLabel labelText="[abcdef]" >
 						<BaseInput />
 					</MyLabel>
-					<MyLabel labelText="Описание:" >
+					<MyLabel labelText="[abcdef]" >
 						<BaseTextarea />
 					</MyLabel>
-					<MyLabel labelText="Описание:" >
+					<MyLabel labelText="[abcdef]" >
 						<BaseCheckbox />
 					</MyLabel>
-					<MyLabel labelText="Описание:" >
+					<MyLabel labelText="[abcdef]" >
 						<BaseRadiocheck />
 					</MyLabel>
 				</GridСell>

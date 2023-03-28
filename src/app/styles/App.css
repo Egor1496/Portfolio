@@ -2,23 +2,37 @@
 @import url("base-params.css");
 
 *::selection {
-  background-color: var(--color5);
+  background-color: var(--color-5);
+}
+
+
+h1, h2, h3, h4, h5, h6,
+label, strong, span,
+a, p, b, li, dt, td, th, dd{
+  color: var(--сolor-def-1);
+  text-decoration: none;
+}
+
+a, a > h1 {
+  color: var(--сolor-a-1);
+}
+
+a:hover, a > h1:hover{
+  color: var(--сolor-a-2);
 }
 
 html{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: var(--def-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: var(--def-font-size);
+  font-size: var(--font-size-def-2);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color3);
-  color: var(--color1);
+  background-color: var(--color-1);
+  color: var(--color-def-1);
 }
 
 #root{

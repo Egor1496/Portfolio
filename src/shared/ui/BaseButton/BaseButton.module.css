@@ -5,50 +5,54 @@
 
 .button{
   min-width: 80px;
-  min-height: 40px;
+  min-height: 35px;
   border: none;
   outline: none;
   border-radius: 5px;
-  border-bottom: 3px solid var(--color2);
-  background-color: var(--color5);
-  color: var(--text-сolor2);
-  font-size: var(--def-font-size);
+  border-bottom: 3px solid var(--color-2);
+  background-color: var(--color-5);
+  color: var(--сolor-control-1);
+  font-size: var(--font-size-def-2);
   transition: transform 0.1s, background-color 0.08s;
 }
 
 .button:hover{
   cursor: pointer;
-  background-color: var(--color2);
-  color: var(--color3);
+  border-bottom: 3px solid var(--color-5);
+  background-color: var(--color-2);
+  color: var(--сolor-control-2);
   transform: scale(1.05);
 }
 
 .button:active{
   border-radius: 5px;
-  border-bottom: 3px solid var(--color2);
-  background-color: var(--color5);
-  color: var(--text-сolor2);
+  border-bottom: 3px solid var(--color-2);
+  background-color: var(--color-5);
+  color: var(--сolor-control-1);
 }
 
 .buttonDisabled{
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
-  color: var(--text-сolor1);
+  border-bottom: 3px solid var(--color-2);
+  background-color: var(--bg-disable-control-2);
+  color: var(--сolor-control-1);
   transition: none;
 }
 
 .buttonDisabled:hover{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
-  color: var(--text-сolor1);
+  border-bottom: 3px solid var(--color-2);
+  background-color: var(--bg-disable-control-2);
+  color: var(--сolor-control-1);
   transform: none;
 }
 
 .buttonDisabled:active{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--disable-control-bg);
-  color: var(--text-сolor1);
+  border-bottom: 3px solid var(--color-2);
+  background-color: var(--bg-disable-control-2);
+  color: var(--сolor-control-1);
   transform: none;
 }

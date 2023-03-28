@@ -14,31 +14,31 @@
   min-height: 200px;
 }
 
-.textColor1{
-  color: var(--text-сolor1);
+.textColor1 > h1{
+  color: var(--сolor-def-1);
 }
 
-.textColor2{
-  color: var(--text-сolor2);
+.textColor2 > h1{
+  color: var(--сolor-def-2);
 }
 
 
 .color1{
-  background-color: var(--color1);
+  background-color: var(--color-1);
 }
 
 .color2{
-  background-color: var(--color2);
+  background-color: var(--color-2);
 }
 
 .color3{
-  background-color: var(--color3);
+  background-color: var(--color-3);
 }
 
 .color4{
-  background-color: var(--color4);
+  background-color: var(--color-4);
 }
 
 .color5{
-  background-color: var(--color5);
+  background-color: var(--color-5);
 }
