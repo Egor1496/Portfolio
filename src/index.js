@@ -12,6 +12,14 @@ let thixNumberTheme = 4;
 const setTheme = (numberTheme) => {
 	thixNumberTheme = numberTheme;
 	console.log(thixNumberTheme);
+
+	root.render(
+		<BrowserRouter>
+			<SelectThisTheme numberTheme={thixNumberTheme}>
+				<App setTheme={setTheme} />
+			</SelectThisTheme>
+		</BrowserRouter>
+	);
 };
 
 root.render(

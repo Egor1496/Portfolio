@@ -1,12 +1,17 @@
 import React from "react";
 
+import css from "./ThemeSelect.module.css"
+
 import { BaseButton } from "../../../shared/ui";
 
 const ThemeSelect = ({ setTheme }) => {
   return (
-    <div>
-      <BaseButton text="1" callBack={() => { setTheme(0) }} />
-      <BaseButton text="2" callBack={() => { setTheme(1) }} />
+    <div className={css.main}>
+      {
+        [...Array(30)].map((el, i) =>
+          <BaseButton text={i + 1} callBack={() => { setTheme(i) }} />
+        )
+      }
     </div>
   );
 }
