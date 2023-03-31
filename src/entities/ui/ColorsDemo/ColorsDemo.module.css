@@ -1,0 +1,97 @@
+@import url("../../../app/styles/base-params.css");
+
+.div{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px;
+  gap: 20px;
+}
+
+.cellColor{
+  display: flex;
+}
+
+.fontSizeDef1 > h1{
+  font-size: var(--fontSizeDef1);
+}
+
+.fontSizeDef2 > h1{
+  font-size: var(--fontSizeDef2);
+}
+
+.fontSizeDef3 > h1{
+  font-size: var(--fontSizeDef3);
+}
+
+.сolorA1 > h1{
+  color: var(--сolorA1);
+}
+
+.сolorA2 > h1{
+  color: var(--сolorA2);
+}
+
+.сolorH1 > h1{
+  color: var(--сolorH1);
+}
+
+.сolorH2 > h1{
+  color: var(--сolorH2);
+}
+
+.сolorP1 > h1{
+  color: var(--сolorP1);
+}
+
+.сolorP2 > h1{
+  color: var(--сolorP2);
+}
+
+.сolorControl1 > h1{
+  color: var(--сolorControl1);
+}
+
+.сolorControl2 > h1{
+  color: var(--сolorControl2);
+}
+
+.bgDisableControl1 > h1{
+  color: var(--bgDisableControl1);
+}
+
+.bgDisableControl2 > h1{
+  color: var(--bgDisableControl2);
+}
+
+
+.color1{
+  width: 100px;
+  height: 100px;
+  background-color: var(--color1);
+}
+
+.color2{
+  width: 100px;
+  height: 100px;
+  background-color: var(--color2);
+}
+
+.color3{
+  width: 100px;
+  height: 100px;
+  background-color: var(--color3);
+}
+
+.color4{
+  width: 100px;
+  height: 100px;
+  background-color: var(--color4);
+}
+
+.color5{
+  width: 100px;
+  height: 100px;
+  background-color: var(--color5);
+}

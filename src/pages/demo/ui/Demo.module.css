@@ -1,14 +1,5 @@
 @import url("../../../app/styles/base-params.css");
 
 .main{
-
-}
-
-.input{
-  width: 30px;
-  height: 30px;
-}
-
-.readonly{
-
+  padding: 50px;
 }

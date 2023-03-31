@@ -3,15 +3,21 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import "./styles/App.css";
 
-import { UIKit } from "../pages";
-import { Demo } from "../pages";
-import { Error as ErrorPage } from "../pages";
+import {
+	Error as ErrorPage,
+	UIKit, Demo
+} from "../pages";
 
-const App = () => {
+import {
+	ThemeSelect
+} from "../entities/ui";
+
+const App = ({ setTheme }) => {
 	return (
 		<div>
-			<Link to="/ui"><h1>Интерфейс</h1></Link>
-			<Link to="/demo"><h1>Шаблон</h1></Link>
+			<h1><Link to="/ui">UI Шаблон</Link></h1>
+			<h1><Link to="/demo">HTML Образец</Link></h1>
+			<ThemeSelect setTheme={setTheme} />
 			<Routes>
 				<Route index element={<UIKit />} />
 				<Route path="/demo" element={<Demo />} />

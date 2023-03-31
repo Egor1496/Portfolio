@@ -3,45 +3,53 @@ import React from "react";
 import {
 	BaseButton, BaseInput, BaseTextarea,
 	BaseCheckbox, BaseRadiocheck,
-	Grid, GridСell, MyLabel
+	MyLabel, Br, Grid, GridСell,
 } from "../../../shared/ui";
+
+import {
+	ColorsDemo
+} from "../../../entities/ui";
 
 function UIKit() {
 	return (
 		<>
+			<Br />
 			<Grid>
 				<GridСell>
 					<BaseButton text="Кнопка" />
-					<BaseInput />
-					<BaseTextarea />
+					<BaseInput defaultValue="По умолчанию" />
+					<BaseTextarea placeholder="Пустой" />
 					<BaseCheckbox />
 					<BaseRadiocheck />
 				</GridСell>
 				<GridСell>
 					<BaseButton text="Кнопка" disabled />
-					<BaseInput readonly />
-					<BaseTextarea readonly />
+					<BaseInput readonly placeholder="Пустой" />
+					<BaseTextarea readonly defaultValue="По умолчанию" />
 					<BaseCheckbox disabled />
 					<BaseRadiocheck disabled />
 				</GridСell>
 				<GridСell>
-					<MyLabel labelText="[abcdef]" >
+					<MyLabel labelText="Описание" >
 						<BaseButton text="Кнопка" />
 					</MyLabel>
-					<MyLabel labelText="[abcdef]" >
+					<MyLabel labelText="Описание" >
 						<BaseInput />
 					</MyLabel>
-					<MyLabel labelText="[abcdef]" >
+					<MyLabel labelText="Описание" >
 						<BaseTextarea />
 					</MyLabel>
-					<MyLabel labelText="[abcdef]" >
+					<MyLabel labelText="Описание" >
 						<BaseCheckbox />
 					</MyLabel>
-					<MyLabel labelText="[abcdef]" >
+					<MyLabel labelText="Описание" >
 						<BaseRadiocheck />
 					</MyLabel>
 				</GridСell>
 			</Grid>
+			<Br />
+			<ColorsDemo />
+			<Br />
 
 			{
 				/*

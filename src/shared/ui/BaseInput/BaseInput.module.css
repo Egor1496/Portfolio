@@ -5,18 +5,18 @@
 }
 
 .input{
-  width: 250px;
-  height: 30px;
+  width: 100%;
+  height: 40px;
   max-height: 110px;
-  max-width: 250px;
+  max-width: 300px;
   padding: 5px 5px;
   border: none;
   outline: none;
   border-radius: 10px;
-  border: 3px solid var(--color-2);
-  background-color: var(--color-5);
-  color: var(--сolor-control-1);
-  font-size: var(--font-size-def-2);
+  border: 3px solid var(--color2);
+  background-color: var(--color5);
+  color: var(--сolorControl1);
+  font-size: var(--fontSizeDef2);
   transition: box-shadow 0.2s;
 }
 
@@ -25,16 +25,17 @@
 }
 
 .input:focus{
-  box-shadow: 0px 0px 4px 1px var(--color-2);
+  box-shadow: 0px 0px 4px 1px var(--color2);
 }
 
 input::selection {
-  background-color: var(--color-3);
+  background-color: var(--color3);
 }
 
 .disable{
   opacity: 0.5;
-  background-color: var(--bg-disable-control-1);
+  background-color: var(--bgDisableControl1);
+  color: var(--color1);
   transition: none;
   box-shadow: none;
 }
@@ -42,8 +43,8 @@ input::selection {
 .disable:hover{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--bg-disable-control-1);
-  color: var(--color-1);
+  background-color: var(--bgDisableControl1);
+  color: var(--color1);
   transform: none;
   box-shadow: none;
 }
@@ -51,8 +52,8 @@ input::selection {
 .disable:active{
   cursor: default;
   opacity: 0.5;
-  background-color: var(--bg-disable-control-1);
-  color: var(--color-1);
+  background-color: var(--bgDisableControl1);
+  color: var(--color1);
   transform: none;
   box-shadow: none;
 }

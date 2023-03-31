@@ -1,0 +1,12 @@
+@import url("../../../app/styles/base-params.css");
+
+.main{
+  min-width: 100%;
+}
+
+.border{
+  min-width: 100%;
+  min-height: 20px;
+  margin: 50px 0;
+  background-color: var(--color2);
+}

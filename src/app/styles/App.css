@@ -1,43 +1,51 @@
 @import url("normalize.css");
 @import url("base-params.css");
 
+*{
+  box-sizing: border-box;
+}
+
 *::selection {
-  background-color: var(--color-5);
+  background-color: var(--color5);
 }
 
+h1, h2, h3, h4, h5, h6 { color: var(--сolorH1); margin: 0; }
+blockquote, pre, code {}
+dt, td, th, dd { color: var(--сolorP1); }
+ol, ul, li { color: var(--сolorP1); }
+p, b { color: var(--сolorP1); }
+strong { color: var(--сolorP1); }
+small { color: var(--сolorP1); }
+label { color: var(--сolorP1); }
+span { color: var(--сolorP1); }
 
-h1, h2, h3, h4, h5, h6,
-label, strong, span,
-a, p, b, li, dt, td, th, dd{
-  color: var(--сolor-def-1);
-  text-decoration: none;
+a{
+  color: var(--сolorA1);
 }
 
-a, a > h1 {
-  color: var(--сolor-a-1);
-}
-
-a:hover, a > h1:hover{
-  color: var(--сolor-a-2);
+a:hover{
+  color: var(--сolorA2);
 }
 
 html{
-  font-family: var(--def-font-family);
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: var(--fontFamilyDef);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: var(--font-size-def-2);
+  font-size: var(--fontSizeDef2);
 }
 
 body {
+  min-height: 100%;
+  min-width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--color-1);
-  color: var(--color-def-1);
+  background-color: var(--color1);
+  color: var(--colorDef1);
 }
 
 #root{
-  display: flex;
-  justify-content: center;
-  min-width: 100%;
   min-height: 100%;
+  min-width: 100%;
 }

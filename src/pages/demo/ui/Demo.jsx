@@ -1,18 +1,18 @@
 import React from "react";
 
+import css from "./Demo.module.css";
+
 import {
-  ColorsDemo,
   TypographyDemo,
   RadiocheckDemo
-} from "../../../shared/ui";
+} from "../../../entities/ui";
 
 const Demo = () => {
   return (
-    <>
-      <ColorsDemo />
+    <div className={css.main}>
       <RadiocheckDemo />
       <TypographyDemo />
-    </>
+    </div>
   );
 };
 
