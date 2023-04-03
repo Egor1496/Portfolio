@@ -1,1 +1,1 @@
-export * from "./SelectThisTheme/SelectThisTheme.jsx";
+export * from "./ThemeParams/ThemeParams.jsx";

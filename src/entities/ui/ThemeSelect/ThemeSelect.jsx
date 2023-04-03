@@ -9,7 +9,7 @@ const ThemeSelect = ({ setTheme }) => {
     <div className={css.main}>
       {
         [...Array(30)].map((el, i) =>
-          <BaseButton text={i + 1} callBack={() => { setTheme(i) }} />
+          <BaseButton key={i} text={i + 1} callBack={() => { setTheme(i) }} />
         )
       }
     </div>

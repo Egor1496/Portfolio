@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import css from "./BaseTextarea.module.css";
 
-const BaseTextarea = ({ readonly, defaultValue, placeholder }) => {
+const BaseTextarea = ({ readonly, defaultValue = "", placeholder = "" }) => {
 	const [value, setValue] = useState(defaultValue);
 
 	return (

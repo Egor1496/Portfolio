@@ -1,11 +1,14 @@
 import React from "react";
 import css from "./MyLabel.module.css";
 
-const MyLabel = ({ labelText, children }) => {
+const MyLabel = ({ labelText = "", children, position = "top" }) => {
+
+	console.log();
+
 	return (
 		<div className={css.main}>
 			{
-				<label className={css.label}>
+				<label className={`${css.label} ${css[position]}`}>
 					{labelText}
 					{children}
 				</label>

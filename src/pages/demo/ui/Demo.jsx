@@ -4,13 +4,13 @@ import css from "./Demo.module.css";
 
 import {
   TypographyDemo,
-  RadiocheckDemo
+  Custom
 } from "../../../entities/ui";
 
 const Demo = () => {
   return (
     <div className={css.main}>
-      <RadiocheckDemo />
+      <Custom />
       <TypographyDemo />
     </div>
   );

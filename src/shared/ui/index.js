@@ -1,14 +1,14 @@
 // Base
-export * from "./BaseButton/BaseButton.jsx";
-export * from "./BaseCheckbox/BaseCheckbox.jsx";
-export * from "./BaseInput/BaseInput.jsx";
-export * from "./BaseTextarea/BaseTextarea.jsx";
-export * from "./BaseRadiocheck/BaseRadiocheck.jsx";
-export * from "./Br/Br.jsx";
+export * from "./BaseButton/BaseButton";
+export * from "./BaseCheckbox/BaseCheckbox";
+export * from "./BaseInput/BaseInput";
+export * from "./BaseTextarea/BaseTextarea";
+export * from "./BaseRadiocheck/BaseRadiocheck";
+export * from "./Br/Br";
 
 // My control
-export * from "./MyLabel/MyLabel.jsx";
+export * from "./MyLabel/MyLabel";
 
 //else
-export * from "./Grid/Grid.jsx";
-export * from "./GridСell/GridСell.jsx";
+export * from "./Grid/Grid";
+export * from "./GridСell/GridСell";

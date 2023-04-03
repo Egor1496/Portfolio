@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import css from "./BaseInput.module.css";
 
-const BaseInput = ({ readonly, defaultValue, placeholder }) => {
+const BaseInput = ({ readonly, defaultValue = "", placeholder = "" }) => {
 	const [value, setValue] = useState(defaultValue);
 
 	return (
