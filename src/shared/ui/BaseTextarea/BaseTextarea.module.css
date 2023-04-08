@@ -30,7 +30,7 @@
   box-shadow: 0px 0px 4px 1px var(--color2);
 }
 
-textarea::selection {
+.textarea::selection {
   background-color: var(--color3);
 }
 

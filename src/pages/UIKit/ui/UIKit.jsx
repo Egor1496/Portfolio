@@ -3,12 +3,24 @@ import React from "react";
 import {
 	BaseButton, BaseInput, BaseTextarea,
 	BaseCheckbox, BaseRadiocheck,
+	BaseToggleBox, BaseToggleRadio, BaseSwitchRadio,
+	BaseSelect,
 	MyLabel, Br, Grid, GridСell,
 } from "../../../shared/ui";
 
 import {
 	ColorsDemo
 } from "../../../entities/ui";
+
+const baseSelectCss = {
+
+};
+
+const baseSelectOpt = {
+	title: "Выбрать что-то",
+	arrOption: ["что-то 1", "что-то 2", "что-то 3", "что-то 4", "что-то 5"],
+	iconUrl: null
+};
 
 function UIKit() {
 	return (
@@ -25,12 +37,6 @@ function UIKit() {
 					<MyLabel labelText="Описание">
 						<BaseTextarea placeholder="Пустой" />
 					</MyLabel>
-					<MyLabel labelText="Описание" position="left">
-						<BaseCheckbox />
-					</MyLabel>
-					<MyLabel labelText="Описание" position="right">
-						<BaseRadiocheck />
-					</MyLabel>
 				</GridСell>
 				<GridСell>
 					<MyLabel labelText="Описание" >
@@ -41,12 +47,6 @@ function UIKit() {
 					</MyLabel>
 					<MyLabel labelText="Описание" >
 						<BaseTextarea readonly defaultValue="По умолчанию" />
-					</MyLabel>
-					<MyLabel labelText="Описание" >
-						<BaseCheckbox disabled />
-					</MyLabel>
-					<MyLabel labelText="Описание" >
-						<BaseRadiocheck disabled />
 					</MyLabel>
 				</GridСell>
 				<GridСell>
@@ -59,11 +59,27 @@ function UIKit() {
 					<MyLabel labelText="Описание" >
 						<BaseTextarea />
 					</MyLabel>
-					<MyLabel labelText="Описание" position="bottom">
-						<BaseCheckbox />
+				</GridСell>
+			</Grid>
+			<Br />
+			<Grid>
+				<GridСell>
+					<BaseSelect styles={baseSelectCss} options={baseSelectOpt} />
+					<MyLabel labelText="Переключить" position="left">
+						<BaseToggleBox />
 					</MyLabel>
-					<MyLabel labelText="Описание" position="top">
-						<BaseRadiocheck />
+					<MyLabel labelText="Переключить" position="right">
+						<BaseToggleRadio />
+					</MyLabel></GridСell>
+				<GridСell>
+					<MyLabel labelText="Переключить" position="left">
+						<BaseCheckbox disabled />
+					</MyLabel>
+					<MyLabel labelText="Переключить" position="left">
+						<BaseRadiocheck disabled />
+					</MyLabel>
+					<MyLabel labelText="Переключить" position="left">
+						<BaseSwitchRadio />
 					</MyLabel>
 				</GridСell>
 			</Grid>
@@ -74,6 +90,7 @@ function UIKit() {
 			{
 				/*
 					*******************************************************
+					убрать глобальные стили с .module.css
 					настроить лайяут
 					темная и светлая вариант для каждой темы
 					*******************************************************

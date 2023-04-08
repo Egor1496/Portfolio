@@ -1,13 +1,11 @@
 import React from "react";
-import css from "./Custom.module.css"
-
-
+import css from "./Custom.css"
 
 const Custom = () => {
   return (
     <div className={css.main}>
-
-    </div>
+      <h1>*****</h1>
+    </div >
   );
 }
 

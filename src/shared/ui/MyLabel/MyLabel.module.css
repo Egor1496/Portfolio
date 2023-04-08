@@ -10,6 +10,10 @@
   gap: 10px;
 }
 
+.label:hover{
+  cursor: pointer;
+}
+
 .top{
 
 }

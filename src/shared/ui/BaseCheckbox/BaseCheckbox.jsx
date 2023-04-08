@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import css from "./BaseCheckbox.module.css";
 
-const BaseCheckbox = ({ disabled }) => {
-	const [IsChecked, setIsChecked] = useState(false);
-
+const BaseCheckbox = () => {
 	return (
-		<div className={css.main}>
-			<input
-				className={`${css.input} ${disabled && css.disabled}`}
-				type="checkbox"
-				checked={IsChecked}
-				onChange={(e) => setIsChecked(e.target.checked)}
-				disabled={disabled}
-			/>
+		<div className={`${css["check"]}`}>
+			<input type="checkbox" />
 		</div>
 	);
 }

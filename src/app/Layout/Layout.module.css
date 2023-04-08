@@ -15,22 +15,22 @@
   flex-direction: column;
   flex: 5;
 }
-.content {
+.main {
   display: flex;
   flex-direction: row;
 }
-.content > article {
+.main > .article {
   flex: 3;
   min-height: 60vh;
 }
-.content > aside {
+.main > .aside {
   background: var(--color4);
   flex: 0.5;
 }
-header, footer {
+.header, .footer {
   min-height: 100px;
   background: var(--color3);
 }
-header, footer, article, nav, aside {
+.header, .footer, .article, .nav, .aside {
   padding: 10px;
 }

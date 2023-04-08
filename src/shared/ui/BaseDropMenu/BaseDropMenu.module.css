@@ -1,0 +1,75 @@
+@import url("../../../app/styles/base-params.css");
+
+#navigation {
+  width: 300px;
+  height: 50px;
+  box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.links {
+  position: relative;
+}
+.links li {
+  float: left;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+.links li > a {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+}
+.links li > a:hover {
+  color: var(--color5);
+  background: var(--color2);
+  border-radius: 2px;
+}
+.links li ul {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 2px;
+  display: none;
+}
+.links li ul > li {
+  clear: both;
+  list-style: none;
+  display: block;
+  width: 150px;
+  padding: 2px 5px;
+  margin: 0;
+  margin-bottom: 2px;
+  background: var(--color2);
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.links li ul > li:hover {
+  background: var(--color3);
+}
+.links li ul > li:hover > a {
+  background: var(--color3);
+  color: #fff;
+}
+.links li:hover > .drop {
+  display: block;
+  animation: fadeInRight 0.3s ease;
+  -webkit-animation: fadeInRight 0.3s ease;
+}
+.links li ul > li a {
+  color: var(--color5);
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

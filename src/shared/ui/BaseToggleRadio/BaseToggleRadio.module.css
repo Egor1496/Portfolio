@@ -1,0 +1,42 @@
+@import url("../../../app/styles/base-params.css");
+
+.switch_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"].switch{
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  background: var(--color5);
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch:checked{
+  background: var(--color2);
+}
+
+input[type="checkbox"].switch:after{
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color2);
+  box-shadow: 0 0 .25em var(--color4);
+  transform: scale(.7);
+  left: 0;
+  transition: all .2s ease-in-out;
+  }
+
+input[type="checkbox"].switch:checked:after{
+  left: calc(100% - 30px);
+  background: var(--color1);
+}
+

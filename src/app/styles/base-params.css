@@ -4,4 +4,22 @@
   sans-serif;
   --colorDef1: #ddd;
   --colorDef2: #333;
+  --fontSizeDef1: 14px;
+  --fontSizeDef2: 18px;
+  --fontSizeDef3: 24px;
+  --сolorA1: var(--colorDef2);
+  --сolorA2: #116466;
+  --сolorH1: var(--colorDef2);
+  --сolorH2: var(--colorDef1);
+  --сolorP1: var(--colorDef2);
+  --сolorP2: var(--colorDef1);
+  --сolorControl1: var(--colorDef2);
+  --сolorControl2: var(--colorDef1);
+  --bgDisableControl1: var(--colorDef2);
+  --bgDisableControl2: var(--colorDef1);
+  --color4: #687864;
+  --color2: #31708E;
+  --color3: #5085A5;
+  --color1: #8FC1E3;
+  --color5: #F7F9FB;
 }

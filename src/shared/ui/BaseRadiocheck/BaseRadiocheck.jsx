@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import css from "./BaseRadiocheck.module.css";
 
-const BaseRadiocheck = ({ disabled }) => {
-	const [isChecked, setIsChecked] = useState(false);
+const BaseRadiocheck = () => {
 	return (
-		<div className={css.main}>
-			<input
-				className={`${css.input} ${disabled && css.disabled}`}
-				type="radio"
-				checked={isChecked}
-				onChange={(e) => setIsChecked(e.target.checked)}
-				disabled={disabled}
-			/>
+		<div className={`${css["radio"]}`}>
+			<input type="radio" name="radio" defaultValue="1" />
 		</div>
 	);
 }
