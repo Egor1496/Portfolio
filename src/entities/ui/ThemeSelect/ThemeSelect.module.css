@@ -1,7 +1,0 @@
-@import url("../../../app/styles/base-params.css");
-
-.main{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}

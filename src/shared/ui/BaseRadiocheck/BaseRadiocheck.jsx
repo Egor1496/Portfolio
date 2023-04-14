@@ -1,10 +1,10 @@
 import React from "react";
-import css from "./BaseRadiocheck.module.css";
+import css from "./BaseRadiocheck.module.sass";
 
-const BaseRadiocheck = () => {
+const BaseRadiocheck = ({ disabled }) => {
 	return (
 		<div className={`${css["radio"]}`}>
-			<input type="radio" name="radio" defaultValue="1" />
+			<input type="radio" name="radio" defaultValue="1" disabled={disabled} />
 		</div>
 	);
 }

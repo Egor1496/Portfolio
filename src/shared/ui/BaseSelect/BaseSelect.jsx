@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import css from "./BaseSelect.module.css";
+import css from "./BaseSelect.module.sass";
 
 const BaseSelect = ({ styles, options }) => {
 

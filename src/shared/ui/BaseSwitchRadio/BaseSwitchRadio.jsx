@@ -1,10 +1,10 @@
 import React from "react";
-import css from "./BaseSwitchRadio.module.css";
+import css from "./BaseSwitchRadio.module.sass";
 
-const BaseSwitchRadio = () => {
+const BaseSwitchRadio = ({ disabled }) => {
 	return (
 		<div className={`${css["switch"]}`}>
-			<input type="checkbox" className={`${css["switch"]}`} />
+			<input type="checkbox" className={`${css["switch"]}`} disabled={disabled} />
 		</div>
 	);
 }

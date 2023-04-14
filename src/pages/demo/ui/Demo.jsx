@@ -1,6 +1,6 @@
 import React from "react";
 
-import css from "./Demo.module.css";
+import css from "./Demo.module.sass";
 
 import {
   TypographyDemo,

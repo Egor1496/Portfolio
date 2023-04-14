@@ -1,6 +1,6 @@
 import React from "react";
 
-import css from "./ThemeSelect.module.css"
+import css from "./ThemeSelect.module.sass"
 
 import { BaseButton } from "../../../shared/ui";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./TypographyDemo.module.css";
+import css from "./TypographyDemo.module.sass";
 
 const TypographyDemo = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./MyLabel.module.css";
+import css from "./MyLabel.module.sass";
 
 const MyLabel = ({ labelText = "", children, position = "top" }) => {
 

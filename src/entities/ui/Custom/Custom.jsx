@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Custom.css"
+import css from "./Custom.sass"
 
 const Custom = () => {
   return (

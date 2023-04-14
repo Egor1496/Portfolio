@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import css from "./BaseTextarea.module.css";
+import css from "./BaseTextarea.module.sass";
 
 const BaseTextarea = ({ readonly, defaultValue = "", placeholder = "" }) => {
 	const [value, setValue] = useState(defaultValue);

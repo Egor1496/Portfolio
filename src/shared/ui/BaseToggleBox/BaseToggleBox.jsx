@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import css from "./BaseToggleBox.module.css";
+import css from "./BaseToggleBox.module.sass";
 
 const BaseToggleBox = () => {
 

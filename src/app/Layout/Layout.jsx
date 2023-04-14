@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import css from "./Layout.module.css";
+import css from "./Layout.module.sass";
 
 import { ThemeParams } from "../../features/ui";
 import { ThemeSelect } from "../../entities/ui";
@@ -27,7 +27,7 @@ const Layout = () => {
 					</aside>
 				</main>
 				<footer className={css.footer} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-					<h4>Copyright © 2023 Egor1496</h4>
+					<h3>Develop my App ^ Egor1496</h3>
 				</footer>
 			</div>
 		</div >

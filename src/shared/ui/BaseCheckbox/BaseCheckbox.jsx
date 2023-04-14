@@ -1,10 +1,10 @@
 import React from "react";
-import css from "./BaseCheckbox.module.css";
+import css from "./BaseCheckbox.module.sass";
 
-const BaseCheckbox = () => {
+const BaseCheckbox = ({ disabled }) => {
 	return (
 		<div className={`${css["check"]}`}>
-			<input type="checkbox" />
+			<input type="checkbox" disabled={disabled} />
 		</div>
 	);
 }

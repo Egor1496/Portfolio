@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./ColorsDemo.module.css"
+import css from "./ColorsDemo.module.sass"
 
 import { Grid, GridСell } from "../../../shared/ui";
 

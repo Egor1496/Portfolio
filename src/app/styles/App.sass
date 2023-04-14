@@ -1,0 +1,41 @@
+@import url("normalize.css")
+@import url("base-params.css")
+
+*
+  box-sizing: border-box
+  &::selection
+    background-color: var(--color5)
+
+h1, h2, h3, h4, h5, h6
+  color: var(--сolorH1)
+  margin: 0
+
+blockquote, pre, code
+
+dt, td, th, dd, ol, ul, li, p, b, strong, small, label, span, div
+  color: var(--сolorP1)
+
+a
+  color: var(--сolorA1)
+  &:hover
+    color: var(--сolorA2)
+
+html
+  min-height: 100vh
+  min-width: 100%
+  font-family: var(--fontFamilyDef)
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-size: var(--fontSizeDef2)
+
+body
+  min-height: 100%
+  min-width: 100%
+  margin: 0
+  padding: 0
+  background-color: var(--color1)
+  color: var(--colorDef1)
+
+#root
+  min-height: 100%
+  min-width: 100%
