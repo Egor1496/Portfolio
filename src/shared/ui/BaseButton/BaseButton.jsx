@@ -1,11 +1,30 @@
 import React from "react";
-import css from "./BaseButton.module.sass";
+import sass from "./BaseButton.module.sass";
 
-const BaseButton = ({ text, disabled, callBack, floatIcon, children }) => {
+const BaseButton = (props) => {
+
+	const {
+		text,
+		disabled,
+		callBack,
+		floatIcon,
+		btnStyle,
+		sizeStyle,
+		border,
+		children
+	} = props;
+
 	return (
-		<div className={css.main}>
+		<div className={sass.main}>
 			<button
-				className={`${css.button} ${css[floatIcon]} ${disabled && css.buttonDisabled}`}
+				className={`
+					${sass.button}
+					${sass[floatIcon]}
+					${sass[btnStyle]}
+					${sass[border]}
+					${sass[sizeStyle]}
+					${disabled && sass.buttonDisabled}
+				`}
 				onClick={callBack}
 				disabled={disabled}>
 				{children}

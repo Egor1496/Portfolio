@@ -1,6 +1,7 @@
 @import url("../../../app/styles/base-params.css")
 
 .bookmark
+  position: relative
   display: block
   align-self: flex-start
   width: 250px
@@ -10,14 +11,32 @@
   background-color: var(--color3)
   text-decoration: none
   overflow: hidden
-
-.bookmark
   &:hover
     filter: contrast(1.5)
+    .changeBookmark
+      visibility: block
+      opacity: 1
+  .changeBookmark
+    position: absolute
+    top: 7px
+    right: 7px
+    z-index: 1
+    visibility: none
+    opacity: 0
+    transition: opacity 0.5s
+    svg
+      width: 25px
+      height: 25px
+    &:hover
+      transform: scale(1.2)
+      path
+        fill: var(--color3)
+    path
+      fill: var(--color4)
 
 .main-inner
   position: relative
-  &:nth-child(2)
+  &:nth-child(3)
     border-top: 1px solid var(--color4)
 
 .inner
@@ -46,20 +65,24 @@
 
 .tags
   display: flex
-  gap: 10px
+  flex-wrap: wrap
+  column-gap: 10px
   margin: 5px 0
   padding: 0
   list-style-type: none
   .tags-item
+    margin: 0
 
 .group
   display: flex
-  gap: 10px
+  flex-wrap: wrap
+  column-gap: 10px
   margin: 5px 0
   margin-bottom: 0
   padding: 0
   list-style-type: none
   .group-item
+    margin: -5px
 
 .time
   margin: 5px 0

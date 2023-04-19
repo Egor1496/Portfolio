@@ -1,5 +1,10 @@
 import React from "react";
-import css from "./Bookmark.module.sass"
+import sass from "./Bookmark.module.sass"
+
+import { BaseButton } from "../../../shared/ui"
+
+import { AiFillFolderOpen } from 'react-icons/ai';
+import { RxPencil2 } from 'react-icons/rx';
 
 const Bookmark = (props) => {
   const baseURL = "https://besticon-demo.herokuapp.com/icon?url=",
@@ -15,44 +20,65 @@ const Bookmark = (props) => {
     time = ""
   } = props;
 
+  const elemImg = imgLink && (
+    <div className={`${sass["preview"]}`}>
+      <img src={baseURL + imgLink + postfixUrl} alt="" />
+    </div>
+  );
+
+  const elemTitle = title && (<h2 className={`${sass["title"]}`}>{title}</h2>);
+
+  const elemDescription = description && (
+    <div className={`${sass["inner"]}`}>
+      <p className={`${sass["description"]}`}>{description}</p>
+    </div>
+  );
+
+  const elemTags = tags && (
+    <ul className={`${sass["tags"]}`}>
+      {
+        tags.map((elem, i) =>
+          <li key={i} className={`${sass["tags-item"]}`}>
+            <BaseButton text={elem} sizeStyle="small"></BaseButton>
+          </li>)
+      }
+    </ul>
+  );
+
+  const elemGroup = group && (
+    <ul className={`${sass["group"]}`}>
+      {
+        group.map((elem, i) =>
+          <li key={i} className={`${sass["group-item"]}`}>
+            <BaseButton text={elem} btnStyle="transparent"><AiFillFolderOpen /></BaseButton>
+          </li>)
+      }
+    </ul>
+  );
+
+  const elemTime = time && (<div className={`${sass["time"]}`}><span>{time}</span></div>);
+
   return (
-    <a className={`${css["bookmark"]}`}
+    <a className={`${sass["bookmark"]}`}
       href={link}
       target="_blank"
       rel="noreferrer"
     >
-      <div className={`${css["main-inner"]}`}>
-        {
-          imgLink &&
-          <div className={`${css["preview"]}`}>
-            <img src={baseURL + imgLink + postfixUrl} alt="" />
-          </div>
-        }
-        {title && <h2 className={`${css["title"]}`}>{title}</h2>}
+      <div className={sass.changeBookmark}>
+        <RxPencil2 />
+      </div>
+      <div className={`${sass["main-inner"]}`}>
+        {elemImg}
+        {elemTitle}
       </div>
       {
         (description || tags || group || time) &&
-        <div className={`${css["main-inner"]}`}>
-          {
-            description &&
-            <div className={`${css["inner"]}`}>
-              <p className={`${css["description"]}`}>{description}</p>
-            </div>
-          }
-          <div className={`${css["inner"]}`}>
-            {
-              tags &&
-              <ul className={`${css["tags"]}`}>
-                {tags.map((elem, i) => <li key={i} className={`${css["tags-item"]}`}>{elem}</li>)}
-              </ul>
-            }
-            {
-              group &&
-              <ul className={`${css["group"]}`}>
-                {group.map((elem, i) => <li key={i} className={`${css["group-item"]}`}>{elem}</li>)}
-              </ul>
-            }
-            {time && <div className={`${css["time"]}`}><span>{time}</span></div>}
+        <div className={`${sass["main-inner"]}`}>
+          {elemDescription}
+          <div className={`${sass["inner"]}`}>
+            {elemTags}
+            {elemGroup}
+            {elemTime}
           </div>
         </div>
       }

@@ -1,7 +1,5 @@
 @import url("../../../app/styles/base-params.css")
 
-.main
-
 .button
   display: flex
   gap: 5px
@@ -14,19 +12,47 @@
   color: var(--сolorControl1)
   font-size: var(--fontSizeDef2)
   transition: transform 0.1s, background-color 0.08s
-
   &:hover
     cursor: pointer
     border-bottom: 3px solid var(--color5)
     background-color: var(--color2)
     color: var(--сolorControl2)
     transform: scale(1.05)
-
   &:active
     border-radius: 5px
     border-bottom: 3px solid var(--color2)
     background-color: var(--color5)
     color: var(--сolorControl1)
+  svg
+    fill: var(--color2)
+  &:hover svg
+    fill: var(--color5)
+  &:active svg
+    fill: var(--color2)
+
+.transparent
+  border: none
+  background-color: transparent
+  &:hover
+    border: none
+    background-color: transparent
+  &:active
+    border: none
+    background-color: transparent
+
+.noBorder
+  border: none
+
+.big
+  font-size: 20px
+  // padding: 10px 20px
+  svg
+    width: 30px
+    height: 30px
+
+.small
+  font-size: 14px
+  padding: 2px 5px
 
 .buttonDisabled
   opacity: 0.5
@@ -34,7 +60,6 @@
   background-color: var(--bgDisableControl2)
   color: var(--сolorControl1)
   transition: none
-
   &:hover, &:active
     cursor: default
     opacity: 0.5
@@ -42,18 +67,6 @@
     background-color: var(--bgDisableControl2)
     color: var(--сolorControl1)
     transform: none
-
-.button
-  svg
-    fill: var(--color2)
-
-  &:hover svg
-    fill: var(--color5)
-
-  &:active svg
-    fill: var(--color2)
-
-.buttonDisabled
   svg, &:hover svg
     fill: var(--color2)
 
@@ -67,5 +80,3 @@
 .bottom
   flex-direction: column-reverse
   align-items: center
-
-.left

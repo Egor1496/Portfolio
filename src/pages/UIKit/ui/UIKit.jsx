@@ -5,7 +5,7 @@ import {
 	BaseCheckbox, BaseRadiocheck,
 	BaseToggleBox, BaseToggleRadio, BaseSwitchRadio,
 	BaseSelect,
-	MyLabel, Br, Grid, GridСell,
+	MyLabel, Br, Grid, GridСell, Title,
 } from "../../../shared/ui";
 
 import {
@@ -35,21 +35,27 @@ function UIKit() {
 			<Br />
 			<Grid>
 				<GridСell>
-					<MyLabel labelText="Описание"><BaseButton text="Кнопка" ></BaseButton></MyLabel>
+					<Title text="Заголовок" type="h1" BorderStyle="left" />
+					<Title text="Заголовок" type="h2" BorderStyle="left" />
+					<BaseButton text="Кнопка" />
 					<MyLabel labelText="Описание"><BaseInput defaultValue="По умолчанию" /></MyLabel>
 					<MyLabel labelText="Описание"><BaseTextarea placeholder="Пустой" /></MyLabel>
 				</GridСell>
 				<GridСell>
-					<MyLabel labelText="Описание" ><BaseButton text="Кнопка" disabled /></MyLabel>
+					<Title text="Заголовок" BorderStyle="borderTop"> <FaReact /> </Title>
+					<Title text="Заголовок" BorderStyle="borderBottom"> <FaReact /> </Title>
+					<BaseButton text="Кнопка" />
 					<MyLabel labelText="Описание" ><BaseInput readonly placeholder="Пустой" /></MyLabel>
 					<MyLabel labelText="Описание" ><BaseTextarea readonly defaultValue="По умолчанию" /></MyLabel>
 				</GridСell>
 				<GridСell>
-					<MyLabel labelText="Описание" ><BaseButton text="Кнопка" /></MyLabel>
+					<Title text="Заголовок" floatIcon="iconRight" BorderStyle="borderleft"> <FaReact /> </Title>
+					<Title text="Заголовок" floatIcon="iconRight" BorderStyle="borderRight"> <FaReact /> </Title>
+					<BaseButton text="Кнопка" />
 					<MyLabel labelText="Описание" ><BaseInput /></MyLabel>
 					<MyLabel labelText="Описание" ><BaseTextarea /></MyLabel>
 				</GridСell>
-			</Grid>
+			</Grid >
 			<Br />
 			<Grid>
 				<GridСell>
@@ -70,18 +76,21 @@ function UIKit() {
 			<Br />
 			<Grid>
 				<GridСell>
+					<BaseButton btnStyle="transparent" text="Кнопка" ><DiHtml5 /></BaseButton>
 					<BaseButton text="Жми" floatIcon="top"><DiHtml5 /></BaseButton>
 					<BaseButton text="Кнопка" floatIcon="right"><SiCss3 /></BaseButton>
 					<BaseButton text="Кнопка" floatIcon="left"><DiJsBadge /></BaseButton>
 					<BaseButton text="Кнопка" floatIcon="bottom"><FaReact /></BaseButton>
 				</GridСell>
 				<GridСell>
-					<MyLabel labelText="Описание" position="top"><BaseButton><DiNpm /></BaseButton></MyLabel>
+					<BaseButton sizeStyle="big" text="Кнопка" />
+					<BaseButton sizeStyle="big"><DiNpm /></BaseButton>
 					<MyLabel labelText="Описание" position="right"><BaseButton><DiGithubBadge /></BaseButton></MyLabel>
 					<MyLabel labelText="Описание" position="left"><BaseButton><BiCodeAlt /></BaseButton></MyLabel>
 					<MyLabel labelText="Описание" position="bottom"><BaseButton ><FaYandex /></BaseButton></MyLabel>
 				</GridСell>
 				<GridСell>
+					<BaseButton sizeStyle="small" text="Кнопка" />
 					<BaseButton disabled text="Жми" floatIcon="top"><IoAccessibilitySharp /></BaseButton>
 					<BaseButton disabled text="Кнопка" floatIcon="right"><HiCheckCircle /></BaseButton>
 					<BaseButton disabled text="Кнопка" floatIcon="left"><HiMail /></BaseButton>
@@ -97,7 +106,6 @@ function UIKit() {
 					3 стиля у кнопок / транспарент / бордерр снизу / бордер везде
 					инпут с иконкой
 					варнинги на инпут
-					кнопка транспаред стиль
 					инпут транспаред стиль с бордером снизу
 					текстареа транспаред стиль с бордером снизу
 					текст с боковым бордером
@@ -105,11 +113,11 @@ function UIKit() {
 					боковое складывающиеся меню
 					верхнее меню страниц с найстройками темы
 					элемент меню с текстом с иконкой с боковым бордером
-					кнопки некст и прев (кнопка с иконкой)
 					пагинация два вида
 					мини уведомления на инпут, оповищение об обязательых полях
 					красные звездочки на лейбл инпут, оповищение об обязательых полях
 					теги
+					Количество закладок к тэгу
 					уведомление (текст с кнопкой 3 цвета)
 					микро уведомление иконка снизу текст
 					загрузка файла виджет
