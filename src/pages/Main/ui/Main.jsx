@@ -1,9 +1,9 @@
 import React from "react";
 import css from "./Main.module.sass"
 
-import { Bookmarks } from "../../../features/ui";
-import { getBookmarks } from "../../../entities/model";
-import { AddBookmark, Filters, SelectStyleBookmark, Sort } from "../../../entities/ui";
+import { Bookmarks } from "../../../features";
+import { getBookmarks } from "../../../entities";
+import { AddBookmark, Filters, SelectStyleBookmark, Sort } from "../../../entities";
 
 const Main = () => {
   return (

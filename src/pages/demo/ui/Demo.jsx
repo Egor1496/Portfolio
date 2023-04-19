@@ -5,7 +5,7 @@ import css from "./Demo.module.sass";
 import {
   TypographyDemo,
   Custom
-} from "../../../entities/ui";
+} from "../../../entities";
 
 const Demo = () => {
   return (

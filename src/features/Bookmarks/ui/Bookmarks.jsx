@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./Bookmarks.module.sass"
 
-import { Bookmark } from "../../../entities/ui"
+import { Bookmark } from "../../../entities"
 
 const Bookmarks = ({ bookmarks }) => {
 

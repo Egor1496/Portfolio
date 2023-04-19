@@ -1,7 +1,7 @@
 import React from "react";
 import sass from "./MainHeader.module.sass";
 
-import { Search, FastLinks, GroupLinks, BaseSettings } from "../../../entities/ui";
+import { Search, FastLinks, GroupLinks, BaseSettings } from "../../../entities";
 
 const MainHeader = () => {
   return (

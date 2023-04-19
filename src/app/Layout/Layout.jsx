@@ -3,8 +3,8 @@ import { Outlet } from "react-router-dom";
 
 import sass from "./Layout.module.sass";
 
-import { ThemeParams, MainMenu, MainHeader, MainAside, MainFooter } from "../../features/ui";
-import { ThemeSelect } from "../../entities/ui";
+import { ThemeParams, MainMenu, MainHeader, MainAside, MainFooter } from "../../features";
+import { ThemeSelect } from "../../entities";
 
 const Layout = () => {
 	const THEME_DEFAULT = 12;

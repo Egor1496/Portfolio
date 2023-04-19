@@ -10,7 +10,7 @@ import {
 
 import {
 	ColorsDemo
-} from "../../../entities/ui";
+} from "../../../entities";
 
 import { DiCodeigniter, DiJsBadge, DiHtml5, DiGithubBadge, DiNpm } from "react-icons/di";
 import { SiCss3 } from "react-icons/si";
