@@ -1,7 +1,8 @@
 import React from "react";
 import sass from "./MainHeader.module.sass";
 
-import { Search, FastLinks, GroupLinks, BaseSettings } from "../../../entities";
+import { Search, BaseSettings } from "../../../entities";
+import { FastLinks, GroupLinks } from "../../../features";
 
 const MainHeader = () => {
   return (

@@ -1,16 +1,16 @@
 import React from "react";
-import css from "./Bookmarks.module.sass"
+import sass from "./Bookmarks.module.sass"
 
-import { Bookmark } from "../../../entities"
+import { Bookmark } from "../../../features"
 
 const Bookmarks = ({ bookmarks }) => {
-
   return (
     <>
-      <div className={css["bookmarks-wrap"]}>
+      <div className={sass["bookmarks-wrap"]}>
         {
           bookmarks.map((elem) => {
             const {
+              id,
               imgLink = "",
               link = "./",
               title = "",
@@ -20,7 +20,8 @@ const Bookmarks = ({ bookmarks }) => {
               time = ""
             } = elem;
 
-            return < Bookmark key={link}
+            return < Bookmark
+              key={id}
               link={link}
               title={title}
               description={description}
@@ -32,7 +33,7 @@ const Bookmarks = ({ bookmarks }) => {
           })
         }
       </div>
-      <div className={css.countBookmarks}>закладок - {bookmarks.length}</div>
+      <div className={sass.countBookmarks}>закладок - {bookmarks.length}</div>
     </>
   );
 }
