@@ -3,21 +3,10 @@ import sass from "./Main.module.sass"
 
 import { AddBookmark, Sort } from "../../../entities";
 import { SelectStyleBookmark, Filters } from "../../../features";
-import { Bookmarks, getBookmarks, addBookmarks } from "../../../widgets";
+import { Bookmarks, getBookmarks } from "../../../widgets";
 
 const Main = () => {
   const [bookmarks, setBookmarks] = useState(getBookmarks());
-
-  const bookmarkClick = () => {
-    addBookmarks({
-      id: -1,
-      link: "https://www.youtube.com/",
-      description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
-      tags: ["Видео", "Соц. сеть"],
-      group: ["Избранные"],
-    },);
-    setBookmarks(getBookmarks());
-  }
 
   return (
     <div className={sass.main}>
@@ -27,7 +16,7 @@ const Main = () => {
           <SelectStyleBookmark />
           <Filters />
         </div>
-        <AddBookmark onAddBookmark={bookmarkClick} />
+        <AddBookmark bookmarks={bookmarks} setBookmarks={setBookmarks} />
       </div>
       <Bookmarks bookmarks={bookmarks} />
     </div>
@@ -35,8 +24,3 @@ const Main = () => {
 };
 
 export { Main };
-
-/*
-  link *
-  title *
-*/

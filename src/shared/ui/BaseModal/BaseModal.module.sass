@@ -28,3 +28,23 @@
 .mainInner
   min-width: 100%
   min-height: 100%
+
+.close
+  position: absolute
+  right: 10px
+  top: 10px
+  transition: 0.1s
+  &:hover
+    cursor: pointer
+    transform: scale(1.1)
+    svg
+      fill: var(--color2)
+  &:active
+    cursor: pointer
+    transform: scale(1)
+    svg
+      fill: var(--color4)
+  svg
+    fill: var(--color5)
+    width: 40px
+    height: 40px
