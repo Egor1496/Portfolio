@@ -8,3 +8,4 @@ export * from "./FastLinks/ui/FastLinks.jsx";
 export * from "./SelectStyleBookmark/ui/SelectStyleBookmark.jsx";
 export * from "./GroupLinks/ui/GroupLinks.jsx";
 export * from "./Filters/ui/Filters.jsx";
+export * from "./Bookmark/model/bookmark.js";

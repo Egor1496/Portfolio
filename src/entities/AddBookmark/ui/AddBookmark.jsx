@@ -4,30 +4,26 @@ import sass from "./AddBookmark.module.sass"
 import { AiOutlineAppstoreAdd } from 'react-icons/ai';
 
 import { BaseButton, BaseInput, BaseModal, BaseTextarea, MyLabel } from "../../../shared/ui";
-import { getBookmarks, addBookmarks } from "../../../widgets";
 
-const AddBookmark = ({ setBookmarks }) => {
+const AddBookmark = ({ addAndUpdateBookmarks }) => {
 
   const [modalActive, modalSetActive] = useState(false);
 
   const [titleInput, setTitleInput] = useState("");
   const [descriptionInput, setFescriptionInput] = useState("");
-  const [urlInput, setUrlInput] = useState("https://ya.ru/");
+  const [linkInput, setLinkInput] = useState("https://www.youtube.com/");
   const [tagsInput, setTagsInput] = useState("");
   const [groupInput, setGroupInput] = useState("");
 
-  const addBookmark = () => {
-    const bookmarks = getBookmarks();
+  const onAddBookmark = () => {
     const bookmark = {
-      id: Date.now(),
-      link: urlInput,
+      link: linkInput,
       title: titleInput,
       description: descriptionInput,
-      tags: tagsInput.trim().toLocaleLowerCase().split(" "),
-      group: [groupInput],
-    }
-    addBookmarks(bookmark);
-    setBookmarks(bookmarks);
+      tags: tagsInput,
+      group: groupInput,
+    };
+    addAndUpdateBookmarks(bookmark);
   }
 
   return (
@@ -36,11 +32,11 @@ const AddBookmark = ({ setBookmarks }) => {
         <div className={sass.addBookFrom}>
           <h3>Добавить закладку</h3>
           <div className={sass.formWrap}>
-            <MyLabel labelText="URL">
+            <MyLabel labelText="Ссылка">
               <BaseInput
                 placeholder="https://www.youtube.com/"
-                state={urlInput}
-                setState={setUrlInput}
+                state={linkInput}
+                setState={setLinkInput}
               />
             </MyLabel>
             <MyLabel labelText="Заголовок">
@@ -61,7 +57,7 @@ const AddBookmark = ({ setBookmarks }) => {
           <div className={sass.formWrap}>
             <MyLabel labelText="Тэги">
               <BaseInput
-                placeholder="видео"
+                placeholder="видео, ютуб"
                 state={tagsInput}
                 setState={setTagsInput}
               />
@@ -76,7 +72,7 @@ const AddBookmark = ({ setBookmarks }) => {
           </div>
           <div className={sass.buttonWrap}>
             <BaseButton text="Принять"
-              callBack={() => { modalSetActive(false); addBookmark(); }}
+              callBack={() => { modalSetActive(false); onAddBookmark(); }}
             />
             <BaseButton text="Отмена" btnStyle="transparent"
               callBack={() => { modalSetActive(false) }}

@@ -19,7 +19,9 @@ const BaseModal = (props) => {
 				active && (<div>
 					<div className={sass.bg} style={cssBg} onClick={() => { setActive(false) }} />
 					<div className={sass.modal} style={cssModal} >
-						<div className={sass.close} onClick={() => { setActive(false) }} ><AiOutlineCloseCircle /></div>
+						<div className={sass.close} onClick={() => { setActive(false) }} >
+							<AiOutlineCloseCircle />
+						</div>
 						<div className={sass.mainInner} style={cssInner} >
 							{children}
 						</div>

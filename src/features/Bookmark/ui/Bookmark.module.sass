@@ -1,5 +1,33 @@
 @import url("../../../app/styles/base-params.css")
 
+.bookamrkWrap
+  position: relative
+  &:hover .changeBookmark, &:hover .deleteBookmark
+    visibility: block
+    opacity: 1
+  .changeBookmark, .deleteBookmark
+    position: absolute
+    top: 7px
+    right: 7px
+    z-index: 1
+    visibility: none
+    opacity: 0
+    transition: opacity 0.5s
+    &:hover
+      cursor: pointer
+      transform: scale(1.2)
+      path
+        fill: var(--color3)
+    svg
+      width: 25px
+      height: 25px
+      path
+        fill: var(--color4)
+  .deleteBookmark
+    top: 7px
+    left: 7px
+    right: auto
+
 .bookmark
   position: relative
   display: block
@@ -13,26 +41,6 @@
   overflow: hidden
   &:hover
     filter: contrast(1.5)
-    .changeBookmark
-      visibility: block
-      opacity: 1
-  .changeBookmark
-    position: absolute
-    top: 7px
-    right: 7px
-    z-index: 1
-    visibility: none
-    opacity: 0
-    transition: opacity 0.5s
-    svg
-      width: 25px
-      height: 25px
-    &:hover
-      transform: scale(1.2)
-      path
-        fill: var(--color3)
-    path
-      fill: var(--color4)
 
 .main-inner
   position: relative

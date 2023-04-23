@@ -5,19 +5,24 @@ import { BaseButton } from "../../../shared/ui"
 
 import { AiFillFolderOpen } from 'react-icons/ai';
 import { RxPencil2 } from 'react-icons/rx';
+import { AiOutlineDelete } from 'react-icons/ai';
+
 
 const Bookmark = (props) => {
   const baseURL = "https://besticon-demo.herokuapp.com/icon?url=",
     postfixUrl = "&size=80";
 
   const {
+    id,
     imgLink = "",
     link = "./",
     title = "",
     description = "",
     tags = null,
     group = null,
-    time = ""
+    time = "",
+    onEditBookmark,
+    onDeleteBookmark
   } = props;
 
   const elemImg = imgLink && (
@@ -39,7 +44,7 @@ const Bookmark = (props) => {
       {
         tags.map((elem, i) =>
           <li key={i} className={`${sass["tags-item"]}`}>
-            <BaseButton text={elem} sizeStyle="small"></BaseButton>
+            <BaseButton text={elem.trim()} sizeStyle="small"></BaseButton>
           </li>)
       }
     </ul>
@@ -50,39 +55,40 @@ const Bookmark = (props) => {
       {
         group.map((elem, i) =>
           <li key={i} className={`${sass["group-item"]}`}>
-            <BaseButton text={elem} btnStyle="transparent"><AiFillFolderOpen /></BaseButton>
+            <BaseButton text={elem.trim()} btnStyle="transparent"><AiFillFolderOpen /></BaseButton>
           </li>)
       }
     </ul>
   );
 
   const elemTime = time && (<div className={`${sass["time"]}`}><span>{time}</span></div>);
-
   return (
-    <a className={`${sass["bookmark"]}`}
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <div className={sass.changeBookmark}>
+    <div className={sass.bookamrkWrap}>
+      <div className={sass.deleteBookmark} onClick={(e) => { onDeleteBookmark(id) }}>
+        <AiOutlineDelete />
+      </div>
+      <div className={sass.changeBookmark} onClick={(e) => { onEditBookmark(id) }}>
         <RxPencil2 />
       </div>
-      <div className={`${sass["main-inner"]}`}>
-        {elemImg}
-        {elemTitle}
-      </div>
-      {
-        (description || tags || group || time) &&
+      <a className={`${sass["bookmark"]}`} href={link} target="_blank" rel="noreferrer">
         <div className={`${sass["main-inner"]}`}>
-          {elemDescription}
-          <div className={`${sass["inner"]}`}>
-            {elemTags}
-            {elemGroup}
-            {elemTime}
-          </div>
+          {elemImg}
+          {elemTitle}
         </div>
-      }
-    </a >
+        {
+          (description || tags || group || time) &&
+          <div className={`${sass["main-inner"]}`}>
+            {elemDescription}
+            <div className={`${sass["inner"]}`}>
+              {elemTags}
+              {elemGroup}
+              {elemTime}
+            </div>
+          </div>
+        }
+      </ a>
+    </div>
+
   );
 }
 

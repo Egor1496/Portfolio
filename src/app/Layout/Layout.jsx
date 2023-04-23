@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 
 import sass from "./Layout.module.sass";
 
-import { ThemeParams, MainMenu, MainHeader, MainAside, MainFooter } from "../../features";
-import { ThemeSelect } from "../../entities";
+import { MainMenu, MainHeader, MainAside, MainFooter } from "../../features";
+
 
 const Layout = () => {
-	const THEME_DEFAULT = 12;
-	const [numberTheme, setTheme] = useState(THEME_DEFAULT);
+
 	return (
-		<div className={sass.main}>
-			<ThemeParams thisNumberTheme={numberTheme} />
+		<div className={sass.mainWrap}>
+
 			<nav className={`${sass["col-1"]} ${sass.nav}`}>
 				<MainMenu />
 			</nav>
@@ -23,7 +22,6 @@ const Layout = () => {
 					<article className={sass.article} ><Outlet /></article>
 					<aside className={sass.aside} >
 						<MainAside />
-						<ThemeSelect setTheme={setTheme} />
 					</aside>
 				</main>
 				<footer className={sass.footer} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
