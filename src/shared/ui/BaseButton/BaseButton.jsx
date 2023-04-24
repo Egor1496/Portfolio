@@ -9,6 +9,7 @@ const BaseButton = (props) => {
 		callBack,
 		floatIcon,
 		btnStyle,
+		hoverStyle,
 		sizeStyle,
 		border,
 		children
@@ -21,6 +22,7 @@ const BaseButton = (props) => {
 					${sass.button}
 					${sass[floatIcon]}
 					${sass[btnStyle]}
+					${sass[hoverStyle]}
 					${sass[border]}
 					${sass[sizeStyle]}
 					${disabled && sass.buttonDisabled}

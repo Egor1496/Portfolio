@@ -13,7 +13,6 @@ const Bookmark = (props) => {
     postfixUrl = "&size=80";
 
   const {
-    id,
     imgLink = "",
     link = "./",
     title = "",
@@ -55,7 +54,7 @@ const Bookmark = (props) => {
       {
         group.map((elem, i) =>
           <li key={i} className={`${sass["group-item"]}`}>
-            <BaseButton text={elem.trim()} btnStyle="transparent"><AiFillFolderOpen /></BaseButton>
+            <BaseButton text={elem.trim()} btnStyle="transparent" hoverStyle="noHoverStyle"><AiFillFolderOpen /></BaseButton>
           </li>)
       }
     </ul>
@@ -64,10 +63,10 @@ const Bookmark = (props) => {
   const elemTime = time && (<div className={`${sass["time"]}`}><span>{time}</span></div>);
   return (
     <div className={sass.bookamrkWrap}>
-      <div className={sass.deleteBookmark} onClick={(e) => { onDeleteBookmark(id) }}>
+      <div className={sass.deleteBookmark} onClick={(e) => { onDeleteBookmark(); }}>
         <AiOutlineDelete />
       </div>
-      <div className={sass.changeBookmark} onClick={(e) => { onEditBookmark(id) }}>
+      <div className={sass.changeBookmark} onClick={(e) => { onEditBookmark(); }}>
         <RxPencil2 />
       </div>
       <a className={`${sass["bookmark"]}`} href={link} target="_blank" rel="noreferrer">

@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./BaseTextarea.module.sass";
+import sass from "./BaseTextarea.module.sass";
 
 const BaseTextarea = (props) => {
 
@@ -7,12 +7,13 @@ const BaseTextarea = (props) => {
 		state,
 		setState,
 		readonly,
-		placeholder = ""
+		placeholder = "",
+		width
 	} = props;
 
 	return (
-		<div className={css.main}>
-			<textarea className={`${css.textarea} ${readonly && css.disable}`}
+		<div className={sass.main}>
+			<textarea className={`${sass.textarea} ${sass[width]} ${readonly && sass.disable}`}
 				value={state}
 				onChange={(e) => setState(e.target.value)}
 				readOnly={readonly}

@@ -6,7 +6,7 @@ import { BaseDropMenu, Br } from "../../../shared/ui";
 const MainMenu = () => {
 
   return (
-    <div className={sass["MainMenu-wrap"]}>
+    <div className={sass["mainMenuWrap"]}>
       <h1>Bookmark</h1>
       <Br style={{ "margin": "5px 0" }} />
       <BaseDropMenu />

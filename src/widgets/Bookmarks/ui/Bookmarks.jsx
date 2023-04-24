@@ -1,50 +1,56 @@
 import React, { useState } from "react";
 import sass from "./Bookmarks.module.sass";
 
-import { BaseButton, BaseModal } from "../../../shared/ui";
+import { deleteBookmark, editBookmark } from "../../../widgets";
 import { Bookmark } from "../../../features";
+import { BookmarkModal, DialogModal } from "../../../entities";
 
-const Bookmarks = ({ bookmarks }) => {
+let idActiveBookmark,
+  titleActiveBookmark,
+  defaultForm = {};
 
-  const [deleteModalActive, deleteModalSetActive] = useState(false);
+const Bookmarks = ({ bookmarks, setBookmarks }) => {
+
+  const [deleteModalActive, SetDeleteModalActive] = useState(false);
   const [editModalActive, editModalSetActive] = useState(false);
 
-  const onDeleteBookmark = () => {
-    deleteModalSetActive(true);
+  const onDeleteBookmark = (elem) => {
+    defaultForm = elem;
+    idActiveBookmark = elem.id;
+    titleActiveBookmark = elem.title;
+    SetDeleteModalActive(true);
   }
 
-  const onEditBookmark = () => {
+  const onEditBookmark = (elem) => {
+    defaultForm = elem;
+    idActiveBookmark = elem.id;
+    titleActiveBookmark = elem.title;
     editModalSetActive(true);
   }
 
   return (
     <>
-      <BaseModal active={deleteModalActive} setActive={deleteModalSetActive}>
-        <div className={sass.deleteBookFrom}>
-          <h3>Удалить закладку</h3>
-          <div className={sass.buttonWrap}>
-            <BaseButton text="Удалить"
-              callBack={() => { deleteModalSetActive(false); }}
-            />
-            <BaseButton text="Отмена" btnStyle="transparent"
-              callBack={() => { deleteModalSetActive(false) }}
-            />
-          </div>
-        </div>
-      </BaseModal>
-      <BaseModal active={editModalActive} setActive={editModalSetActive}>
-        <div className={sass.editBookFrom}>
-          <h3>Редактировать (заглушка)</h3>
-          <div className={sass.buttonWrap}>
-            <BaseButton text="Принять"
-              callBack={() => { editModalSetActive(false); }}
-            />
-            <BaseButton text="Отмена" btnStyle="transparent"
-              callBack={() => { editModalSetActive(false) }}
-            />
-          </div>
-        </div>
-      </BaseModal>
+      <DialogModal
+        title={`Удалить "${titleActiveBookmark}" ?`}
+        textAccept="Удалить"
+        textСancele="Отмена"
+        modalActive={deleteModalActive}
+        modalSetActive={SetDeleteModalActive}
+        OnАccept={() => {
+          deleteBookmark(idActiveBookmark, setBookmarks);
+        }}
+      />
+      <BookmarkModal
+        modalActive={editModalActive}
+        modalSetActive={editModalSetActive}
+        title="Редактировать закладку"
+        OnАccept={(newBookmark) => { editBookmark(idActiveBookmark, newBookmark, setBookmarks); }}
+        titleInputDefault={defaultForm.title}
+        descriptionInputDefault={defaultForm.description}
+        linkInputDefault={defaultForm.linkI}
+        tagsInputDefault={defaultForm.tags}
+        groupInputDefault={defaultForm.group}
+      />
       <div className={sass["bookmarks-wrap"]}>
         {
           bookmarks.map((elem) => {
@@ -58,8 +64,8 @@ const Bookmarks = ({ bookmarks }) => {
               tags={elem.tags}
               group={elem.group}
               time={elem.time}
-              onDeleteBookmark={onDeleteBookmark}
-              onEditBookmark={onEditBookmark}
+              onDeleteBookmark={() => { onDeleteBookmark(elem); }}
+              onEditBookmark={() => { onEditBookmark(elem); }}
             />
           })
         }

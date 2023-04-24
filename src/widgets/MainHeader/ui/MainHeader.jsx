@@ -6,7 +6,7 @@ import { FastLinks, GroupLinks } from "../../../features";
 
 const MainHeader = () => {
   return (
-    <div className={sass["MainHeader-wrap"]}>
+    <div className={sass["mainHeaderWrap"]}>
       <div className={sass["header-inner"]}>
         <Search />
         <BaseSettings />

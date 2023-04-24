@@ -9,6 +9,7 @@
   border-radius: 5px
   border-bottom: 3px solid var(--color2)
   background-color: var(--color5)
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px
   color: var(--сolorControl1)
   font-size: var(--fontSizeDef2)
   transition: transform 0.1s, background-color 0.08s
@@ -17,6 +18,7 @@
     border-bottom: 3px solid var(--color5)
     background-color: var(--color2)
     color: var(--сolorControl2)
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .3) 0 6px 20px
     transform: scale(1.05)
   &:active
     border-radius: 5px
@@ -33,12 +35,18 @@
 .transparent
   border: none
   background-color: transparent
+  box-shadow: none
   &:hover
     border: none
-    background-color: transparent
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .3) 0 6px 20px
   &:active
     border: none
     background-color: transparent
+
+.noHoverStyle:hover
+  border: none
+  background-color: transparent
+  box-shadow: none
 
 .noBorder
   border: none

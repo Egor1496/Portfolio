@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import sass from "./Layout.module.sass";
 
-import { MainMenu, MainHeader, MainAside, MainFooter } from "../../features";
+import { MainMenu, MainHeader, MainAside, MainFooter } from "../../widgets";
 
 
 const Layout = () => {

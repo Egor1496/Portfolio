@@ -4,7 +4,7 @@ import sass from "./MainFooter.module.sass";
 const MainFooter = () => {
 
   return (
-    <div className={sass["MainFooter-wrap"]}>
+    <div className={sass["mainFooterWrap"]}>
       <h3>DOO NOT Develop my App ^ Egor1496</h3>
     </div>
   );

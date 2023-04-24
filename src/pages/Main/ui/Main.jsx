@@ -3,18 +3,13 @@ import sass from "./Main.module.sass"
 
 import { AiFillFolderOpen } from 'react-icons/ai';
 
-import { AddBookmark, Sort } from "../../../entities";
-import { SelectStyleBookmark, Filters } from "../../../features";
+import { Sort } from "../../../entities";
+import { SelectStyleBookmark, Filters, AddBookmark } from "../../../features";
 import { Bookmarks, getBookmarks, addBookmark } from "../../../widgets";
 import { BaseButton } from "../../../shared/ui";
 
 const Main = () => {
   const [bookmarks, setBookmarks] = useState(getBookmarks());
-
-  const addAndUpdateBookmarks = (bookmark) => {
-    addBookmark(bookmark);
-    setBookmarks(getBookmarks());
-  }
 
   return (
     <div className={sass.main}>
@@ -27,9 +22,13 @@ const Main = () => {
           <Sort />
           <Filters />
         </div>
-        <AddBookmark bookmarks={bookmarks} addAndUpdateBookmarks={addAndUpdateBookmarks} />
+        <AddBookmark bookmarks={bookmarks}
+          setBookmarks={setBookmarks}
+          addBookmark={addBookmark}
+          getBookmarks={getBookmarks}
+        />
       </div>
-      <Bookmarks bookmarks={bookmarks} />
+      <Bookmarks bookmarks={bookmarks} setBookmarks={setBookmarks} />
     </div>
   );
 };

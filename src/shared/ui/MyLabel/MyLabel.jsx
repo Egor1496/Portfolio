@@ -1,14 +1,11 @@
 import React from "react";
-import css from "./MyLabel.module.sass";
+import sass from "./MyLabel.module.sass";
 
-const MyLabel = ({ labelText = "", children, position = "top" }) => {
-
-	console.log();
-
+const MyLabel = ({ labelText = "", children, position = "top", width }) => {
 	return (
-		<div className={css.main}>
+		<div className={sass.main}>
 			{
-				<label className={`${css.label} ${css[position]}`}>
+				<label className={`${sass.label} ${sass[width]} ${sass[position]}`}>
 					{labelText}
 					{children}
 				</label>

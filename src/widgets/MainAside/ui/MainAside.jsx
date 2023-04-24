@@ -7,7 +7,7 @@ import { ThemeParams } from "../../../features";
 const MainAside = () => {
   const [numberTheme, setTheme] = useState(1);
   return (
-    <div className={sass["MainAside-wrap"]}>
+    <div className={sass["mainAsideWrap"]}>
       <ThemeParams thisNumberTheme={numberTheme} />
       <ThemeSelect setTheme={setTheme} />
     </div>
