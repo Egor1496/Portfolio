@@ -5,51 +5,50 @@ import { deleteBookmark, editBookmark } from "../../../widgets";
 import { Bookmark } from "../../../features";
 import { BookmarkModal, DialogModal } from "../../../entities";
 
-let idActiveBookmark,
-  titleActiveBookmark,
-  defaultForm = {};
-
 const Bookmarks = ({ bookmarks, setBookmarks }) => {
 
   const [deleteModalActive, SetDeleteModalActive] = useState(false);
   const [editModalActive, editModalSetActive] = useState(false);
 
+  const [form, setForm] = useState({
+    id: 0,
+    title: "",
+    description: "",
+    link: "",
+    tags: "",
+    group: ""
+  });
+
   const onDeleteBookmark = (elem) => {
-    defaultForm = elem;
-    idActiveBookmark = elem.id;
-    titleActiveBookmark = elem.title;
+    setForm({ ...elem });
     SetDeleteModalActive(true);
   }
 
   const onEditBookmark = (elem) => {
-    defaultForm = elem;
-    idActiveBookmark = elem.id;
-    titleActiveBookmark = elem.title;
+    console.log(elem)
+    setForm({ ...elem });
     editModalSetActive(true);
   }
 
   return (
     <>
       <DialogModal
-        title={`Удалить "${titleActiveBookmark}" ?`}
+        modalTitle={`Удалить "${form.title}" ?`}
         textAccept="Удалить"
         textСancele="Отмена"
         modalActive={deleteModalActive}
         modalSetActive={SetDeleteModalActive}
-        OnАccept={() => {
-          deleteBookmark(idActiveBookmark, setBookmarks);
+        onАccept={() => {
+          deleteBookmark(form.id, setBookmarks);
         }}
       />
       <BookmarkModal
+        modalTitle={`Редактировать "${form.title}"`}
         modalActive={editModalActive}
         modalSetActive={editModalSetActive}
-        title="Редактировать закладку"
-        OnАccept={(newBookmark) => { editBookmark(idActiveBookmark, newBookmark, setBookmarks); }}
-        titleInputDefault={defaultForm.title}
-        descriptionInputDefault={defaultForm.description}
-        linkInputDefault={defaultForm.linkI}
-        tagsInputDefault={defaultForm.tags}
-        groupInputDefault={defaultForm.group}
+        onАccept={(newBookmark) => { editBookmark(form.id, newBookmark, setBookmarks); }}
+        state={form}
+        setState={setForm}
       />
       <div className={sass["bookmarks-wrap"]}>
         {

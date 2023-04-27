@@ -10,7 +10,6 @@ const Layout = () => {
 
 	return (
 		<div className={sass.mainWrap}>
-
 			<nav className={`${sass["col-1"]} ${sass.nav}`}>
 				<MainMenu />
 			</nav>

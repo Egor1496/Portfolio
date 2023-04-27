@@ -43,12 +43,12 @@ const getDescription = (description) => {
 	return filledDescription;
 };
 
-const getTags = (tags) => {
+const getTags = (tags = "") => {
 	const filledTags = tags.trim() && tags.toLowerCase().trim().split(",");
 	return filledTags;
 };
 
-const getGroup = (group) => {
+const getGroup = (group = "") => {
 	const filledGroup = group.trim() && group.toLowerCase().trim().split(",");
 	return filledGroup;
 };

@@ -1,64 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 import sass from "./BookmarkModal.module.sass";
 
 import { BaseButton, BaseInput, BaseModal, BaseTextarea, MyLabel } from "../../../shared/ui";
 
 const BookmarkModal = (props) => {
-
   const {
     modalActive,
     modalSetActive,
-    OnАccept,
-    title,
-    titleInputDefault = "youtube",
-    descriptionInputDefault = "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
-    linkInputDefault = "https://www.youtube.com/",
-    tagsInputDefault = "Видео, Соц. сеть",
-    groupInputDefault = "Избранные",
+    modalTitle,
+    onАccept,
+    state,
+    setState,
   } = props;
-
-  const [titleInput, setTitleInput] = useState(titleInputDefault);
-  const [descriptionInput, setFescriptionInput] = useState(descriptionInputDefault);
-  const [linkInput, setLinkInput] = useState(linkInputDefault);
-  const [tagsInput, setTagsInput] = useState(tagsInputDefault);
-  const [groupInput, setGroupInput] = useState(groupInputDefault);
 
   return (
     <BaseModal active={modalActive} setActive={modalSetActive}>
       <div className={sass.addBookFrom}>
-        <h3>{title}</h3>
+        <h3>{modalTitle}</h3>
         <div className={sass.formWrap}>
           <MyLabel labelText="Ссылка">
             <BaseInput
-              state={linkInput}
-              setState={setLinkInput}
+              state={state.link}
+              setState={(newState) => setState({ ...state, link: newState })}
             />
           </MyLabel>
           <MyLabel labelText="Заголовок">
             <BaseInput
-              state={titleInput}
-              setState={setTitleInput}
+              state={state.title}
+              setState={(newState) => setState({ ...state, title: newState })}
             />
           </MyLabel>
         </div>
         <MyLabel labelText="Описание" width="maxWidth">
           <BaseTextarea
-            state={descriptionInput}
-            setState={setFescriptionInput}
+            state={state.description}
+            setState={(newState) => setState({ ...state, description: newState })}
             width="maxWidth"
           />
         </MyLabel>
         <div className={sass.formWrap}>
           <MyLabel labelText="Тэги">
             <BaseInput
-              state={tagsInput}
-              setState={setTagsInput}
+              state={state.tags}
+              setState={(newState) => setState({ ...state, tags: newState })}
             />
           </MyLabel>
           <MyLabel labelText="Группа">
             <BaseInput
-              state={groupInput}
-              setState={setGroupInput}
+              state={state.group}
+              setState={(newState) => setState({ ...state, group: newState })}
             />
           </MyLabel>
         </div>
@@ -66,12 +56,12 @@ const BookmarkModal = (props) => {
           <BaseButton text="Принять"
             callBack={() => {
               modalSetActive(false);
-              OnАccept({
-                link: linkInput,
-                title: titleInput,
-                description: descriptionInput,
-                tags: tagsInput,
-                group: groupInput,
+              onАccept({
+                link: state.link,
+                title: state.title,
+                description: state.description,
+                tags: state.tags,
+                group: state.group,
               });
             }}
           />
