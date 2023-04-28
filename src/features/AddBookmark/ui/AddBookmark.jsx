@@ -11,9 +11,9 @@ const AddBookmark = ({ uploadBookmarks, setBookmarks }) => {
   const [modalActive, modalSetActive] = useState(false);
 
   const [bookmarkState, setBookmarkState] = useState({
+    link: "https://www.youtube.com",
     title: "",
     description: "",
-    link: "",
     tags: "",
     group: ""
   });
@@ -26,11 +26,11 @@ const AddBookmark = ({ uploadBookmarks, setBookmarks }) => {
         }}
         modalActive={modalActive}
         modalSetActive={modalSetActive}
-        title="Добавить закладку"
+        title="Создать закладку"
         state={bookmarkState}
         setState={setBookmarkState}
       />
-      <BaseButton text="Добавить"
+      <BaseButton text="Создать"
         callBack={() => { modalSetActive(true) }}
       >
         <AiOutlineAppstoreAdd />

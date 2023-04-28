@@ -1,4 +1,47 @@
-let bookmarks = [
+// let bookmarks = [
+// 	{
+// 		id: 1,
+// 		link: "https://www.youtube.com/",
+// 		title: "youtube",
+// 		description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
+// 		tags: "Видео, Соц. сеть",
+// 		group: "Избранные",
+// 	},
+// 	{
+// 		id: 2,
+// 		link: "https://dzen.ru",
+// 		title: "dzen",
+// 		description: "Это Дзен — платформа для создания и просмотра контента. ",
+// 		tags: "Видео, Соц.сеть",
+// 		group: "Соц. сети",
+// 	},
+// 	{
+// 		id: 3,
+// 		link: "https://vk.com/",
+// 		title: "vk",
+// 		description: "ВКонта́кте — российская социальная сеть",
+// 		tags: "Соц. сеть",
+// 		group: "Избранные",
+// 	},
+// 	{
+// 		id: 4,
+// 		link: "https://translate.yandex.ru/",
+// 		title: "translate",
+// 		description: "Перевод с английского",
+// 		tags: "Переводчик",
+// 		group: "Избранные, Инструменты",
+// 	},
+// 	{
+// 		id: 5,
+// 		link: "https://www.deepl.com/en/translator#ru",
+// 		title: "deepl",
+// 		description: "онлайн-переводчик, работающий на основе машинного перевода",
+// 		tags: "Пререводчик",
+// 		group: "Инструменты",
+// 	},
+// ];
+
+let bookmarks = JSON.parse(localStorage.getItem("bookmarks"))?.bookmarks || [
 	{
 		id: 1,
 		link: "https://www.youtube.com/",
@@ -6,38 +49,6 @@ let bookmarks = [
 		description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
 		tags: "Видео, Соц. сеть",
 		group: "Избранные",
-	},
-	{
-		id: 2,
-		link: "https://dzen.ru",
-		title: "dzen",
-		description: "Это Дзен — платформа для создания и просмотра контента. ",
-		tags: "Видео, Соц.сеть",
-		group: "Соц. сети",
-	},
-	{
-		id: 3,
-		link: "https://vk.com/",
-		title: "vk",
-		description: "ВКонта́кте — российская социальная сеть",
-		tags: "Соц. сеть",
-		group: "Избранные",
-	},
-	{
-		id: 4,
-		link: "https://translate.yandex.ru/",
-		title: "translate",
-		description: "Перевод с английского",
-		tags: "Переводчик",
-		group: "Избранные, Инструменты",
-	},
-	{
-		id: 5,
-		link: "https://www.deepl.com/en/translator#ru",
-		title: "deepl",
-		description: "онлайн-переводчик, работающий на основе машинного перевода",
-		tags: "Пререводчик",
-		group: "Инструменты",
 	},
 ];
 
@@ -49,6 +60,7 @@ const deleteBookmark = (id, setBookmarks) => {
 	bookmarks.forEach((el, i) => {
 		if (el.id === id) {
 			bookmarks.splice(i, 1);
+			localStorage.setItem("bookmarks", JSON.stringify({ bookmarks: [...bookmarks] }));
 			setBookmarks(bookmarks);
 		}
 	});
@@ -58,6 +70,7 @@ const editBookmark = (id, newBookmark, setBookmarks) => {
 	bookmarks.forEach((el, i) => {
 		if (el.id === id) {
 			bookmarks.splice(i, 1);
+			localStorage.setItem("bookmarks", JSON.stringify({ bookmarks: [...bookmarks] }));
 			uploadBookmarks(newBookmark, setBookmarks);
 		}
 	});
@@ -75,6 +88,7 @@ const getBookmarks = () => sortTitleBookmarks(bookmarks);
 
 const uploadBookmarks = (bookmark, setState) => {
 	addBookmark(bookmark);
+	localStorage.setItem("bookmarks", JSON.stringify({ bookmarks: [...bookmarks] }));
 	setState(getBookmarks());
 };
 

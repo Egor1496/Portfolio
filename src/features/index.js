@@ -6,3 +6,4 @@ export * from "./GroupLinks/ui/GroupLinks.jsx";
 export * from "./Filters/ui/Filters.jsx";
 export * from "./Bookmark/model/bookmark.js";
 export * from "./AddBookmark/ui/AddBookmark.jsx";
+export * from "./LoadBookmark/ui/LoadBookmark.jsx";

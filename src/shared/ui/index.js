@@ -10,6 +10,7 @@ export * from "./BaseDropMenu/BaseDropMenu.jsx";
 export * from "./BaseSelect/BaseSelect.jsx";
 export * from "./BaseRadiocheck/BaseRadiocheck.jsx";
 export * from "./Br/Br.jsx";
+export * from "./Logo/Logo.jsx";
 export * from "./Title/Title.jsx";
 export * from "./MyLabel/MyLabel.jsx";
 export * from "./Grid/Grid.jsx";

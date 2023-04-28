@@ -8,7 +8,6 @@ import { AiFillFolderOpen } from 'react-icons/ai';
 import { RxPencil2 } from 'react-icons/rx';
 import { AiOutlineDelete } from 'react-icons/ai';
 
-
 const Bookmark = (props) => {
 
   const baseURL = "https://besticon-demo.herokuapp.com/icon?url=",

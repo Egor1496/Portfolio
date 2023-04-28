@@ -4,7 +4,7 @@ import sass from "./Main.module.sass"
 import { AiFillFolderOpen } from 'react-icons/ai';
 
 import { Sort } from "../../../entities";
-import { SelectStyleBookmark, Filters, AddBookmark } from "../../../features";
+import { SelectStyleBookmark, Filters, AddBookmark, LoadBookmark } from "../../../features";
 import { Bookmarks, getBookmarks, uploadBookmarks } from "../../../widgets";
 import { BaseButton } from "../../../shared/ui";
 
@@ -22,11 +22,14 @@ const Main = () => {
           <Sort />
           <Filters />
         </div>
-        <AddBookmark
-          bookmarks={bookmarks}
-          setBookmarks={setBookmarks}
-          uploadBookmarks={uploadBookmarks}
-        />
+        <div className={sass["sort-wrap"]}>
+          <AddBookmark
+            bookmarks={bookmarks}
+            setBookmarks={setBookmarks}
+            uploadBookmarks={uploadBookmarks}
+          />
+          <LoadBookmark />
+        </div>
       </div>
       <Bookmarks
         bookmarks={bookmarks}
