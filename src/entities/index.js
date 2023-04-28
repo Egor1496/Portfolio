@@ -9,6 +9,7 @@ export * from "./EditBookmark/ui/EditBookmark.jsx";
 export * from "./BaseSettings/ui/BaseSettings.jsx";
 export * from "./BookmarkModal/ui/BookmarkModal.jsx";
 export * from "./DialogModal/ui/DialogModal.jsx";
+export * from "./TagСloud/ui/TagСloud.jsx";
 
 // model
 export * from "./getTheme/model/getTheme.js";

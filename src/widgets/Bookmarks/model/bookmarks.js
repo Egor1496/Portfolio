@@ -1,5 +1,3 @@
-import { fillBookmark } from "../../../features";
-
 let bookmarks = [
 	{
 		id: 1,
@@ -60,14 +58,9 @@ const editBookmark = (id, newBookmark, setBookmarks) => {
 	bookmarks.forEach((el, i) => {
 		if (el.id === id) {
 			bookmarks.splice(i, 1);
-			addBookmark(newBookmark);
-			setBookmarks(bookmarks);
+			uploadBookmarks(newBookmark, setBookmarks);
 		}
 	});
-};
-
-const fillBookmarks = (bookmarks) => {
-	return bookmarks.map((obj) => fillBookmark(obj));
 };
 
 const sortTitleBookmarks = (bookmarks) => {
@@ -78,8 +71,11 @@ const sortTitleBookmarks = (bookmarks) => {
 // 	return [...bookmarks].sort((a, b) => a.description.localeCompare(b.description));
 // };
 
-const getFilledBookmarks = () => sortTitleBookmarks(fillBookmarks(bookmarks));
-
 const getBookmarks = () => sortTitleBookmarks(bookmarks);
 
-export { getBookmarks, addBookmark, deleteBookmark, editBookmark, getFilledBookmarks };
+const uploadBookmarks = (bookmark, setState) => {
+	addBookmark(bookmark);
+	setState(getBookmarks());
+};
+
+export { getBookmarks, deleteBookmark, editBookmark, uploadBookmarks };

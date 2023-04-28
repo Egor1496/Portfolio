@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import sass from "./MainAside.module.sass";
 
-import { ThemeSelect } from "../../../entities";
-import { ThemeParams } from "../../../features";
+import { TagСloud } from "../../../entities"
 
 const MainAside = () => {
-  const [numberTheme, setTheme] = useState(1);
   return (
     <div className={sass["mainAsideWrap"]}>
-      <ThemeParams thisNumberTheme={numberTheme} />
-      <ThemeSelect setTheme={setTheme} />
+      <TagСloud />
     </div>
   );
 }

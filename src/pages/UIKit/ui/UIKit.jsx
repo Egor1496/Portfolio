@@ -18,6 +18,8 @@ import { FaReact, FaYandex } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
 import { HiCheckCircle, HiMail } from "react-icons/hi";
 import { IoAccessibilitySharp } from "react-icons/io5";
+import { IoMdPricetag } from "react-icons/io";
+
 
 const baseSelectCss = {
 
@@ -98,26 +100,30 @@ function UIKit() {
 				</GridСell>
 			</Grid>
 			<Br />
+			<Grid>
+				<GridСell>
+					<BaseButton
+						sizeStyle="small"
+						text="Видео">
+						<IoMdPricetag style={{ transform: "translateY(1px)" }} />
+					</BaseButton>
+				</GridСell>
+			</Grid>
+			<Br />
 			<ColorsDemo />
 			<Br />
 
 			{
 				/*
-					3 стиля у кнопок / транспарент / бордерр снизу / бордер везде
 					инпут с иконкой
 					варнинги на инпут
-					инпут транспаред стиль с бордером снизу
-					текстареа транспаред стиль с бордером снизу
-					текст с боковым бордером
-					текст с иконкой
 					боковое складывающиеся меню
 					верхнее меню страниц с найстройками темы
 					элемент меню с текстом с иконкой с боковым бордером
 					пагинация два вида
 					мини уведомления на инпут, оповищение об обязательых полях
 					красные звездочки на лейбл инпут, оповищение об обязательых полях
-					теги
-					Количество закладок к тэгу
+					Облако тэгов с количеством закладок к тэгу
 					уведомление (текст с кнопкой 3 цвета)
 					микро уведомление иконка снизу текст
 					загрузка файла виджет

@@ -5,7 +5,7 @@ import { AiFillFolderOpen } from 'react-icons/ai';
 
 import { Sort } from "../../../entities";
 import { SelectStyleBookmark, Filters, AddBookmark } from "../../../features";
-import { Bookmarks, getBookmarks, addBookmark } from "../../../widgets";
+import { Bookmarks, getBookmarks, uploadBookmarks } from "../../../widgets";
 import { BaseButton } from "../../../shared/ui";
 
 const Main = () => {
@@ -25,8 +25,7 @@ const Main = () => {
         <AddBookmark
           bookmarks={bookmarks}
           setBookmarks={setBookmarks}
-          addBookmark={addBookmark}
-          getBookmarks={getBookmarks}
+          uploadBookmarks={uploadBookmarks}
         />
       </div>
       <Bookmarks
