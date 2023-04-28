@@ -13,6 +13,14 @@ const BookmarkModal = (props) => {
     setState,
   } = props;
 
+  const plhld = {
+    title: "YouTube",
+    description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
+    link: "https://www.youtube.com/",
+    tags: "видео, соц сеть",
+    group: "избранные"
+  };
+
   return (
     <BaseModal active={modalActive} setActive={modalSetActive}>
       <div className={sass.addBookFrom}>
@@ -22,12 +30,14 @@ const BookmarkModal = (props) => {
             <BaseInput
               state={state.link}
               setState={(newState) => setState({ ...state, link: newState })}
+              placeholder={plhld.link}
             />
           </MyLabel>
           <MyLabel labelText="Заголовок">
             <BaseInput
               state={state.title}
               setState={(newState) => setState({ ...state, title: newState })}
+              placeholder={plhld.title}
             />
           </MyLabel>
         </div>
@@ -35,6 +45,7 @@ const BookmarkModal = (props) => {
           <BaseTextarea
             state={state.description}
             setState={(newState) => setState({ ...state, description: newState })}
+            placeholder={plhld.description}
             width="maxWidth"
           />
         </MyLabel>
@@ -43,12 +54,14 @@ const BookmarkModal = (props) => {
             <BaseInput
               state={state.tags}
               setState={(newState) => setState({ ...state, tags: newState })}
+              placeholder={plhld.tags}
             />
           </MyLabel>
           <MyLabel labelText="Группа">
             <BaseInput
               state={state.group}
               setState={(newState) => setState({ ...state, group: newState })}
+              placeholder={plhld.group}
             />
           </MyLabel>
         </div>

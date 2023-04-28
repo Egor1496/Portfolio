@@ -11,22 +11,20 @@ const AddBookmark = ({ setBookmarks, addBookmark, getBookmarks }) => {
   const [modalActive, modalSetActive] = useState(false);
 
   const [bookmarkState, setBookmarkState] = useState({
-    title: " YouTube",
-    description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
-    link: "https://www.youtube.com/",
-    tags: "видео, соц сеть",
-    group: "избранные"
+    title: "",
+    description: "",
+    link: "",
+    tags: "",
+    group: ""
   });
-
-  const addAndUpdateBookmarks = (bookmark) => {
-    addBookmark(bookmark);
-    setBookmarks(getBookmarks());
-  }
 
   return (
     <div className={sass.main}>
       <BookmarkModal
-        onАccept={(newBookmark) => { addAndUpdateBookmarks(newBookmark); }}
+        onАccept={(newBookmark) => {
+          addBookmark({ ...newBookmark });
+          setBookmarks(getBookmarks());
+        }}
         modalActive={modalActive}
         modalSetActive={modalSetActive}
         title="Добавить закладку"

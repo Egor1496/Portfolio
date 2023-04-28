@@ -13,7 +13,7 @@ const fillBookmark = (bookmark) => {
 };
 
 const getId = (id) => {
-	const filledId = id || Date.now() + Math.random();
+	const filledId = id;
 	return filledId;
 };
 
@@ -27,12 +27,17 @@ const getImgLink = (url) => {
 	return filledimgLink;
 };
 
-const getTitle = (title = "", url) => {
-	let filledTitle = "";
-	if (title.trim().replace(/(.|,|-|_|;|:|'|)/gi, "")) {
-		filledTitle = title.trim();
+const getTitle = (title, url) => {
+	title = title.trim();
+
+	let filledTitle = title,
+		copyTitle = title;
+	copyTitle.replace(/(.|,|-|_|;|:|'|)/gi, "");
+
+	if (copyTitle) {
+		filledTitle = title;
 	} else {
-		filledTitle = url.hostname.trim().replace(/(.com|www.|.ru|.net|.org|.biz|dvd.|.io)/g, "");
+		filledTitle = url.hostname.replace(/(.com|www.|.ru|.net|.org|.biz|dvd.|.io)/g, "");
 	}
 
 	return filledTitle;
@@ -43,12 +48,12 @@ const getDescription = (description) => {
 	return filledDescription;
 };
 
-const getTags = (tags = "") => {
+const getTags = (tags) => {
 	const filledTags = tags.trim() && tags.toLowerCase().trim().split(",");
 	return filledTags;
 };
 
-const getGroup = (group = "") => {
+const getGroup = (group) => {
 	const filledGroup = group.trim() && group.toLowerCase().trim().split(",");
 	return filledGroup;
 };

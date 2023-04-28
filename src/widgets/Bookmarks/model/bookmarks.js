@@ -4,6 +4,7 @@ let bookmarks = [
 	{
 		id: 1,
 		link: "https://www.youtube.com/",
+		title: "youtube",
 		description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
 		tags: "Видео, Соц. сеть",
 		group: "Избранные",
@@ -11,6 +12,7 @@ let bookmarks = [
 	{
 		id: 2,
 		link: "https://dzen.ru",
+		title: "dzen",
 		description: "Это Дзен — платформа для создания и просмотра контента. ",
 		tags: "Видео, Соц.сеть",
 		group: "Соц. сети",
@@ -18,6 +20,7 @@ let bookmarks = [
 	{
 		id: 3,
 		link: "https://vk.com/",
+		title: "vk",
 		description: "ВКонта́кте — российская социальная сеть",
 		tags: "Соц. сеть",
 		group: "Избранные",
@@ -25,6 +28,7 @@ let bookmarks = [
 	{
 		id: 4,
 		link: "https://translate.yandex.ru/",
+		title: "translate",
 		description: "Перевод с английского",
 		tags: "Переводчик",
 		group: "Избранные, Инструменты",
@@ -32,6 +36,7 @@ let bookmarks = [
 	{
 		id: 5,
 		link: "https://www.deepl.com/en/translator#ru",
+		title: "deepl",
 		description: "онлайн-переводчик, работающий на основе машинного перевода",
 		tags: "Пререводчик",
 		group: "Инструменты",
@@ -39,14 +44,14 @@ let bookmarks = [
 ];
 
 const addBookmark = (bookmark) => {
-	bookmarks = [...bookmarks, { ...bookmark }];
+	bookmarks = [...bookmarks, { ...bookmark, id: Date.now() + Math.random() }];
 };
 
 const deleteBookmark = (id, setBookmarks) => {
 	bookmarks.forEach((el, i) => {
 		if (el.id === id) {
 			bookmarks.splice(i, 1);
-			setBookmarks(fillBookmarks(bookmarks));
+			setBookmarks(bookmarks);
 		}
 	});
 };
@@ -56,24 +61,25 @@ const editBookmark = (id, newBookmark, setBookmarks) => {
 		if (el.id === id) {
 			bookmarks.splice(i, 1);
 			addBookmark(newBookmark);
-			setBookmarks(fillBookmarks(bookmarks));
+			setBookmarks(bookmarks);
 		}
 	});
 };
 
 const fillBookmarks = (bookmarks) => {
-	return sortTitleBookmarks(bookmarks.map((obj) => fillBookmark(obj)));
+	return bookmarks.map((obj) => fillBookmark(obj));
 };
 
 const sortTitleBookmarks = (bookmarks) => {
 	return [...bookmarks].sort((a, b) => a.title.localeCompare(b.title));
 };
+
 // const sortDescriptionBookmarks = (bookmarks) => {
-// 	return [...bookmarks].sort((a, b) => {
-// 		return a.description.localeCompare(b.description);
-// 	});
+// 	return [...bookmarks].sort((a, b) => a.description.localeCompare(b.description));
 // };
 
-const getBookmarks = () => fillBookmarks(bookmarks);
+const getFilledBookmarks = () => sortTitleBookmarks(fillBookmarks(bookmarks));
 
-export { getBookmarks, addBookmark, deleteBookmark, editBookmark };
+const getBookmarks = () => sortTitleBookmarks(bookmarks);
+
+export { getBookmarks, addBookmark, deleteBookmark, editBookmark, getFilledBookmarks };

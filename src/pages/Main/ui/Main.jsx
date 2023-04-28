@@ -22,13 +22,17 @@ const Main = () => {
           <Sort />
           <Filters />
         </div>
-        <AddBookmark bookmarks={bookmarks}
+        <AddBookmark
+          bookmarks={bookmarks}
           setBookmarks={setBookmarks}
           addBookmark={addBookmark}
           getBookmarks={getBookmarks}
         />
       </div>
-      <Bookmarks bookmarks={bookmarks} setBookmarks={setBookmarks} />
+      <Bookmarks
+        bookmarks={bookmarks}
+        setBookmarks={setBookmarks}
+      />
     </div>
   );
 };

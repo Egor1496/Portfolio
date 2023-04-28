@@ -7,25 +7,17 @@ import { BookmarkModal, DialogModal } from "../../../entities";
 
 const Bookmarks = ({ bookmarks, setBookmarks }) => {
 
-  const [deleteModalActive, SetDeleteModalActive] = useState(false);
+  const [deleteModalActive, setDeleteModalActive] = useState(false);
   const [editModalActive, editModalSetActive] = useState(false);
 
-  const [form, setForm] = useState({
-    id: 0,
-    title: "",
-    description: "",
-    link: "",
-    tags: "",
-    group: ""
-  });
+  const [form, setForm] = useState({});
 
   const onDeleteBookmark = (elem) => {
     setForm({ ...elem });
-    SetDeleteModalActive(true);
+    setDeleteModalActive(true);
   }
 
   const onEditBookmark = (elem) => {
-    console.log(elem)
     setForm({ ...elem });
     editModalSetActive(true);
   }
@@ -37,7 +29,7 @@ const Bookmarks = ({ bookmarks, setBookmarks }) => {
         textAccept="Удалить"
         textСancele="Отмена"
         modalActive={deleteModalActive}
-        modalSetActive={SetDeleteModalActive}
+        modalSetActive={setDeleteModalActive}
         onАccept={() => {
           deleteBookmark(form.id, setBookmarks);
         }}
@@ -55,14 +47,7 @@ const Bookmarks = ({ bookmarks, setBookmarks }) => {
           bookmarks.map((elem) => {
             return <Bookmark
               key={elem.id}
-              id={elem.id}
-              link={elem.link}
-              title={elem.title}
-              description={elem.description}
-              imgLink={elem.imgLink}
-              tags={elem.tags}
-              group={elem.group}
-              time={elem.time}
+              bookmark={elem}
               onDeleteBookmark={() => { onDeleteBookmark(elem); }}
               onEditBookmark={() => { onEditBookmark(elem); }}
             />

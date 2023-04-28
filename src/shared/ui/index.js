@@ -1,4 +1,3 @@
-// Base
 export * from "./BaseButton/BaseButton.jsx";
 export * from "./BaseCheckbox/BaseCheckbox.jsx";
 export * from "./BaseInput/BaseInput.jsx";
