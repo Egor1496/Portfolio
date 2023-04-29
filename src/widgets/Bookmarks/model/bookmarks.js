@@ -1,45 +1,44 @@
-// let bookmarks = [
-// 	{
-// 		id: 1,
-// 		link: "https://www.youtube.com/",
-// 		title: "youtube",
-// 		description: "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
-// 		tags: "Видео, Соц. сеть",
-// 		group: "Избранные",
-// 	},
-// 	{
-// 		id: 2,
-// 		link: "https://dzen.ru",
-// 		title: "dzen",
-// 		description: "Это Дзен — платформа для создания и просмотра контента. ",
-// 		tags: "Видео, Соц.сеть",
-// 		group: "Соц. сети",
-// 	},
-// 	{
-// 		id: 3,
-// 		link: "https://vk.com/",
-// 		title: "vk",
-// 		description: "ВКонта́кте — российская социальная сеть",
-// 		tags: "Соц. сеть",
-// 		group: "Избранные",
-// 	},
-// 	{
-// 		id: 4,
-// 		link: "https://translate.yandex.ru/",
-// 		title: "translate",
-// 		description: "Перевод с английского",
-// 		tags: "Переводчик",
-// 		group: "Избранные, Инструменты",
-// 	},
-// 	{
-// 		id: 5,
-// 		link: "https://www.deepl.com/en/translator#ru",
-// 		title: "deepl",
-// 		description: "онлайн-переводчик, работающий на основе машинного перевода",
-// 		tags: "Пререводчик",
-// 		group: "Инструменты",
-// 	},
-// ];
+let json = `
+{
+	"bookmarks": [
+		{
+			"link": "https://www.youtube.com/",
+			"title": "youtube",
+			"description": "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
+			"tags": "Видео, Соц. сеть",
+			"group": "Избранные"
+		},
+		{
+			"link": "https://dzen.ru",
+			"title": "dzen",
+			"description": "Это Дзен — платформа для создания и просмотра контента. ",
+			"tags": "Видео, Соц.сеть",
+			"group": "Соц. сети"
+		},
+		{
+			"link": "https://vk.com/",
+			"title": "vk",
+			"description": "ВКонта́кте — российская социальная сеть",
+			"tags": "Соц. сеть",
+			"group": "Избранные"
+		},
+		{
+			"link": "https://translate.yandex.ru/",
+			"title": "translate",
+			"description": "Перевод с английского",
+			"tags": "Переводчик",
+			"group": "Избранные, Инструменты"
+		},
+		{
+			"link": "https://www.deepl.com/en/translator#ru",
+			"title": "deepl",
+			"description": "онлайн-переводчик, работающий на основе машинного перевода",
+			"tags": "Пререводчик",
+			"group": "Инструменты"
+		}
+	]
+}
+`;
 
 let bookmarks = JSON.parse(localStorage.getItem("bookmarks"))?.bookmarks || [
 	{
@@ -76,15 +75,15 @@ const editBookmark = (id, newBookmark, setBookmarks) => {
 	});
 };
 
-const sortTitleBookmarks = (bookmarks) => {
-	return [...bookmarks].sort((a, b) => a.title.localeCompare(b.title));
-};
+// const sortTitleBookmarks = (bookmarks) => {
+// 	return [...bookmarks].sort((a, b) => a.title.localeCompare(b.title));
+// };
 
 // const sortDescriptionBookmarks = (bookmarks) => {
 // 	return [...bookmarks].sort((a, b) => a.description.localeCompare(b.description));
 // };
 
-const getBookmarks = () => sortTitleBookmarks(bookmarks);
+const getBookmarks = () => bookmarks;
 
 const uploadBookmarks = (bookmark, setState) => {
 	addBookmark(bookmark);

@@ -3,12 +3,10 @@ import sass from "./LoadBookmark.module.sass"
 
 import { AiFillFileText } from 'react-icons/ai';
 
-import { BaseModal, BaseButton, MyLabel, BaseTextarea } from "../../../shared/ui";
+import { BaseModal, BaseButton, BaseTextarea } from "../../../shared/ui";
 
-const LoadBookmark = () => {
+const LoadBookmark = ({ inputState, setInputState, onАccept }) => {
   const [modalActive, modalSetActive] = useState(false);
-
-  const [inputState, setInputState] = useState("");
 
   return (
     <div className={sass.main}>
@@ -17,26 +15,24 @@ const LoadBookmark = () => {
         setActive={modalSetActive}
       >
         <div className={sass.addBookFrom}>
-          <h3>"Загрузить закладки"</h3>
-          <MyLabel labelText="Описание" width="maxWidth">
-            <BaseTextarea
-              state={inputState}
-              setState={(newState) => setInputState(newState)}
-              placeholder={`[\n{ link: "https://www.youtube.com/" },\n{ link: "https://ya.ru/" }\n]`}
-              width="maxWidth"
-            />
-          </MyLabel>
+          <h3>Загрузить закладки</h3>
+          <BaseTextarea
+            state={inputState}
+            setState={(newState) => setInputState(newState)}
+            placeholder={`[\n{ link: "https://www.youtube.com/" },\n{ link: "https://ya.ru/" }\n]`}
+            width="medium"
+          />
         </div>
         <div className={sass.buttonWrap}>
           <BaseButton text="Принять"
-            callBack={() => { modalSetActive(false) }}
+            callBack={() => { modalSetActive(false); onАccept(inputState); }}
           />
           <BaseButton text="Отмена" btnStyle="transparent"
             callBack={() => { modalSetActive(false) }}
           />
         </div>
       </BaseModal >
-      <BaseButton text="Загрузить" callBack={() => { modalSetActive(true) }} >
+      <BaseButton text="Загрузить" callBack={() => { modalSetActive(true); }} >
         <AiFillFileText />
       </BaseButton>
     </div >

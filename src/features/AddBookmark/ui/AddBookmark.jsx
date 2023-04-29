@@ -26,7 +26,7 @@ const AddBookmark = ({ uploadBookmarks, setBookmarks }) => {
         }}
         modalActive={modalActive}
         modalSetActive={modalSetActive}
-        title="Создать закладку"
+        modalTitle="Создать закладку"
         state={bookmarkState}
         setState={setBookmarkState}
       />

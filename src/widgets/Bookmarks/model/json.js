@@ -1,0 +1,1044 @@
+const json = `{
+  "bookmarks": [
+    {
+      "link": "https://www.youtube.com/",
+      "description": "Видеохостинг, предоставляющий пользователям услуги хранения, доставки и показа видео.",
+      "tags": "Видео, Соц. сеть",
+      "group": "Избранные"
+    },
+    {
+      "link": "https://dzen.ru",
+      "description": "Это Дзен — платформа для создания и просмотра контента.",
+      "tags": "Видео, Соц.сеть",
+      "group": "Соц. сети"
+    },
+    {
+      "link": "https://vk.com/",
+      "description": "ВКонта́кте — российская социальная сеть",
+      "tags": "Соц. сеть",
+      "group": "Избранные"
+    },
+    {
+      "link": "https://translate.yandex.ru/",
+      "description": "Перевод с английского",
+      "tags": "Переводчик",
+      "group": "Избранные, Инструменты"
+    },
+    {
+      "link": "https://www.deepl.com/en/translator#ru",
+      "description": "онлайн-переводчик, работающий на основе машинного перевода",
+      "tags": "Пререводчик",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://sbsplay.net/index.php?do=favorites",
+      "description": "Мои закладки » Самые БезБашенные Сериалы",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://dvd.vse-chasti-filmov.biz/",
+      "description": "Смотреть онлайн все части фильмов",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://tardis.fandom.com/ru/wiki/Снеговики_(ТВ_история)",
+      "description": "Снеговики (ТВ история)",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://oper.ru/video/",
+      "description": "Гоблина (Goblin). Переводы кино. Студия Полный П.",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://vse-filmy-akterov.ru/",
+      "description": "Фильмы актеров смотреть онлайн",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://knigavuhe.org/book/tajjny-khoroshejj-kukhni/",
+      "description": "Тайны хорошей кухни автор Вильям Похлебкин читает Николай Козий",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://www.youtube.com/@mishanep/playlists",
+      "description": "Просто о веб-разработке с разных сторон - от профессионального разработчика и преподавателя Михаила Непомнящего.",
+      "tags": "Видео",
+      "group": "Просмотр"
+    },
+    {
+      "link": "https://tf2pickup.ru/",
+      "tags": "Пикап, 6v6",
+      "group": "TF2, Lobby"
+    },
+    {
+      "link": "https://sib.tf2pickup.ru/",
+      "tags": "Пикап, 6v6",
+      "group": "TF2, Lobby"
+    },
+    {
+      "link": "https://tf2center.com/lobbies",
+      "description": "TF2. TF2Center - это место, где можно играть в игры TF2, основанные на особых режимах соревновательной игры",
+      "tags": "9v9, 6v6, 4v4, 2v2",
+      "group": "TF2, Lobby"
+    },
+    {
+      "link": "https://logs.tf/",
+      "description": "Статистика соревнований Team Fortress 2 Автоматически генерируемая статистика из журналов сервера Игроки",
+      "tags": "Статистика",
+      "group": "TF2"
+    },
+    {
+      "link": "https://tempus2.xyz/",
+      "description": "Мониторинг серверов tempus",
+      "tags": "Статистика, Мониторинг",
+      "group": "TF2"
+    },
+    {
+      "link": "https://cfg.tf/angle/",
+      "description": "CFG.TF - это бесплатный кроссплатформенный генератор конфигураций Team Fortress 2 ",
+      "tags": "Конфигуратор",
+      "group": "TF2"
+    },
+    {
+      "link": "https://hl.tf2pickup.eu/",
+      "tags": "Пикап, 9v9",
+      "group": "TF2, Lobby"
+    },
+    {
+      "link": "https://tempushub.xyz/recentrecords",
+      "description": "Мониторинг серверов tempus",
+      "tags": "Статистика, Мониторинг",
+      "group": "TF2"
+    },
+    {
+      "link": "https://essentials.tf/beyond/jump",
+      "description": "DreamHack: Beyond The Limit - TF2 (2022)",
+      "tags": "Турнир",
+      "group": "TF2"
+    },
+    {
+      "link": "https://etf2l.org/recruitment/276926/",
+      "tags": "ETF2L",
+      "group": "TF2, Соревнование"
+    },
+    {
+      "link": "https://www.faceit.com/ru",
+      "description": "ВАША ВЕДУЩАЯ ПЛАТФОРМА СОРЕВНОВАТЕЛЬНЫХ ИГР",
+      "tags": "Турнир",
+      "group": "TF2, Соревнование"
+    },
+    {
+      "link": "https://ozfstats.com/loganalyser/",
+      "description": "Основанная на статистике система ранжирования для австралийской соревновательной лиги Team Fortress 2, ozfortress",
+      "tags": "Статистика",
+      "group": "TF2"
+    },
+    {
+      "link": "https://tf2.online/",
+      "description": "Пикап.-онлаин. Соревновательная площадка 6v6",
+      "tags": "Пикап, 6v6",
+      "group": "TF2, Lobby"
+    },
+    {
+      "link": "https://mail.ru/",
+      "description": "Почта Mail.ru — крупнейшая бесплатная почта",
+      "tags": "Почта",
+      "group": "Работа"
+    },
+    {
+      "link": "https://egor1496.github.io/Portfolio/dist/pages/about",
+      "description": "Фрилансер, Front-end разработчик & Верстальщик сайтов.",
+      "tags": "Пет проект",
+      "group": "WEB"
+    },
+    {
+      "link": "https://egor1496.github.io/MyBookmarks/",
+      "description": "Визуальные закладки онлаин",
+      "tags": "Ссылки",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://github.com/Egor1496",
+      "description": "Кодовая база",
+      "tags": "Хранилище",
+      "group": "Облако"
+    },
+    {
+      "link": "https://rutube.ru/channel/24675435/",
+      "description": "Минобороны России",
+      "tags": "Видео",
+      "group": "Новости"
+    },
+    {
+      "link": "https://rutube.ru/u/mikle1/",
+      "description": "Мир Михаила Онуфриенко",
+      "tags": "Видео",
+      "group": "Новости"
+    },
+    {
+      "link": "https://habr.com/ru/all/",
+      "description": "Безопасная работа с памятью в D",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://learn.javascript.ru/",
+      "description": "Перед вами учебник по JavaScript, начиная с основ, включающий в себя много тонкостей и фишек JavaScript/DOM.",
+      "tags": "Учебник",
+      "group": "Учебники, Документация"
+    },
+    {
+      "link": "https://html5book.ru/html-html5/",
+      "description": "Сайт для тех, кто изучает веб-технологии и создает сайты",
+      "tags": "Учебник, Шпаргалка",
+      "group": "Учебники, Шпаргалки"
+    },
+    {
+      "link": "https://reactdev.ru/libs/react-router/",
+      "description": "Справочник React",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://liquidhub.ru/blogs/blog/html-verstka",
+      "description": "HTML-верстка: что это такое и какие основные правила процесса",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://htmlbase.ru/",
+      "description": "HTMLBASE - самый современный справочник по HTML и CSS.",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/htmlacademy/articles/566244/",
+      "description": "Критерии качества вёрстки 2021",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://gist.github.com/paulirish/5d52fb081b3570c81e3a",
+      "description": "Методы DOOM елементов: Получение метрик box, Прокрутите материал, Настройка фокуса, Получение размеров окна, Документ, Формы: Настройка выделения + фокус, События мыши: считывание данных смещения",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://habr.com/ru/articles/490714/",
+      "description": "Как получать 100 тысяч за код. Полное руководство для начинающих",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/otus/articles/675668/",
+      "description": "17 убойных репозиториев GitHub, которые нужно сохранить",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://ohshitgit.com/ru",
+      "description": "Git сложен: легко всё проебать, и нереально понять как исправить. Документация Git - это финиш: чтобы найти решение, тебе заранее надо знать название фишки, которая вернет всё на место.",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://codeguide.maxgraph.ru/",
+      "description": "КОД-СТАЙЛ-ГАЙД",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://habr.com/ru/companies/ruvds/articles/337042/",
+      "description": "Как работает JS: обзор движка, механизмов времени выполнения, стека вызовов",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/otus/articles/686670/",
+      "description": "10 задач с JavaScript Promise для подготовки к собеседованиям",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/articles/689738/",
+      "description": "Алгоритмы сортировки и их производительность",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/articles/148325/",
+      "description": "Вычислительная геометрия, или как я стал заниматься олимпиадным программированием. Часть 2",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/yandex/articles/686668/",
+      "description": "Как работает автозаполнение в браузерах и что важно учитывать веб-разработчику",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://academy.yandex.ru/?utm_source=vk&utm_medium=social&utm_campaign=post",
+      "description": "Вместе учимся, решаем сложные задачи, общаемся и строим свою карьеру в IT",
+      "tags": "Курс",
+      "group": "Курсы"
+    },
+    {
+      "link": "https://proglib.io/p/javascript-patterns",
+      "description": "Паттерны JavaScript: курс, который упростит разработку",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://refactor-like-a-superhero.vercel.app/ru/chapters/22-cheatsheet#shpargalka-po-tekhnikam-refaktoringa",
+      "description": "Шпаргалка по техникам рефакторинга",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://habr.com/ru/companies/ruvds/articles/709056/",
+      "description": "Пять шаблонов загрузки данных для повышения быстродействия сайтов",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/ruvds/articles/712548/",
+      "description": "Осваиваем TypeScript: 21 лучшая практика при написании кода",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/timeweb/articles/707744/",
+      "description": "React + TypeScript: необходимый минимум",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/ruvds/articles/445276/",
+      "description": "Полное руководство по useEffect",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://ru.legacy.reactjs.org/",
+      "description": "JavaScript-библиотека для создания пользовательских интерфейсов",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://react.dev/reference/react-dom/components",
+      "description": "The library for web and native user interfaces. React DOM Components",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://webdesign-master.ru/blog/docs/gulp-documentation.html",
+      "description": "Документация Gulp на русском",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://doka.guide/",
+      "description": "Дока — это документация для разработчиков на человеческом языке",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://habr.com/ru/companies/ruvds/articles/599929/",
+      "description": "30 команд Git, необходимых для освоения интерфейса командной строки Git",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://frontend-stuff.com/blog/tags/javascript/",
+      "description": "Количество статей с категорией “JavaScript” - '41'",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://proglib.io/p/js-guide",
+      "description": "JS-гайд: основные концепции JavaScript с примерами кода",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://frontend-stuff.com/blog/object-oriented-programming/",
+      "description": "ООП в JavaScript. Вкратце об объектно-ориентированном программировании.",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://recommend.maxgraph.ru/",
+      "description": "Рекомендации по верстке сайта",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://jquery-docs.ru/",
+      "description": "Русская документация по API jQuery. jQuery это быстрая, небольшая и богатая возможностями JavaScript библиотека",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://my-js.org/docs/guide/intro-guide/",
+      "description": "Руководства, шпаргалки, вопросы и другие материалы по JavaScript, TypeScript, React, а также Блог по веб-разработке.",
+      "tags": "Документация, Шпагалка, Учебник",
+      "group": "Документация, Шпагалки, Учебники"
+    },
+    {
+      "link": "https://webref.ru/",
+      "description": "Руководства, шпаргалки, вопросы и другие материалы по веб-разработке",
+      "tags": "Документация, Шпагалка, Учебник",
+      "group": "Документация, Шпагалки, Учебники"
+    },
+    {
+      "link": "https://www.30secondsofcode.org/",
+      "description": "Откройте для себя короткие фрагменты кода для всех ваших потребностей в разработке.",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://ru.algorithmica.org/",
+      "description": "Анализ алгоритмов, Вычислительная сложность, Сортировки, Цифровая сортировка, Бинпоиск и интерактивки",
+      "tags": "Учебник",
+      "group": "Учебники"
+    },
+    {
+      "link": "https://webdevblog.ru/proxy/",
+      "description": "Еще один блог веб-разработчика .Заметки на полях о программировании и веб-разработке",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://developer.chrome.com/docs/extensions/mv3/devguide/",
+      "description": "Обзор разработки расширения",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://chakra-ui.com/",
+      "description": "Chakra UI - это простая, модульная и доступная библиотека компонентов, которая предоставляет вам строительные блоки, необходимые для создания ваших приложений React.",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "description": "Научитесь использовать семантику доступности, определенную спецификацией доступного расширенного интернет-приложения (ARIA), для создания доступных веб-интерфейсов.",
+      "tags": "Учебник",
+      "group": "Учебники"
+    },
+    {
+      "link": "https://feature-sliced.design/ru/",
+      "description": "Feature-Sliced Design. Архитектурная методология для фронтенд проектов",
+      "tags": "Документация",
+      "group": "Документация"
+    },
+    {
+      "link": "https://habr.com/ru/companies/macloud/articles/555082/",
+      "description": "Базовая структура HTML-документа с объяснением каждой строчки",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://nuancesprog.ru/p/14066/",
+      "description": "5 продвинутых шаблонов React на пальцах",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://nuancesprog.ru/tag/javascript/",
+      "description": "Образовательные статьи и переводы — всё для программиста",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://feature-sliced.design/ru/docs/guides/examples/auth",
+      "description": "Во всех приложениях так или иначе есть бизнес-логика, завязанная на текущем авторизованном пользователе.",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://feature-sliced.design/ru/docs/get-started/tutorial",
+      "description": "Рассмотрим применение Feature-Sliced Design на примере TodoApp",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://feature-sliced.design/examples",
+      "description": "Список веб-сайтов, которые люди создают с функционально-срезанным дизайном",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://webdesign.tutsplus.com/ru/articles/------webdesign-15234",
+      "description": "Типографический шаблон для веб-дизайнера",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://my-js.org/docs/cheatsheet/ts/",
+      "description": "Шпаргалка по TypeScript",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://tretyakov.net/post/shpargalka-po-komandam-git/",
+      "description": "Шпаргалка по командам Git",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://frontend-stuff.com/blog/javascript-cheatsheet/",
+      "description": "Шпаргалка по JavaScript в 2021. Краткое изложение вопросов и концепций о JavaScript.",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://habr.com/ru/companies/macloud/articles/557422/",
+      "description": "Шпаргалка по JS-методам для работы с DOM",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://github.com/web-standards-ru/dictionary/blob/main/dictionary.md#promises",
+      "description": "Словарь терминов по фронтенду",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://habr.com/ru/companies/yandex/articles/718084/",
+      "description": "Полное понимание асинхронности в браузере",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://habr.com/ru/companies/gnivc/articles/696054/",
+      "description": "Алгоритмы для веб-разработчиков простыми словами (часть 3)",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://hcdev.ru/html/input/",
+      "description": "Спраочник HTML, CSS, Flexbox, Grid",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://htmlacademy.ru/blog/html/semantics?utm_source=tg&utm_medium=social&utm_campaign=ab_semantics_24032023",
+      "description": "что такое семантическая вёрстка и зачем она нужна",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://tpverstak.ru/flex-cheatsheet/",
+      "description": "Шпаргалка по Flexbox CSS",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://tpverstak.ru/grid/",
+      "description": "Шпаргалка по Grid CSS",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://tpverstak.ru/adaptive-cheatsheet/",
+      "description": "Шпаргалка адаптивности",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://tpverstak.ru/common-css-class-names/",
+      "description": "Популярные названия классов HTML/CSS",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://tpverstak.ru/seo-html-template/",
+      "description": "Базовый SEO HTML шаблон",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://replit.com/languages/csharp",
+      "description": "Компилируйте, кодируйте, создавайте и изучайте вместе с C#",
+      "tags": "Компилятор",
+      "group": "Инструмент"
+    },
+    {
+      "link": "https://codeforces.com/problemset/problem/1443/B?mobile=true",
+      "description": "B. Спасение города",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://codeforces.com/problemset/problem/707/B?mobile=true",
+      "description": "B. Пекарня",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://codeforces.com/problemset/problem/1459/B?mobile=true",
+      "description": "B. Ходы и повороты",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://codeforces.com/problemset?order=BY_RATING_ASC&mobile=true",
+      "description": "Архив задач CodeForces",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1",
+      "description": "JS тест синтаксиса.",
+      "tags": "Тест",
+      "group": "Тесты"
+    },
+    {
+      "link": "https://www.w3schools.com/react/exercise.asp?filename=exercise_jsx2",
+      "description": "React тест синтаксиса.",
+      "tags": "Тест",
+      "group": "Тесты"
+    },
+    {
+      "link": "https://www.w3schools.com/cs/exercise.php?filename=exercise_syntax1",
+      "description": "C# тест синтаксиса.",
+      "tags": "Тест",
+      "group": "Тесты"
+    },
+    {
+      "link": "https://gb.ru/tests",
+      "description": "GeekBrains - тесты",
+      "tags": "Тест",
+      "group": "Тесты"
+    },
+    {
+      "link": "https://metanit.com/sharp/tutorial/",
+      "description": "Полное руководство по языку программирования С# 11 и платформе .NET",
+      "tags": "Учебник",
+      "group": "Учебники"
+    },
+    {
+      "link": "https://www.youtube.com/playlist?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N",
+      "description": "C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ",
+      "tags": "Учебник",
+      "group": "Учебники"
+    },
+    {
+      "link": "https://www.frontendmentor.io/",
+      "description": "Улучшайте свои навыки интерфейсного кодирования, создавая реальные проекты",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://cups.online/ru/tasks/1250",
+      "description": "IT-Соревнования для специалистов и начинающих",
+      "tags": "Задачка",
+      "group": "Задачки"
+    },
+    {
+      "link": "https://grid.layoutit.com/",
+      "description": "Bootstrap Builder CSS Grid Generator Tokens Generator Rest GIS",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://cssgradient.io/",
+      "description": "CSS Gradient",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://animista.net/",
+      "description": "Animista - это библиотека CSS-анимации и место, где вы можете поиграть с коллекцией готовых CSS-анимаций и загрузить только те, которые вы будете использовать.",
+      "tags": "библиотека",
+      "group": "Документация"
+    },
+    {
+      "link": "https://webdesign-master.ru/services/lazy/",
+      "description": "Генератор заполнителей ленивой загрузки. Сгенерируйте при отложенной загрузке наименьшее по размеру изображение заполнителя и фоновый рисунок.",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://morphismail.github.io/myInstruments/",
+      "description": "CSS GENERATORS. BORDER-RADIUS, TEXT-SHADOW, BOX-SHADOW, TRIANGLE, GRADIENT ",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://getwaves.io/",
+      "description": "Сделайте несколько волн!",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://webdevtips.pro/js/",
+      "description": "Статьи от <WDT />",
+      "tags": "Статья",
+      "group": "Статьи"
+    },
+    {
+      "link": "https://michalsnik.github.io/aos/",
+      "description": "Анимация появления",
+      "tags": "библиотека",
+      "group": "Документация"
+    },
+    {
+      "link": "https://projects.verou.me/animatable/",
+      "description": "Анимируемый квадрат. Одно свойство, два значения, бесконечные возможности",
+      "tags": "библиотека",
+      "group": "Документация"
+    },
+    {
+      "link": "http://embedresponsively.com/",
+      "description": "Генератор встраивания видео",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://www.colorzilla.com/gradient-editor/",
+      "description": "Идеальный генератор градиентов CSS",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://swiperjs.com/",
+      "description": "Самый современный мобильный сенсорный слайдер",
+      "tags": "библиотека",
+      "group": "Документация"
+    },
+    {
+      "link": "https://fancyapps.com/showcase/",
+      "description": "Демонстрация. Коллекция готовых к использованию примеров, которые вдохновят вас.",
+      "tags": "Дизаин",
+      "group": "Примеры"
+    },
+    {
+      "link": "https://marketplace.visualstudio.com/items?itemName=MULU-github.jsflowchart",
+      "description": "Показать блок-схему выбранного кода Javascript. Блок-схема синхронизируется с выбранным кодом в режиме реального времени.",
+      "tags": "Плагин",
+      "group": "Плагины"
+    },
+    {
+      "link": "https://html-css-js.com/css/generator/",
+      "description": "Выберите один из доступных генераторов CSS. Быстро устанавливайте нужные параметры с помощью ползунков, средств выбора цвета и тестируйте коды с помощью интерактивного HTML-CSS редактора.",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "http://pxtoem.com/",
+      "description": "PXtoEM.com : Преобразование пикселей в EM упрощено.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode",
+      "description": "Snippet Генератор",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://besticon-demo.herokuapp.com/",
+      "description": "Веб-сайты раньше имели favicon.ico или нет. С введением apple-touch-icon.png значка “the” для сайта стало сложнее находить. Этот сервис находит и — при необходимости — генерирует значки для веб-сайтов.",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "http://designmodo.github.io/Flat-UI/",
+      "description": "Flat UI. Free User Interface Kit",
+      "tags": "Дизаин",
+      "group": "Примеры"
+    },
+    {
+      "link": "https://rusability.ru/pfanshtil/tsveta-dlya-saita-50-idei-ot-luchshih-dizainerov/5fd296642dda593c3483ebd2",
+      "description": "Цвета для сайта: 50 идей от лучших дизайнеров.",
+      "tags": "Дизаин",
+      "group": "Примеры"
+    },
+    {
+      "link": "https://www.qhmit.com/css/flexbox/examples/flexbox_website_layout_examples.cfm",
+      "description": "Примеры макета веб-сайта Flexbox",
+      "tags": "Пример",
+      "group": "Примеры"
+    },
+    {
+      "link": "https://imagecompressor.com/",
+      "description": "Этот онлайн-оптимизатор изображений использует разумную комбинацию лучших алгоритмов оптимизации и сжатия с потерями, чтобы уменьшить изображения в формате JPEG, GIF и PNG",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://tinypng.com/",
+      "description": "Интеллектуальное сжатие WebP, PNG и JPEG",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://compressor.io/",
+      "description": "Быстрое и эффективное сжатие изображений",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://terser.org/",
+      "description": "Terser - это стандартный в отрасли минификатор для кода JavaScript. Он удаляет комментарии, уменьшает размеры имен переменных и удаляет пробелы.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://www.iloveimg.com/ru/compress-image",
+      "description": "Сжать JPG, PNG, SVG или GIF с самым лучшим качеством и сжатием. Уменьшить размер файла с вашими изображениями одновременно.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://kwork.ru/",
+      "description": "Покупайте фриланс-услуги в один клик",
+      "tags": "Фриланс",
+      "group": "Фриланс"
+    },
+    {
+      "link": "https://www.fl.ru/",
+      "description": "Миллионы исполнителей готовы вам помочь",
+      "tags": "Фриланс",
+      "group": "Фриланс"
+    },
+    {
+      "link": "https://work-zilla.com/",
+      "description": "Исполнители для любых заданий",
+      "tags": "Фриланс",
+      "group": "Фриланс"
+    },
+    {
+      "link": "https://validator.w3.org/",
+      "description": "Этот валидатор проверяет правильность разметки веб-документов в HTML, XHTML, SMIL, MathML и т.д",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://jigsaw.w3.org/css-validator/",
+      "description": "Служба проверки CSS",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect&hl=ru",
+      "description": "Узнайте, как ускорить загрузку своих страниц на любых устройствах.",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://tools.pingdom.com/",
+      "description": "Тест скорости веб-сайта Pingdom",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://sitechecker.pro/ru/",
+      "description": "SEO-анализ сайта на ошибки и уязвимости.",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://search.google.com/test/mobile-friendly",
+      "description": "Оптимизирована ли ваша страница для мобильных устройств?",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://www.whatsmyip.org/http-compression-test/",
+      "description": "тот инструмент проверяет ваш сервер, чтобы увидеть, отправляет ли он сжатые данные.",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "http://iloveadaptive.com/ru/",
+      "description": "Посмотрите как выглядит сайт на разных устройствах",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://jsonlint.com/",
+      "description": "JSONLint - Средство проверки JSON",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://www.artlebedev.ru/typograf/",
+      "description": "- Это 'Типограф'? — Нет, это «Типограф»!",
+      "tags": "Орфограф",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://pr-cy.ru/",
+      "description": "Оптимизируйте ваш сайт для Google и Яндекс",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://htmlacademy.ru/blog/html/how-to-test",
+      "description": "как тестировать сайты",
+      "tags": "Шпаргалка",
+      "group": "Шпаргалки"
+    },
+    {
+      "link": "https://www.browserstack.com/",
+      "description": "Тестирование приложений и браузеров стало проще",
+      "tags": "Валидатор",
+      "group": "Валидаторы"
+    },
+    {
+      "link": "https://yoksel.github.io/html-tree/",
+      "description": "Генератор HTML-дерева",
+      "tags": "Генератор",
+      "group": "Генераторы"
+    },
+    {
+      "link": "https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk?hl=en",
+      "description": "CSS Peeper",
+      "tags": "Плагин",
+      "group": "Плагины"
+    },
+    {
+      "link": "https://www.welldonecode.com/perfectpixel/",
+      "description": "Начните разрабатывать веб-сайты с точностью до пикселя!",
+      "tags": "Плагин",
+      "group": "Плагины"
+    },
+    {
+      "link": "https://www.virustotal.com/gui/home/upload",
+      "description": "Анализируйте подозрительные файлы, домены, IP-адреса и URL-адреса для обнаружения вредоносных программ и других нарушений,",
+      "tags": "Антивирус",
+      "group": "Защита"
+    },
+    {
+      "link": "https://you.com/search?q=who+are+you&fromSearchBar=true&tbm=youchat",
+      "description": "Чат бот ИИ",
+      "tags": "ИИ",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://temp-mail.org/ru",
+      "description": "Ваш временный Email адрес",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "browser://system/#mem_usage",
+      "description": "О системе Диагностические данные системы",
+      "tags": "Информация",
+      "group": "Информация"
+    },
+    {
+      "link": "https://вакцина.стопкоронавирус.рф/",
+      "description": "Все о вакцинации против COVID-19",
+      "tags": "Информация",
+      "group": "Информация"
+    },
+    {
+      "link": "browser://extensions/",
+      "description": "Расширения",
+      "tags": "Информация",
+      "group": "Информация"
+    },
+    {
+      "link": "https://www.artlebedev.ru/orfograf/",
+      "description": "Орфограф",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://trello.com/b/qWOcTzLD/portfolio",
+      "description": "Trello помогает собрать всех сотрудников, задачи и инструменты в одном месте",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://youtube4kdownloader.com/en66/",
+      "description": "Ваш Онлайн-Загрузчик Видео",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://app.diagrams.net/",
+      "description": "draw.io это бесплатное онлайн-программное обеспечение для построения диаграмм для создания блок-схем.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://fotoram.io/artstyle/ru",
+      "description": "Fotoramio - это бесплатный редактор фотографий и создатель коллажей с необычайным набором инструментов для редактирования фотографий.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://rustxt.ru/check-spelling",
+      "description": "Проверка орфографии и пунктуации.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://cleanup.pictures/",
+      "description": "Удалите любой нежелательный, объект, дефект, людей, текст, с ваших фотографий за считанные секунды",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://www.upscale.media/ru",
+      "description": "Увеличивайте и улучшайте свои изображения",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://starryai.com/app/my-creations  ",
+      "description": "Создавайте рисунки с помощью искусственного интеллекта",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://dezgo.com/image2image",
+      "description": "Отредактируйте существующее изображение, чтобы оно соответствовало заданному текстовому описанию",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://lexica.art/aperture",
+      "description": "Лексика принимает на работу!",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://vms.drweb.ru/scan_file/",
+      "description": "С помощью онлайн-сканера файлов Dr.Web вы можете бесплатно проверить подозрительные файлы на наличие вредоносных программ.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://miro.com/index/",
+      "description": "Miro - это визуальная платформа вашей команды для подключения, совместной работы и совместного творчества.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://ru.topsites.me/",
+      "description": "Наш Онлайн сервис закладок - это инструмент, позволяющий вам иметь доступ к любимым закладкам в любом месте, где есть интернет.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    },
+    {
+      "link": "https://www.dododex.com/",
+      "description": "Калькулятор ARK: Survival Evolved.",
+      "tags": "Инструмент",
+      "group": "Инструменты"
+    }
+  ]
+}`;

@@ -17,7 +17,7 @@ const getId = (id) => {
 	return filledId;
 };
 
-const getLink = (link) => {
+const getLink = (link = "") => {
 	const filledLink = link;
 	return filledLink;
 };
@@ -27,12 +27,10 @@ const getImgLink = (url) => {
 	return filledimgLink;
 };
 
-const getTitle = (title, url) => {
+const getTitle = (title = "*", url) => {
 	title = title.trim();
-
 	let filledTitle = title,
-		copyTitle = title;
-	copyTitle.replace(/(.|,|-|_|;|:|'|)/gi, "");
+		copyTitle = title.replace(/(.|,|-|_|;|:|'|)/gi, "");
 
 	if (copyTitle) {
 		filledTitle = title;
@@ -43,17 +41,17 @@ const getTitle = (title, url) => {
 	return filledTitle;
 };
 
-const getDescription = (description) => {
+const getDescription = (description = "") => {
 	const filledDescription = description;
 	return filledDescription;
 };
 
-const getTags = (tags) => {
+const getTags = (tags = "") => {
 	const filledTags = tags.trim() && tags.toLowerCase().trim().split(",");
 	return filledTags;
 };
 
-const getGroup = (group) => {
+const getGroup = (group = "") => {
 	const filledGroup = group.trim() && group.toLowerCase().trim().split(",");
 	return filledGroup;
 };
