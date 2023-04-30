@@ -14,7 +14,7 @@ const MainMenu = () => {
   return (
     <div className={sass["mainMenuWrap"]}>
       <Link to="/" ><Logo /></Link>
-      <Br style={{ "margin": "5px 0", "marginTop": "20px" }} />
+      <Br style={{ "margin": "5px 0", "marginTop": "10px" }} />
       <BaseDropMenu />
       <Br style={{ "margin": "5px 0", "marginBottom": "20px" }} />
       <ThemeParams thisNumberTheme={numberTheme} />

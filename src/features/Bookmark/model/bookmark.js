@@ -1,59 +1,17 @@
+import { getURL, getId, getLink, getImgLink, getDescription, getTags, getGroup } from "../../../shared/model";
+
 const fillBookmark = (bookmark) => {
-	const url = new URL(getLink(bookmark.link));
+	const url = getURL(getLink(bookmark.link));
 	const filledBookmark = {
 		id: getId(bookmark.id),
 		link: getLink(bookmark.link),
 		imgLink: getImgLink(url),
-		title: getTitle(bookmark.title, url),
+		title: bookmark.title,
 		description: getDescription(bookmark.description),
 		tags: getTags(bookmark.tags),
 		group: getGroup(bookmark.group),
 	};
 	return filledBookmark;
-};
-
-const getId = (id) => {
-	const filledId = id;
-	return filledId;
-};
-
-const getLink = (link = "") => {
-	const filledLink = link;
-	return filledLink;
-};
-
-const getImgLink = (url) => {
-	const filledimgLink = url.hostname;
-	return filledimgLink;
-};
-
-const getTitle = (title = "*", url) => {
-	title = title.trim();
-	let filledTitle = title,
-		copyTitle = title.replace(/(.|,|-|_|;|:|'|)/gi, "");
-
-	if (copyTitle) {
-		filledTitle = title;
-	} else {
-		filledTitle = url.hostname.replace(/(.com|www.|.ru|.net|.org|.biz|dvd.|.io)/g, "");
-	}
-
-	return filledTitle;
-};
-
-const getDescription = (description = "") => {
-	const filledDescription = description;
-	return filledDescription;
-};
-
-const getTags = (tags = "") => {
-	const filledTags = tags.trim() && tags.toLowerCase().trim().split(",");
-	return filledTags;
-};
-
-const getGroup = (group = "") => {
-	const filledGroup = group.trim() && group.toLowerCase().trim().split(",");
-	return filledGroup;
 };
 
 export { fillBookmark };
