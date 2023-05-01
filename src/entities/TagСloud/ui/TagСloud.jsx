@@ -5,54 +5,26 @@ import { IoMdPricetag } from "react-icons/io";
 
 import { BaseButton } from "../../../shared/ui";
 
-const TagСloud = () => {
+const TagСloud = ({ tags, activeList, setActiveList, onClick }) => {
+
   return (
     <div className={sass.main}>
-      <BaseButton
-        sizeStyle="small"
-        text="Видео">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Шпаргалка">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Документация">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Переводчик">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Соц. сеть">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Генератор">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Орфограф">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="ИИ">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
-      <BaseButton
-        sizeStyle="small"
-        text="Валидатор">
-        <IoMdPricetag style={{ transform: "translateY(1px)" }} />
-      </BaseButton>
+      {
+        [...tags].map((el, i) => {
+          return (
+            <BaseButton
+              key={el}
+              sizeStyle="small"
+              text={el}
+              callBack={() => { onClick(activeList, setActiveList, i, el) }}
+              buttonActive={activeList[i] && "buttonActive"}
+            >
+              <IoMdPricetag style={{ transform: "translateY(1px)" }} />
+            </BaseButton>
+          )
+        })
+      }
+
     </div >
   );
 }

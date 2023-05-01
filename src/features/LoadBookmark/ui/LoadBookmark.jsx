@@ -6,7 +6,7 @@ import { AiFillFileText } from 'react-icons/ai';
 import { BaseModal, BaseButton, BaseTextarea } from "../../../shared/ui";
 import { getTitle, getObject } from "../../../shared/model";
 
-const DEFAULT_TEXTAREA_TEXT = `
+const DEFAULT_TEXTAREA = `
 {
   "bookmarks": [
     {
@@ -23,7 +23,7 @@ const DEFAULT_TEXTAREA_TEXT = `
 const LoadBookmark = ({ uploadBookmarks, setBookmarks }) => {
   const [modalActive, modalSetActive] = useState(false);
 
-  const [textarea, setTextarea] = useState(DEFAULT_TEXTAREA_TEXT);
+  const [textarea, setTextarea] = useState(DEFAULT_TEXTAREA);
 
   const loadBookmark = (bookmarks) => {
     getObject(bookmarks).bookmarks.forEach(el => {

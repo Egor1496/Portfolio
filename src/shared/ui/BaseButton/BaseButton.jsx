@@ -12,7 +12,8 @@ const BaseButton = (props) => {
 		hoverStyle,
 		sizeStyle,
 		border,
-		children
+		children,
+		buttonActive
 	} = props;
 
 	return (
@@ -25,6 +26,7 @@ const BaseButton = (props) => {
 					${sass[hoverStyle]}
 					${sass[border]}
 					${sass[sizeStyle]}
+					${sass[buttonActive]}
 					${disabled && sass.buttonDisabled}
 				`}
 				onClick={callBack}

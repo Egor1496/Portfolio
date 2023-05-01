@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import sass from "./Layout.module.sass";
 
-import { MainMenu, MainHeader, MainAside, MainFooter } from "../../widgets";
+import { MainMenu, MainHeader, MainAside, MainFooter, getGroups, getTags } from "../../widgets";
 
 
 const Layout = () => {
@@ -11,7 +11,7 @@ const Layout = () => {
 	return (
 		<div className={sass.mainWrap}>
 			<nav className={`${sass["col-1"]} ${sass.nav}`}>
-				<MainMenu />
+				<MainMenu getGroups={getGroups} />
 			</nav>
 			<div className={sass["col-2"]}>
 				<header className={sass.header} >
@@ -20,7 +20,7 @@ const Layout = () => {
 				<main className={sass.main}>
 					<article className={sass.article} ><Outlet /></article>
 					<aside className={sass.aside} >
-						<MainAside />
+						<MainAside getTags={getTags} />
 					</aside>
 				</main>
 				<footer className={sass.footer} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

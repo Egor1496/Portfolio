@@ -2,7 +2,7 @@ import React from "react";
 import sass from "./MainHeader.module.sass";
 
 import { Search, BaseSettings } from "../../../entities";
-import { FastLinks, GroupLinks } from "../../../features";
+import { FastLinks } from "../../../features";
 
 const MainHeader = () => {
   return (
@@ -13,7 +13,6 @@ const MainHeader = () => {
       </div>
       <div className={sass["header-inner"]}>
         <FastLinks />
-        <GroupLinks />
       </div>
     </div>
   );

@@ -4,21 +4,25 @@ import { Link } from "react-router-dom";
 import sass from "./MainMenu.module.sass";
 
 import { ThemeSelect } from "../../../entities";
-import { ThemeParams } from "../../../features";
+import { GroupLinks, ThemeParams } from "../../../features";
 
 import { BaseDropMenu, Br, Logo } from "../../../shared/ui";
 
-const MainMenu = () => {
+const MainMenu = ({ getGroups }) => {
+
   const [numberTheme, setTheme] = useState(1);
 
   return (
     <div className={sass["mainMenuWrap"]}>
       <Link to="/" ><Logo /></Link>
-      <Br style={{ "margin": "5px 0", "marginTop": "10px" }} />
+      <Br style={{ "margin": "10px 0" }} />
       <BaseDropMenu />
-      <Br style={{ "margin": "5px 0", "marginBottom": "20px" }} />
-      <ThemeParams thisNumberTheme={numberTheme} />
+      <Br style={{ "margin": "10px 0" }} />
+      <GroupLinks groups={getGroups()} />
+      <Br style={{ "margin": "10px 0" }} />
       <ThemeSelect setTheme={setTheme} />
+      <ThemeParams thisNumberTheme={numberTheme} />
+      <Br style={{ "marginTop": "10px" }} />
     </div>
   );
 }
