@@ -54,7 +54,6 @@ const Bookmarks = ({ bookmarks, setBookmarks }) => {
           })
         }
       </div>
-      <div className={sass.countBookmarks}>закладок - {bookmarks.length}</div>
     </>
   );
 }

@@ -4,6 +4,8 @@ import { getJSON, setStore, getStore, getObject } from "../../../shared/model";
 
 let bookmarks = getObject(getStore("bookmarks"));
 
+let filledBookmarks;
+
 const tags = new Set(),
 	groups = new Set();
 
@@ -18,7 +20,9 @@ const addTagsAndGroups = (newTags, newGroups) => {
 };
 
 const fillTagsAndGroups = () => {
-	bookmarks.forEach((bookmark) => {
+	tags.clear();
+	groups.clear();
+	filledBookmarks.forEach((bookmark) => {
 		addTagsAndGroups(bookmark.tags, bookmark.group);
 	});
 };
@@ -54,24 +58,28 @@ const uploadBookmarks = (bookmark, setState) => {
 };
 
 const getTags = () => {
-	return tags;
+	fillTagsAndGroups();
+	return [...tags].sort((a, b) => a.localeCompare(b));
 };
 
 const getGroups = () => {
-	return groups;
+	fillTagsAndGroups();
+	return [...groups].sort((a, b) => {
+		return a.localeCompare(b);
+	});
 };
 
 const getBookmarks = (filterName = ["", ""], sortType = "title") => {
-	let newBookmark = filter(filterName, bookmarks);
-	newBookmark = sort(sortType, newBookmark);
-	return newBookmark;
+	filledBookmarks = filter(filterName, bookmarks);
+	filledBookmarks = sort(sortType, filledBookmarks);
+	return filledBookmarks;
 };
 
 const filter = (filter, bookmarks) => {
-	let [groupName, tagsName] = filter;
+	let [groupNames, tagsNames] = filter;
 
-	groupName = groupName.trim().toLowerCase();
-	tagsName = tagsName.trim().toLowerCase();
+	groupNames = groupNames.trim().split(",");
+	tagsNames = tagsNames.trim().split(",");
 
 	const filtered = bookmarks.filter((elem) => {
 		let suitableElem = false;
@@ -79,8 +87,26 @@ const filter = (filter, bookmarks) => {
 		const cleanGroup = elem.group.trim().toLowerCase();
 		const cleanTags = elem.tags.trim().toLowerCase();
 
-		const isSuitableGroup = Boolean(~cleanGroup.indexOf(groupName) || groupName === ""),
-			isSuitableTags = Boolean(~cleanTags.indexOf(tagsName) || tagsName === "");
+		let isSuitableGroup = false,
+			isSuitableTags = false;
+
+		for (let i = 0; i < groupNames.length; i++) {
+			const name = groupNames[i].trim().toLowerCase();
+			if (~cleanGroup.indexOf(name) || name === "") {
+				isSuitableGroup = true;
+				break;
+			}
+		}
+
+		if (tagsNames.length === 1) isSuitableTags = true;
+		else
+			for (let i = 0; i < tagsNames.length - 1; i++) {
+				const name = tagsNames[i].trim().toLowerCase();
+				if (~cleanTags.indexOf(name) || name === "") {
+					isSuitableTags = true;
+					break;
+				}
+			}
 
 		if (isSuitableGroup && isSuitableTags) suitableElem = elem;
 
@@ -114,6 +140,8 @@ const sort = (sortType, bookmarks) => {
 
 	return type[sortType.trim().toLowerCase()](bookmarks);
 };
+
+filledBookmarks = getBookmarks();
 
 fillTagsAndGroups();
 

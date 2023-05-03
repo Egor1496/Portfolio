@@ -6,9 +6,9 @@ import sass from "./MainMenu.module.sass";
 import { ThemeSelect } from "../../../entities";
 import { GroupLinks, ThemeParams } from "../../../features";
 
-import { BaseDropMenu, Br, Logo } from "../../../shared/ui";
+import { Br, Logo, BaseDropMenu } from "../../../shared/ui";
 
-const MainMenu = ({ getGroups }) => {
+const MainMenu = ({ groups }) => {
 
   const [numberTheme, setTheme] = useState(1);
 
@@ -18,7 +18,7 @@ const MainMenu = ({ getGroups }) => {
       <Br style={{ "margin": "10px 0" }} />
       <BaseDropMenu />
       <Br style={{ "margin": "10px 0" }} />
-      <GroupLinks groups={getGroups()} />
+      <GroupLinks groups={groups} />
       <Br style={{ "margin": "10px 0" }} />
       <ThemeSelect setTheme={setTheme} />
       <ThemeParams thisNumberTheme={numberTheme} />

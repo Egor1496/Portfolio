@@ -4,7 +4,7 @@ import sass from "./Bookmark.module.sass"
 import { BaseButton } from "../../../shared/ui"
 import { fillBookmark } from "../../../features"
 
-import { AiFillFolderOpen } from 'react-icons/ai';
+// import { AiFillFolderOpen } from 'react-icons/ai';
 import { RxPencil2 } from 'react-icons/rx';
 import { AiOutlineDelete } from 'react-icons/ai';
 
@@ -46,18 +46,19 @@ const Bookmark = (props) => {
     </ul>
   );
 
-  const elemGroup = fB.group && (
-    <ul className={`${sass["group"]}`}>
-      {
-        fB.group.map((elem, i) =>
-          <li key={i} className={`${sass["group-item"]}`}>
-            <BaseButton text={elem.trim()} btnStyle="transparent" hoverStyle="noHoverStyle"><AiFillFolderOpen /></BaseButton>
-          </li>)
-      }
-    </ul>
-  );
+  // const elemGroup = fB.group && (
+  //   <ul className={`${sass["group"]}`}>
+  //     {
+  //       fB.group.map((elem, i) =>
+  //         <li key={i} className={`${sass["group-item"]}`}>
+  //           <BaseButton text={elem.trim()} btnStyle="transparent" hoverStyle="noHoverStyle"><AiFillFolderOpen /></BaseButton>
+  //         </li>)
+  //     }
+  //   </ul>
+  // );
 
-  const elemTime = fB.time && (<div className={`${sass["time"]}`}><span>{fB.time}</span></div>);
+  // const elemTime = fB.time && (<div className={`${sass["time"]}`}><span>{fB.time}</span></div>);
+
   return (
     <div className={sass.bookamrkWrap}>
       <div className={sass.deleteBookmark} onClick={(e) => { onDeleteBookmark(); }}>
@@ -77,8 +78,8 @@ const Bookmark = (props) => {
             {elemDescription}
             <div className={`${sass["inner"]}`}>
               {elemTags}
-              {elemGroup}
-              {elemTime}
+              {/* {elemGroup} */}
+              {/* {elemTime} */}
             </div>
           </div>
         }
