@@ -670,7 +670,7 @@
     },
     {
       "link": "https://morphismail.github.io/myInstruments/",
-      "description": "CSS GENERATORS. BORDER-RADIUS, TEXT-SHADOW, BOX-SHADOW, TRIANGLE, GRADIENT ",
+      "description": "CSS GENERATORS. BORDER-RADIUS, TEXT-SHADOW, BOX-SHADOW, TRIANGLE, GRADIENT",
       "tags": "Генератор",
       "group": "Генераторы"
     },
