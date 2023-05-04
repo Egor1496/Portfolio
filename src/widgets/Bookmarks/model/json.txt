@@ -27,7 +27,7 @@
     {
       "link": "https://www.deepl.com/en/translator#ru",
       "description": "онлайн-переводчик, работающий на основе машинного перевода",
-      "tags": "Пререводчик",
+      "tags": "Переводчик",
       "group": "Инструменты"
     },
     {
@@ -827,7 +827,7 @@
     {
       "link": "https://jigsaw.w3.org/css-validator/",
       "description": "Служба проверки CSS",
-      "tags": "Валидатор",
+      "tags": "Валидатор, CSS",
       "group": "Валидаторы"
     },
     {
@@ -899,13 +899,13 @@
     {
       "link": "https://yoksel.github.io/html-tree/",
       "description": "Генератор HTML-дерева",
-      "tags": "Генератор",
+      "tags": "Генератор, HTML",
       "group": "Генераторы"
     },
     {
       "link": "https://chrome.google.com/Webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk?hl=en",
       "description": "CSS Peeper",
-      "tags": "Плагин",
+      "tags": "Плагин, CSS",
       "group": "Разное"
     },
     {
@@ -947,13 +947,13 @@
     {
       "link": "browser://extensions/",
       "description": "Расширения",
-      "tags": "Информация",
+      "tags": "Плагин",
       "group": "Разное"
     },
     {
       "link": "https://www.artlebedev.ru/orfograf/",
       "description": "Орфограф",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Орфограф",
       "group": "Инструменты"
     },
     {
@@ -971,55 +971,55 @@
     {
       "link": "https://app.diagrams.net/",
       "description": "draw.io это бесплатное онлайн-программное обеспечение для построения диаграмм для создания блок-схем.",
-      "tags": "Инструмент",
+      "tags": "Инструмент, диаграмма",
       "group": "Инструменты"
     },
     {
       "link": "https://fotoram.io/artstyle/ru",
       "description": "Fotoramio - это бесплатный редактор фотографий и создатель коллажей с необычайным набором инструментов для редактирования фотографий.",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Фото-редактор",
       "group": "Инструменты"
     },
     {
       "link": "https://rustxt.ru/check-spelling",
       "description": "Проверка орфографии и пунктуации.",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Орфограф",
       "group": "Инструменты"
     },
     {
       "link": "https://cleanup.pictures/",
       "description": "Удалите любой нежелательный, объект, дефект, людей, текст, с ваших фотографий за считанные секунды",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Фото-редактор",
       "group": "Инструменты"
     },
     {
       "link": "https://www.upscale.media/ru",
       "description": "Увеличивайте и улучшайте свои изображения",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Фото-редактор",
       "group": "Инструменты"
     },
     {
       "link": "https://starryai.com/app/my-creations  ",
       "description": "Создавайте рисунки с помощью искусственного интеллекта",
-      "tags": "Инструмент",
+      "tags": "Инструмент, ИИ",
       "group": "Инструменты"
     },
     {
       "link": "https://dezgo.com/image2image",
       "description": "Отредактируйте существующее изображение, чтобы оно соответствовало заданному текстовому описанию",
-      "tags": "Инструмент",
+      "tags": "Инструмент, ИИ",
       "group": "Инструменты"
     },
     {
       "link": "https://lexica.art/aperture",
       "description": "Лексика принимает на работу!",
-      "tags": "Инструмент",
+      "tags": "Инструмент, ИИ",
       "group": "Инструменты"
     },
     {
       "link": "https://vms.drWeb.ru/scan_file/",
       "description": "С помощью онлайн-сканера файлов Dr.Web вы можете бесплатно проверить подозрительные файлы на наличие вредоносных программ.",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Антивирус",
       "group": "Инструменты"
     },
     {
@@ -1037,7 +1037,7 @@
     {
       "link": "https://www.dododex.com/",
       "description": "Калькулятор ARK: Survival Evolved.",
-      "tags": "Инструмент",
+      "tags": "Инструмент, Калькулятор",
       "group": "Инструменты"
     }
   ]

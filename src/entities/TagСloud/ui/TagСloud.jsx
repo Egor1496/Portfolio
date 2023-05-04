@@ -21,10 +21,13 @@ const TagСloud = ({ tags = [] }) => {
               <BiReset />
             </BaseButton>
           </div>
-        ) :
-          <h2 className={sass.title}>
-            Теги
-          </h2>
+        ) : (
+          <div className={sass.titleWrap}>
+            <IoMdPricetag />
+            <h2 className={sass.title}>Теги</h2>
+          </div>
+        )
+
       }
       <div className={sass.tagsWrap}>
         {
